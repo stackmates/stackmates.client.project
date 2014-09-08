@@ -1,0 +1,367 @@
+{
+  "sheets": [
+    {
+      "mode": "0644",
+      "collection": "sheets",
+      "data": {
+        "mainmenu": [
+          {
+            "title": "Question",
+            "url": "/philosopher",
+            "context": ""
+          },
+          {
+            "title": "Dream",
+            "url": "/dreamer",
+            "context": ""
+          },
+          {
+            "title": "Engineer",
+            "url": "/engineer",
+            "context": ""
+          },
+          {
+            "title": "Interpret",
+            "url": "/realist",
+            "context": ""
+          },
+          {
+            "title": "stories",
+            "url": "/haiku",
+            "context": ""
+          }
+        ],
+        "site": {
+          "sitename": "dreamineering",
+          "tagline": "Evolution by Design",
+          "baseurl": "http://dreamineering.com",
+          "description": "fallen dreams",
+          "company": "dreamineering",
+          "footercta": "You cannot control events. You can decide your process",
+          "contactemaillink": "mailto:matt@dreamineering.com",
+          "contactemail": "matt@dreamineering.com",
+          "quote": "The unexamined life is not worth living.",
+          "cite": "Socrates",
+          "link1": "/about",
+          "linktext1": "About",
+          "link2": "https://github.com/dreamineering/the-bach",
+          "linktext2": "Engine",
+          "link3": "",
+          "linktext3": "",
+          "link4": "",
+          "linktext4": "",
+          "segmentiowritekey": "qrk426wwgj"
+        },
+        "skills": [
+          {
+            "skill": "critical thinking",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "proactive curiosity",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "noticing critical details",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "piecing facts together",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "understanding behaviour",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "detective skills",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "writing with clarity",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "writing with relevance",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "writing with brevity",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "writing with readability",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "writing with consistency",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "writing with accuracy",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "eye for still images",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "eye for motion images",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "ear for good sounds",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "eye for layout",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "eye for good design",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "visual storytelling",
+            "application": "base",
+            "ref1": "http://www.visualstorytelling.com/",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "partcipatory jounalism",
+            "application": "base",
+            "ref1": "http://www.participatoryjournalism.org/",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          },
+          {
+            "skill": "visualization of data",
+            "application": "base",
+            "ref1": "",
+            "ref2": "",
+            "ref3": "",
+            "ref4": "",
+            "originalfield": "investigative journalism"
+          }
+        ],
+        "timeline": [
+          {
+            "milestone": "29/Sep/2014",
+            "event": "Kickoff meeting",
+            "message": ""
+          },
+          {
+            "milestone": "22/Sep/2014",
+            "event": "Sign contract",
+            "message": ""
+          },
+          {
+            "milestone": "15/Sep/2014",
+            "event": "First meeting",
+            "message": ""
+          },
+          {
+            "milestone": "08/Sep/2014",
+            "event": "Initial contact",
+            "message": ""
+          }
+        ],
+        "unknowns": [
+          {
+            "id": 1,
+            "question": "How much business logic should be in the browser?",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 2,
+            "question": "How do you get the learning versus creating balance right?",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 3,
+            "question": "How do you optimise learning across an organisation as it grows?",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 4,
+            "question": "What are the opportunities for \"Baby Boomers\" to use tech?",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 5,
+            "question": "What is best practice for updating node modules?",
+            "target": "tech",
+            "date": ""
+          },
+          {
+            "id": 6,
+            "question": "What is the relationship between isolation and innovation?",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 7,
+            "question": "What is the importance of myth, What is myth?",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 8,
+            "question": "What will define \"a team\" in an era when traditional organisational boundaries between employee and customer become blurred with geographical proximity irrelevant?",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 9,
+            "question": "",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 10,
+            "question": "",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 11,
+            "question": "",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 12,
+            "question": "",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 13,
+            "question": "",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 14,
+            "question": "",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 15,
+            "question": "",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 16,
+            "question": "",
+            "target": "",
+            "date": ""
+          },
+          {
+            "id": 17,
+            "question": "",
+            "target": "",
+            "date": ""
+          }
+        ]
+      },
+      "html": "{\"mainmenu\":[{\"title\":\"Question\",\"url\":\"/philosopher\",\"context\":\"\"},{\"title\":\"Dream\",\"url\":\"/dreamer\",\"context\":\"\"},{\"title\":\"Engineer\",\"url\":\"/engineer\",\"context\":\"\"},{\"title\":\"Interpret\",\"url\":\"/realist\",\"context\":\"\"},{\"title\":\"stories\",\"url\":\"/haiku\",\"context\":\"\"}],\"site\":{\"sitename\":\"dreamineering\",\"tagline\":\"Evolution by Design\",\"baseurl\":\"http://dreamineering.com\",\"description\":\"fallen dreams\",\"company\":\"dreamineering\",\"footercta\":\"You cannot control events. You can decide your process\",\"contactemaillink\":\"mailto:matt@dreamineering.com\",\"contactemail\":\"matt@dreamineering.com\",\"quote\":\"The unexamined life is not worth living.\",\"cite\":\"Socrates\",\"link1\":\"/about\",\"linktext1\":\"About\",\"link2\":\"https://github.com/dreamineering/the-bach\",\"linktext2\":\"Engine\",\"link3\":\"\",\"linktext3\":\"\",\"link4\":\"\",\"linktext4\":\"\",\"segmentiowritekey\":\"qrk426wwgj\"},\"skills\":[{\"skill\":\"critical thinking\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"proactive curiosity\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"noticing critical details\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"piecing facts together\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"understanding behaviour\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"detective skills\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"writing with clarity\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"writing with relevance\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"writing with brevity\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"writing with readability\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"writing with consistency\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"writing with accuracy\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"eye for still images\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"eye for motion images\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"ear for good sounds\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"eye for layout\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"eye for good design\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"visual storytelling\",\"application\":\"base\",\"ref1\":\"http://www.visualstorytelling.com/\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"partcipatory jounalism\",\"application\":\"base\",\"ref1\":\"http://www.participatoryjournalism.org/\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"},{\"skill\":\"visualization of data\",\"application\":\"base\",\"ref1\":\"\",\"ref2\":\"\",\"ref3\":\"\",\"ref4\":\"\",\"originalfield\":\"investigative journalism\"}],\"timeline\":[{\"milestone\":\"29/Sep/2014\",\"event\":\"Kickoff meeting\",\"message\":\"\"},{\"milestone\":\"22/Sep/2014\",\"event\":\"Sign contract\",\"message\":\"\"},{\"milestone\":\"15/Sep/2014\",\"event\":\"First meeting\",\"message\":\"\"},{\"milestone\":\"08/Sep/2014\",\"event\":\"Initial contact\",\"message\":\"\"}],\"unknowns\":[{\"id\":1,\"question\":\"How much business logic should be in the browser?\",\"target\":\"\",\"date\":\"\"},{\"id\":2,\"question\":\"How do you get the learning versus creating balance right?\",\"target\":\"\",\"date\":\"\"},{\"id\":3,\"question\":\"How do you optimise learning across an organisation as it grows?\",\"target\":\"\",\"date\":\"\"},{\"id\":4,\"question\":\"What are the opportunities for \\\"Baby Boomers\\\" to use tech?\",\"target\":\"\",\"date\":\"\"},{\"id\":5,\"question\":\"What is best practice for updating node modules?\",\"target\":\"tech\",\"date\":\"\"},{\"id\":6,\"question\":\"What is the relationship between isolation and innovation?\",\"target\":\"\",\"date\":\"\"},{\"id\":7,\"question\":\"What is the importance of myth, What is myth?\",\"target\":\"\",\"date\":\"\"},{\"id\":8,\"question\":\"What will define \\\"a team\\\" in an era when traditional organisational boundaries between employee and customer become blurred with geographical proximity irrelevant?\",\"target\":\"\",\"date\":\"\"},{\"id\":9,\"question\":\"\",\"target\":\"\",\"date\":\"\"},{\"id\":10,\"question\":\"\",\"target\":\"\",\"date\":\"\"},{\"id\":11,\"question\":\"\",\"target\":\"\",\"date\":\"\"},{\"id\":12,\"question\":\"\",\"target\":\"\",\"date\":\"\"},{\"id\":13,\"question\":\"\",\"target\":\"\",\"date\":\"\"},{\"id\":14,\"question\":\"\",\"target\":\"\",\"date\":\"\"},{\"id\":15,\"question\":\"\",\"target\":\"\",\"date\":\"\"},{\"id\":16,\"question\":\"\",\"target\":\"\",\"date\":\"\"},{\"id\":17,\"question\":\"\",\"target\":\"\",\"date\":\"\"}]}"
+    }
+  ]
+}
