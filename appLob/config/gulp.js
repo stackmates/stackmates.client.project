@@ -2,7 +2,7 @@
 
 module.exports = {
   ghpages                :  'ghpages/stackmates/appLob',
-  baseURL                :  'app.stackmates.com',
+  baseURL                :  'app.stackmat.es',
   contentDir             :  '/Users/wik/googledrive/dreams/private/stackmates/external/',
   browserifyEntry        :  './src/projects/stackmates/appLob/js/index.js',
   browserifySpecs        :  './src/projects/stackmates/appLob/**/*.spec.js',

@@ -2,7 +2,7 @@
 
 module.exports = {
   ghpages                :  './ghpages/stackmates/mobile',
-  baseURL                :  'mob.stackmates.com',
+  baseURL                :  'mob.stackmat.es',
   contentDir             :  '/Users/wik/googledrive/dreams/private/stackmates/external/',
   browserifyEntry        :  './src/projects/stackmates/appIonic/js/index.js',
   browserifySpecs        :  './src/projects/stackmates/appIonic/**/*.spec.js',
