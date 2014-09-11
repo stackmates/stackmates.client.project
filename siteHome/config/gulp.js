@@ -1,5 +1,3 @@
-
-
 module.exports = {
   ghpages                 :   'ghpages/stackmates/home',
   baseURL                 :   'stackmat.es',
@@ -14,7 +12,6 @@ module.exports = {
                                 'src/projects/stackmates/_shared/icons/**/*'
                               ],
   data                    :   [
-                                // 'src/common/data/**/*',
                                 'src/projects/stackmates/_shared/data/metalsmith_in'
                               ],
   dataOut                 :   './src/projects/stackmates/_shared/data/metalsmith_out',
@@ -29,18 +26,32 @@ module.exports = {
                                 './src/common/ux_patterns/**/*.css',
                                 './src/projects/stackmates/**/*.css'
                               ],
-  fetchSitePartials       :   [
-                                './src/projects/stackmates/_shared/templates/partials/**/*.hbs'
+  templates               :   [
+                                './src/projects/stackmates/_shared/templates'
                               ],
-  fetchSitePages          :   [
-                                './src/projects/stackmates/_shared/templates/pages/**/*.hbs'
-                              ],
+  handlebarsHelpers       :     '../src/projects/stackmates/_shared/templates/helpers',
+  metalsmithTemplates     :   {
+                                engine:      'handlebars',
+                                directory:   '../src/projects/stackmates/_shared/templates'
+                              },
   metalsmithCollections   :   {
-                                sheets: { pattern: 'sheets.json' },
-                                externalProvoke: { pattern: 'haiku/_loop_external/provoke/*.md', sortBy: 'flow' },
-                                externalAffirm: { pattern: 'haiku/_loop_external/affirm/*.md', sortBy: 'flow' },
-                                internalProvoke: { pattern: 'haiku/_loop_internal/provoke/*.md', sortBy: 'flow' },
-                                internalAffirm: { pattern: 'haiku/_loop_internal/affirm/*.md', sortBy: 'flow' },
-                                problems: { pattern: 'philosophy/problems/details/*.md', sortBy: 'belief', reverse: true }
+                                sheets: {
+                                  pattern: 'sheets.json' },
+                                externalProvoke: {
+                                  pattern: 'haiku/_loop_external/provoke/*.md',
+                                  sortBy: 'flow' },
+                                externalAffirm: {
+                                  pattern: 'haiku/_loop_external/affirm/*.md',
+                                  sortBy: 'flow' },
+                                internalProvoke: {
+                                  pattern: 'haiku/_loop_internal/provoke/*.md',
+                                  sortBy: 'flow' },
+                                internalAffirm: {
+                                  pattern: 'haiku/_loop_internal/affirm/*.md',
+                                  sortBy: 'flow' },
+                                problems: {
+                                  pattern: 'philosophy/problems/details/*.md',
+                                  sortBy: 'belief',
+                                  reverse: true }
                               }
 }

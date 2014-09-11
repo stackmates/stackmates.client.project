@@ -7,8 +7,9 @@ module.exports = /*@ngInject*/
     ContentService.getContent()
       .then(
         function (content) {
-          console.log('this', content.externalDreamineering);
-          $scope.haikuList = content.externalDreamineering;
+
+          $scope.haikuList = content.externalProvoke;
+          $scope.haikuBanner = content.externalProvoke[0];
         },
         function (result){
           console.log('Failed to load content: ' + result)
