@@ -1,13 +1,16 @@
 
 'use strict';
 
-var dom = require('domquery');
+var path      = require('path');
+var dom       = require('domquery');
 var FastClick = require('fastclick');
 
-var classie = require('../../../../common/util_modules/sm_classie');
-var smoothScroll = require('../../../../common/util_modules/sm_scroll_smooth');
-require('../../../../common/ux_patterns/site_nav_overlay')();
+// Reference common directory
+var classie      = require('util_modules/classie_util');
+var smoothScroll = require('util_modules/scroll_smooth_util');
+require('ux_patterns/molecules/navigation/site_nav_overlay')();
 
+// Setup
 FastClick(document.body);
 smoothScroll.init();
 
@@ -22,7 +25,6 @@ function toggleCardStepVisibility (evt) {
 
   var cardHaiku = card.querySelector('.Card-haiku');
   var cardDetails = card.querySelector('.Card-details');
-
 
   if ( classie.has( cardDetails, 'is-hidden')){
     classie.remove( cardDetails, 'is-hidden');

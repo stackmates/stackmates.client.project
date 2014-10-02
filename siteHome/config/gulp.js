@@ -3,55 +3,51 @@ module.exports = {
   baseURL                 :   'stackmat.es',
   contentDir              :   '/Users/wik/dreams/stackmates/docs/',
   sheets                  :   ['1x0Fy072BB8hYg2d1j9xpOTG8AW1qHPQo6bENY-0Vx78'],
-  browserifyEntry         :   './src/projects/stackmates/siteHome/js/index.js',
-  styleEntry              :   './src/projects/stackmates/siteHome/style/main.css',
-  images                  :   [ './src/projects/stackmates/common/images/**/*' ],
+  browserifyEntry         :   './src/domain/stackmates/siteHome/js/index.js',
+  styleEntry              :   './src/domain/stackmates/siteHome/style/main.css',
+  images                  :   [ './src/domain/stackmates/common/images/**/*' ],
   fonts                   :   [ 'src/common/fonts/**/*' ],
   icons                   :   [
                                 'src/common/icons/**/*',
-                                'src/projects/stackmates/_shared/icons/**/*'
+                                'src/domain/stackmates/_shared/icons/**/*'
                               ],
   data                    :   [
-                                'src/projects/stackmates/_shared/data/metalsmith_in'
+                                'src/domain/stackmates/_shared/data/metalsmith_in'
                               ],
-  dataOut                 :   './src/projects/stackmates/_shared/data/metalsmith_out',
-  meta                    :   './src/projects/stackmates/_shared/meta',
+  dataOut                 :   './src/domain/stackmates/_shared/data/metalsmith_out',
+  meta                    :   './src/domain/stackmates/_shared/meta',
   watchScripts            :   [
                                 './src/common/util_modules/**/*.js',
                                 './src/common/ux_patterns/**/*.js',
-                                './src/projects/stackmates/**/*.js'
+                                './src/domain/stackmates/**/*.js'
                               ],
   watchStyles             :   [
                                 './src/common/style/rework/**/*.css',
                                 './src/common/ux_patterns/**/*.css',
-                                './src/projects/stackmates/**/*.css'
+                                './src/domain/stackmates/**/*.css'
                               ],
   templates               :   [
-                                './src/projects/stackmates/_shared/templates'
+                                './src/domain/stackmates/_shared/templates'
                               ],
-  handlebarsHelpers       :     '../src/projects/stackmates/_shared/templates/helpers',
+  handlebarsHelpers       :     '../src/domain/stackmates/_shared/templates/helpers',
   metalsmithTemplates     :   {
                                 engine:      'handlebars',
-                                directory:   '../src/projects/stackmates/_shared/templates'
+                                directory:   '../src/domain/stackmates/_shared/templates'
                               },
   metalsmithCollections   :   {
                                 sheets: {
                                   pattern: 'sheets.json' },
                                 externalProvoke: {
-                                  pattern: 'haiku/_loop_external/provoke/*.md',
+                                  pattern: 'cards/_loop_external/provoke/*.md',
                                   sortBy: 'flow' },
                                 externalAffirm: {
-                                  pattern: 'haiku/_loop_external/affirm/*.md',
+                                  pattern: 'cards/_loop_external/affirm/*.md',
                                   sortBy: 'flow' },
                                 internalProvoke: {
-                                  pattern: 'haiku/_loop_internal/provoke/*.md',
+                                  pattern: 'cards/_loop_internal/provoke/*.md',
                                   sortBy: 'flow' },
                                 internalAffirm: {
-                                  pattern: 'haiku/_loop_internal/affirm/*.md',
-                                  sortBy: 'flow' },
-                                problems: {
-                                  pattern: 'philosophy/problems/details/*.md',
-                                  sortBy: 'belief',
-                                  reverse: true }
+                                  pattern: 'cards/_loop_internal/affirm/*.md',
+                                  sortBy: 'flow' }
                               }
 }

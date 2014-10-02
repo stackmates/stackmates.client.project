@@ -2,34 +2,34 @@ module.exports = {
   ghpages                 : 'ghpages/stackmates/appLob',
   baseURL                 : 'app.stackmat.es',
   contentDir              : '/Users/wik/googledrive/dreams/private/stackmates/external/',
-  browserifyEntry         : './src/projects/stackmates/appLob/js/index.js',
-  browserifySpecs         : './src/projects/stackmates/appLob/**/*.spec.js',
-  styleEntry              : './src/projects/stackmates/appLob/style/main.css',
-  watchJS                 : './src/projects/stackmates/appLob/js/**/*.js',
-  indexHtml               : 'src/projects/stackmates/appLob/index.html',
-  jsonData                : './src/projects/stackmates/_shared/data/**/*.json',
+  browserifyEntry         : './src/domain/stackmates/appLob/js/index.js',
+  browserifySpecs         : './src/domain/stackmates/appLob/**/*.spec.js',
+  styleEntry              : './src/domain/stackmates/appLob/style/main.css',
+  watchJS                 : './src/domain/stackmates/appLob/js/**/*.js',
+  indexHtml               : 'src/domain/stackmates/appLob/index.html',
+  jsonData                : './src/domain/stackmates/_shared/data/**/*.json',
   templatesHtmlIn         : [
-                              './src/projects/stackmates/appLob/js/**/*.html',
-                              './src/projects/stackmates/_shared/angular/**/*.html',
+                              './src/domain/stackmates/appLob/js/**/*.html',
+                              './src/domain/stackmates/_shared/angular/**/*.html',
                               './src/common/ux_patterns/**/*.html',
                             ],
-  templatesJsOut          : './src/projects/stackmates/appLob/js/templates',
-  karmaTestHelpers        : './src/projects/stackmates/appLob/test/helpers/**/*.js',
+  templatesJsOut          : './src/domain/stackmates/appLob/js/templates',
+  karmaTestHelpers        : './src/domain/stackmates/appLob/test/helpers/**/*.js',
   images                  : [
-                              './src/projects/stackmates/_shared/images/**/*'
+                              './src/domain/stackmates/_shared/images/**/*'
                             ],
   fonts                   : [ 'src/common/fonts/**/*' ],
   icons                   : [
-                              'src/projects/stackmates/_shared/icons/**/*'
+                              'src/domain/stackmates/_shared/icons/**/*'
                             ],
   data                    : [
-                              'src/projects/stackmates/_shared/data/metalsmith_out/**/*'
+                              'src/domain/stackmates/_shared/data/metalsmith_out/**/*'
                             ],
-  meta                    :  './src/projects/stackmates/_shared/meta',
+  meta                    :  './src/domain/stackmates/_shared/meta',
   watchStyles             : [
                               './src/common/style/rework/**/*.css',
                               './src/common/ux_patterns/**/*.css',
-                              './src/projects/stackmates/**/*.css'
+                              './src/domain/stackmates/**/*.css'
                             ],
-  handlebarsHelpers       :   '../src/projects/stackmates/_shared/templates/helpers'
+  handlebarsHelpers       :   '../src/domain/stackmates/_shared/templates/helpers'
 }

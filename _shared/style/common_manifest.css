@@ -37,11 +37,12 @@
 @import "../../../../common/style/rework/base/suit-base";
 @import "../../../../common/style/rework/base/elements";
 @import "../../../../common/style/rework/base/typography";
+@import "./ux_patterns/typography";
 
 
 /* layout */
-@import "../../../../common/style/rework/layout/basic_container";
 @import "../../../../common/style/rework/layout/sections";
+@import "../../../../common/ux_patterns/screenviews/basic_container";
 
 
 
@@ -56,21 +57,27 @@
 @import "../../../../common/style/rework/quarks/text";
 @import "../../../../common/style/rework/quarks/zindex";
 
+
 /*Atoms*/
 @import "./ux_patterns/brand";
-@import "../../../../common/ux_patterns/icons";
-@import "../../../../common/ux_patterns/button";
-@import "../../../../common/ux_patterns/toggle";
-@import "../../../../common/ux_patterns/forms";
-@import "../../../../common/ux_patterns/lists";
+@import "../../../../common/ux_patterns/atoms/icons";
+@import "../../../../common/ux_patterns/atoms/buttons";
+@import "../../../../common/ux_patterns/atoms/forms";
+@import "../../../../common/ux_patterns/atoms/lists";
+
 
 /*Molecules*/
-@import "../../../../common/ux_patterns/banners";
-@import "../../../../common/ux_patterns/card--haiku";
-@import "../../../../common/ux_patterns/navList";
+@import "../../../../common/ux_patterns/molecules/navigation/toggle";
+@import "../../../../common/ux_patterns/molecules/navigation/nav_list";
+@import "./ux_patterns/banner";
 
-/* bespoke stuff */
 
+/*Organisms*/
+@import "../../../../common/ux_patterns/organisms/cards/haiku";
+
+
+/*Domain Specific*/
 @import "./ux_patterns/markdown";
+
 
 

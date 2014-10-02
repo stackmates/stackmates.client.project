@@ -4,36 +4,36 @@ module.exports = {
   ghpages                :  './ghpages/stackmates/mobile',
   baseURL                :  'mob.stackmat.es',
   contentDir             :  '/Users/wik/googledrive/dreams/private/stackmates/external/',
-  browserifyEntry        :  './src/projects/stackmates/appIonic/js/index.js',
-  browserifySpecs        :  './src/projects/stackmates/appIonic/**/*.spec.js',
-  cordova                :  './src/projects/stackmates/appIonic/cordova/**/*',
-  styleEntry             :  './src/projects/stackmates/appIonic/style/ionic.app.scss',
-  watchJS                :  './src/projects/stackmates/appIonic/js/**/*.js',
-  indexHtml              :  './src/projects/stackmates/appIonic/index.html',
-  jsonData               :  './src/projects/stackmates/appIonic/data/**/*.json',
+  browserifyEntry        :  './src/domain/stackmates/appIonic/js/index.js',
+  browserifySpecs        :  './src/domain/stackmates/appIonic/**/*.spec.js',
+  cordova                :  './src/domain/stackmates/appIonic/cordova/**/*',
+  styleEntry             :  './src/domain/stackmates/appIonic/style/ionic.app.scss',
+  watchJS                :  './src/domain/stackmates/appIonic/js/**/*.js',
+  indexHtml              :  './src/domain/stackmates/appIonic/index.html',
+  jsonData               :  './src/domain/stackmates/appIonic/data/**/*.json',
   templatesHtmlIn        :  [
-                              './src/projects/stackmates/appIonic/js/**/*.html',
-                              './src/projects/stackmates/_shared/angular/**/*.html'
+                              './src/domain/stackmates/appIonic/js/**/*.html',
+                              './src/domain/stackmates/_shared/angular/**/*.html'
                             ],
-  templatesJsOut         :  './src/projects/stackmates/appIonic/js/templates',
-  karmaTestHelpers       :  './src/projects/stackmates/appIonic/test/helpers/**/*.js',
+  templatesJsOut         :  './src/domain/stackmates/appIonic/js/templates',
+  karmaTestHelpers       :  './src/domain/stackmates/appIonic/test/helpers/**/*.js',
   images                 :  [
-                              './src/projects/stackmates/_shared/images/**/*'
+                              './src/domain/stackmates/_shared/images/**/*'
                             ],
   fonts                  :  [ './src/common/fonts/**/*' ],
   icons                  :  [
                               './src/common/icons/**/*',
-                              'src/projects/stackmates/_shared/icons/**/*'
+                              'src/domain/stackmates/_shared/icons/**/*'
                             ],
   data                   :  [
-                              'src/projects/stackmates/_shared/data/metalsmith_out/**/*'
+                              'src/domain/stackmates/_shared/data/metalsmith_out/**/*'
                             ],
-  meta                   :  './src/projects/stackmates/_shared/meta',
+  meta                   :  './src/domain/stackmates/_shared/meta',
   watchStyles            :  [
                               'src/common/style/sass/ionic/**/*.scss',
-                              'src/projects/stackmates/appIonic/**/*.scss'
+                              'src/domain/stackmates/appIonic/**/*.scss'
                             ],
-  handlebarsHelpers       :   '../src/projects/stackmates/_shared/templates/helpers'
+  handlebarsHelpers       :   '../src/domain/stackmates/_shared/templates/helpers'
 };
 
 

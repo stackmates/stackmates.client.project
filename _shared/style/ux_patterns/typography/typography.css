@@ -1,0 +1,23 @@
+
+.dt-BannerHeading--loop {
+  padding-bottom: 2em;
+}
+/*@media purse {
+  .t-BannerHeading {
+    font-size: var(--t-BannerHeadingPurse);
+  }
+}
+@media sofa-and-up {
+  .t-BannerHeading {
+    font-size: var(--t-BannerHeadingSofaAndUp);
+  }
+}
+@media office {
+  .t-BannerHeading {
+    font-size: var(--t-BannerHeadingOffice);
+  }
+}
+.t-BannerHeading span {
+  font-size: 0.48em;
+  line-height: 3.2;
+}*/

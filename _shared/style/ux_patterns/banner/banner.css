@@ -1,0 +1,23 @@
+
+.d-Banner {
+
+}
+.d-Banner-intro {
+  /*position: relative;*/
+  padding-bottom: 40px;
+}
+.d-Banner-nav {
+
+}
+.d-Banner-nav--downArrow {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+/*.Banner--home {
+  background: var(--color-brand);
+  background-size: cover;
+  font-weight: light;
+}
+*/
