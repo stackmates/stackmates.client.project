@@ -1,0 +1,117 @@
+{{> _html}}
+
+<div class='__page-container'>
+
+  {{> m_TopBar--overlay }}
+  {{> m_SiteNav--overlay }}
+
+
+  {{#selectCollection this.collections  this.metaCardsCollection }}
+
+    {{#if this.bannerHeading }}
+      {{> m_Header--loop }}
+    {{/if}}
+
+    <div class='__content-container'>
+      <div class='__content content' role='main'>
+        <div class='u-cf'>
+
+
+
+<div class="Card" id="step-{{ this.flow }}">
+  <div class="Card-haiku" >
+
+      <section class='__section Haiku {{ this.metaMindset }} {{ this.metaPalette }}'>
+
+        <div class='_site-width'>
+          <div class='_copy-width'>
+
+              {{#if this.haikuHeading }}<h2 class="u-textCenter u-marginBn u-marginTn">{{{ this.haikuHeading }}}</h2> {{/if}}
+
+              {{#if this.haikuThought }}
+                <blockquote class='t-important u-textCenter'>{{{ this.haikuThought }}}</blockquote>
+              {{/if}}
+
+
+              <h5 class='u-textCenter u-marginBn u-marginTn'>
+                <a data-step='step-{{ this.flow }}' data-js='haikuaction' class='u-linkBorderBottom' href='#'>{{{ this.haikuAction }}}</a>
+              </h5>
+
+
+              <div class='u-bottomRight'>
+                <a class='u-linkClean' href="#step-{{ this.nextStep }}" data-scroll >
+                  <i class="icon ion-chevron-down"></i>
+                </a>
+              </div>
+
+          </div>
+        </div>
+
+      </section>
+
+  </div>
+  <div class="Card-details is-hidden">
+
+      <header class='__section u-z200 u-sizeFullHeight Banner {{metaPalette}}'>
+
+        <div class='_site-width'>
+          <div class='_copy-width'>
+
+            <div class="Banner-intro">
+
+              <h1>{{{ this.haikuThought }}}</h1>
+
+            </div>
+
+          </div>
+        </div>
+
+      </header>
+
+      <section class='__section'>
+
+        <div class='_site-width'>
+          <div class='_copy-width markdown'>
+
+            <h2>{{{ this.haikuAction }}}</h2>
+
+            {{#if this.introduction }} {{{ this.introduction }}} {{/if}}
+
+
+            {{{ this.contents }}}
+
+
+
+            <blockquote class='u-paddingBl'>
+              <p>{{{ this.mainQuote }}}</p>
+              <cite><a href={{{ this.mainQuoteInsightLink}}}>{{{ this.mainQuoteCite }}}</a></cite>
+            </blockquote>
+
+          </div>
+
+        </div>
+
+      </section>
+
+  </div><!-- end Card-haihu -->
+</div><!-- end Card -->
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+  {{/selectCollection }}
+
+  {{> o_Footer }}
+
+</div>
+
+{{> _close}}
