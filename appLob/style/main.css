@@ -56,6 +56,9 @@
 
 @import "./src/common/style/rework/_helpers/bootstrap";
 
+
+@import "./src/domain/stackmates/_shared/style/ux_patterns/bootstrap";
+
 /*
 @import "./src/common/ux_patterns/main_footer";
 @import "./src/common/ux_patterns/timeline";

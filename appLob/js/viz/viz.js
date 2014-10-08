@@ -17,16 +17,26 @@ module.exports = angular.module( 'app.viz', [
         url: '/viz',
         views: {
           '@': {
-            controller: 'LastFMController',
+            controller: 'VisualizationController',
             controllerAs: 'viz',
             templateUrl: 'viz/templates/viz.html'
           }
         }
+      })
+      .state('app.viz.lastfm', {
+        url: '/lastfm',
+          controller: 'DemoLastFMController',
+          controllerAs: 'lastFMDemo',
+          templateUrl: 'viz/templates/last-fm-demo.html'
       });
   }
 )
 
-.controller( 'LastFMController', require('./controllers/last_fm_controller'))
+
+.controller( 'VisualizationController', require('./controllers/_visualization_controller'))
+.controller( 'DemoLastFMController', require('./controllers/last_fm_controller'))
+
+
 
 ;
 

@@ -1,40 +1,17 @@
 
+<h2>Patterns</h2>
 
-<div>
-  <toptag-chart
-    toptags='viz.toptags'
-    tagsize='viz.tagsize'
-    artists='viz.artists'>
-  </toptag-chart>
-</div>
+<div class="Grid">
+  <div class="Grid-cell u-size2of6">
 
-<div>
-  <artists-chart artists="viz.artists"></artists-chart>
-</div>
+    <ul>
+      <li><a ui-sref="app.viz.lastfm">Last FM</a></li>
+    </ul>
 
-
-
-<div ng-init="chart=[{value: 10}, {value: 20}, {value: 30}]">
-  <donut-chart data="chart" style="float:right"></donut-chart>
-  <button ng-click="chart.push({value: 10})">add slice</button>
-  <button ng-click="chart.pop()">remove slice</button>
-  <div ng-repeat="slice in chart track by $index">
-    <input type="range" ng-model="slice.value">
   </div>
-</div>
+  <div class="Grid-cell u-size4of6">
 
-<!-- {{ viz.employers || json }} -->
+    <div ui-view></div>
 
-
-<div class="ScatterChart">
-  <scatter data="viz.employers" selected-point="selectEmployer"> </scatter>
-</div>
-<div class="detail">
-  <div ng-show="selectEmployer">
-    <h2>{{selectEmployer.name }}</h2>
-    <h3>Employees: {{selectEmployer.value }}M</h3>
-  </div>
-  <div ng-show="!selectEmployer">
-    <h2> [hover over a company] </h2>
   </div>
 </div>
