@@ -21,7 +21,7 @@
 <div class='__content content' role='main'>
 
   <div ng-repeat='content in home.haikuExternal'>
-  <section class='__section {{content.palette}}'>
+  <section class='__section {{content.metaPalette}}'>
 
       <div class='_site-width'>
 
@@ -34,7 +34,7 @@
           </blockquote>
 
           <h4 class='u-textCenter u-marginBn u-marginTn'>
-            <a href="#/tab/haiku/{{haiku.flow}}"
+            <a href="#/details/{{content.flow}}"
               ng-bind-html="content.haikuAction">
             </a>
           </h4>

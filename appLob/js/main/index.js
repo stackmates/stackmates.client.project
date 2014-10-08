@@ -24,10 +24,24 @@ module.exports = angular.module('app.main', [
         //     return Restangular.all('features').getList();
         //   }]
         // }
+      })
+      .state('app.card-detail', {
+        url: '/details/:haikuId',
+        views: {
+          '@': {
+            controller: 'CardDetailController',
+            controllerAs: 'cardDetails',
+            templateUrl: 'main/templates/card_detail.html'
+          }
+        }
       });
 
       $urlRouterProvider.otherwise( '/' );
   }
 )
 
-.controller('HomeController', require('./controllers/home'));
+.controller('HomeController', require('./controllers/home_controller'))
+.controller('CardDetailController', require('./controllers/card_detail_controller'))
+
+
+;

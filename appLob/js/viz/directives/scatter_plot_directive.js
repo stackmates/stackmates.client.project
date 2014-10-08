@@ -7,7 +7,10 @@ module.exports = /*@ngInject*/
     return {
       link: link,
       restrict: 'E',
-      scope: { data: '=', selectedPoint: '=' }
+      scope: {
+        data: '=',
+        selectedPoint: '='
+      }
     }
   }
 
@@ -48,9 +51,12 @@ function link(scope, el, attr){
   function update(){
     if(!scope.data){ return };
     var data = scope.data;
+
     var x_extent = d3.extent(data, function(d, i){ return i });
     x.domain(x_extent);
-    var y_max = d3.max(data, function(d){ return d.value });
+    var y_max = d3.max(data, function(d){
+      return d.value
+    });
     y.domain([0, y_max]);
     points = points.data(data);
     points.exit().remove();
@@ -64,6 +70,8 @@ function link(scope, el, attr){
 
     // update the position of all the points
     points.attr('transform', function(d, i){
+      console.log('d',d.value);
+      console.log('i',i);
       return 'translate(' + [x(i), y(d.value)] + ')';
     });
 

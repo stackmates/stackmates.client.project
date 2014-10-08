@@ -23,6 +23,18 @@ module.exports = angular.module( 'app.viz', [
           }
         }
       })
+      .state('app.viz.donut', {
+        url: '/donut',
+          controller: 'DemoDonutController',
+          controllerAs: 'donutDemo',
+          templateUrl: 'viz/templates/donut-demo.html'
+      })
+      .state('app.viz.scatter', {
+        url: '/scatter',
+          controller: 'DemoScatterController',
+          controllerAs: 'scatterDemo',
+          templateUrl: 'viz/templates/scatter-demo.html'
+      })
       .state('app.viz.lastfm', {
         url: '/lastfm',
           controller: 'DemoLastFMController',
@@ -34,9 +46,10 @@ module.exports = angular.module( 'app.viz', [
 
 
 .controller( 'VisualizationController', require('./controllers/_visualization_controller'))
+
 .controller( 'DemoLastFMController', require('./controllers/last_fm_controller'))
-
-
+.controller( 'DemoDonutController', require('./controllers/employers_controller'))
+.controller( 'DemoScatterController', require('./controllers/employers_controller'))
 
 ;
 

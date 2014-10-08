@@ -1,0 +1,19 @@
+<div>
+  <header class='{{content.metaPalette}}'>
+
+    <h1 class='u-textCenter'>{{ content.haikuThought }}</h1>
+
+  </header>
+  <article>
+
+    <h2>{{ content.haikuAction }}</h2>
+
+    <div ng-bind-html-unsafe="bodyHtml"></div>
+
+    <div ng-bind-html="bodyHtml"></div>
+
+  </article>
+</div>
+<!--
+
+{{ content.html | json }} -->

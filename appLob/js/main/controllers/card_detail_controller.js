@@ -15,8 +15,8 @@ module.exports = /*@ngInject*/
             console.log(rec);
             console.log($stateParams.haikuId);
               // rec.flow
-            $scope.haiku = rec;
-            $scope.bodyHtml = rec.html;
+            $scope.content = rec;
+            $scope.bodyHtml = $sce.trustAsHtml(rec.html)
 
           },
           function (result){
