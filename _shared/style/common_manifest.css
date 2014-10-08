@@ -41,12 +41,13 @@
 
 
 /* layout */
+@import "../../../../common/style/rework/layout/grid";
 @import "../../../../common/style/rework/layout/sections";
 @import "../../../../common/ux_patterns/screenviews/basic_container";
 
 
 
-/* Quarks - micro rules */
+/* Quarks - micro rules core */
 @import "../../../../common/style/rework/quarks/dimension";
 @import "../../../../common/style/rework/quarks/display";
 @import "../../../../common/style/rework/quarks/layout";
@@ -57,27 +58,27 @@
 @import "../../../../common/style/rework/quarks/text";
 @import "../../../../common/style/rework/quarks/zindex";
 
+/* Quarks - micro rules community */
+@import "../../../../common/style/rework/quarks/lists";
+@import "../../../../common/style/rework/quarks/labels";
 
 /*Atoms*/
 @import "./ux_patterns/brand";
-@import "../../../../common/ux_patterns/atoms/icons";
 @import "../../../../common/ux_patterns/atoms/buttons";
+@import "../../../../common/ux_patterns/atoms/close";
+@import "../../../../common/ux_patterns/atoms/icons";
 @import "../../../../common/ux_patterns/atoms/forms";
-@import "../../../../common/ux_patterns/atoms/lists";
 
 
 /*Molecules*/
 @import "../../../../common/ux_patterns/molecules/navigation/toggle";
 @import "../../../../common/ux_patterns/molecules/navigation/nav_list";
 @import "./ux_patterns/banner";
-
+@import "./ux_patterns/markdown";
 
 /*Organisms*/
 @import "../../../../common/ux_patterns/organisms/cards/haiku";
 
-
-/*Domain Specific*/
-@import "./ux_patterns/markdown";
 
 
 

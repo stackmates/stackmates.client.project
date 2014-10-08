@@ -17,10 +17,10 @@
   --text-color--light:            var(--white);
 
   /* Messaging colors */
-  --error :                       #f00;
-  --valid :                       #089e00;
-  --warning :                     #fff664;
-  --information :                 #000db5;
+  --error:                       #f00;
+  --success:                     #089e00;
+  --warning:                     #fff664;
+  --information:                 #000db5;
 
   /* emotion */
   --positive:                     var(--pomegranate);
@@ -78,6 +78,27 @@
   --link-underlinePadding:        0.01em;
 
   --TopBar-color-logo:            var(--midnightblue);
+
+  /* COMPONENTS *****************************************/
+
+  /* ALERT*/
+  --Alert-border:                            none;
+  --Alert-color--info:                       var(--information);
+  --Alert-color--success:                    var(--success);
+  --Alert-color--warning:                    var(--warning);
+  --Alert-color--error:                      var(--error);
+
+  /* MODAL*/
+  --Modal-content-background:                var(--grey100);
+  --Modal-backdrop-background:               var(--grey800);
+  --Modal-backdrop-opacity:                  0.9;
+  --Modal-content-fallback-border-color:     var(--grey300);
+  --Modal-content-border-color:              var(--grey300);
+  --Modal-header-border-color:               var(--grey300);
+  --Modal-footer-border-color:               var(--grey300);
+
+  --Modal-border-radius:                     5px;
+
 
 }
 

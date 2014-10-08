@@ -38,13 +38,10 @@
   --z-site-nav:                       var(--zIndex-8);
   --z-site-nav__bar:                  var(--zIndex-9);
   --z-nav-overlay:                    var(--zIndex-3);
-
-  /* SITE NAV */
-  --topbar-HEIGHT:                    80px;
-
+  --Modal-zindex--background:         var(--zIndex-3);
+  --Modal-zindex:                     var(--zIndex-7);
 
   --banner-BOTTOM-HEIGHT:             260px;
-
   --footer-container-MB:              300px;
 
 
@@ -62,8 +59,29 @@
   --absLayoutBottom:                   20px;
   --absLayoutLeftRight:                30px;
 
-  /* Site Nav Overlay - SNO */
+  /*COMPONENTS*/
+
+  /*ALERT*/
+  --Alert-margin-bottom:                10px;
+
+  /*MODAL*/
+
+  --Modal-width--small:                300px;
+  --Modal-width--medium:               600px;
+  --Modal-width--large:                800px;
+
+  --Modal-title-padding:               10px;
+  --Modal-title-line-height:           20px;
+  --Modal-inner-padding:               10px;
+
+  /* SITE NAV */
+
+  --topbar-HEIGHT:                    80px;
+
+  /* SITE NAV OVERLAY - SNO */
+
   --SNO-menuItemCount:                 5;
+
 
 }
 

@@ -102,42 +102,52 @@
 
             <h2>{{{ this.haikuAction }}}</h2>
 
-            {{#if this.introduction }} {{{ this.introduction }}} {{/if}}
+            <p>{{{ this.communicationJob }}}</p>
 
             {{#if this.leadership }}
               <h3>Leadership</h3>
               {{{ this.leadership }}}
             {{/if}}
 
-            {{#if this.communicationJob }}
-              <h3>Communication</h3>
-              <p><strong>Job to done:</strong> {{{ this.communicationJob }}}</p>
-            {{/if}}
             {{#if this.communicationTeaching }}
-              <p><strong>Teaching:</strong> {{{ this.communicationTeaching }}}</p>
+              <h3>Learning</h3>
+              {{{ this.communicationTeaching }}}
             {{/if}}
 
-            {{#if this.innovation }}
+            {{#if this.developmentProductivity }}
               <h3>Innovation</h3>
-              {{{ this.innovation }}}
 
-              <h4>Development</h4>
+              <strong>Development</strong>
               <p><strong>Productivity:</strong> {{{ this.developmentProductivity }}}</p>
               <p><strong>Performance:</strong> {{{ this.developmentPerformance }}}</p>
               <p><strong>Flexibility:</strong> {{{ this.developmentFlexibility }}}</p>
 
-              <h4>Ecosystem</h4>
+              <strong>Ecosystem</strong>
               <p><strong>Developers:</strong> {{{ this.ecosystemDevelopers }}}</p>
               <p><strong>Modules:</strong> {{{ this.ecosystemModules }}}</p>
               <p><strong>Proof:</strong> {{{ this.ecosystemProof }}}</p>
 
             {{/if}}
 
+            {{#if this.stackmatesProblem }}
+              <h3>StackMates</h3>
+
+              {{#if this.stackmatesHistory }}
+                <p><strong>Manifest:</strong> {{{ this.stackmatesHistory }}}</p>
+              {{/if }}
+
+              <p><strong>History:</strong> {{{ this.stackmatesProblem }}}</p>
+
+              <p><strong>Intent:</strong> {{{ this.stackmatesIntent }}}</p>
+            {{/if }}
+
             {{{ this.contents }}}
 
+
+
             <blockquote class='u-paddingBl'>
-              <p>{{{ this.mainQuote }}}</p>
-              <cite><a href={{{ this.mainQuoteInsightLink}}}>{{{ this.mainQuoteCite }}}</a></cite>
+              <p>{{{ this.quote }}}</p>
+              <cite><a href={{{ this.quoteLink}}}>{{{ this.quoteCite }}}</a></cite>
             </blockquote>
 
             <div class='u-bottomLeft'>
