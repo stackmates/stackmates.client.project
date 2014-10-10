@@ -1,6 +1,6 @@
 ---
-template: Page.hbs
-metaShowLogo: true
+template: landing_page.hbs
+metaPalette: dreamer
 metaPrimaryCustomer:
 metaKeywords: 
 metaObjective:  
@@ -9,7 +9,8 @@ metaImageIntent:
 imageSmall:
 imageMid:
 imageLarge:
-heading: Landing Page
+heading: How do you approach your web design strategy?
+subheading: Does it constantly evolve?
 callToAction: 
 tags:
 ---

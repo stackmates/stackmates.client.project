@@ -1,12 +1,14 @@
 module.exports = {
   ghpages                 :   'ghpages/stackmates/home',
   baseURL                 :   'stackmat.es',
-  contentDir              :   '/Users/wik/dreams/stackmates/docs/',
+  contentDir              :   './src/domain/stackmates/siteHome/markdown/',
   sheets                  :   ['1x0Fy072BB8hYg2d1j9xpOTG8AW1qHPQo6bENY-0Vx78'],
   browserifyEntry         :   './src/domain/stackmates/siteHome/js/index.js',
   styleEntry              :   './src/domain/stackmates/siteHome/style/main.css',
   images                  :   [ './src/domain/stackmates/common/images/**/*' ],
-  fonts                   :   [ 'src/common/fonts/**/*' ],
+  fonts                   :   [
+                                'src/common/fonts/ionicons/**/*'
+                              ],
   icons                   :   [
                                 'src/common/icons/**/*',
                                 'src/domain/stackmates/_shared/icons/**/*'

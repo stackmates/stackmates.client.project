@@ -1,12 +1,16 @@
 module.exports = {
-  ghpages                 :   'ghpages/stackmates/landing',
-  baseURL                 :   'landing.stackmat.es',
-  contentDir              :   './src/domain/stackmates/siteLanding/markdown/',
+  ghpages                 :   'ghpages/stackmates/pinboard',
+  baseURL                 :   'pinboard.stackmat.es',
+  contentDir              :   './src/domain/stackmates/appPinboard/markdown/',
   sheets                  :   ['18DBzR_PPd06WmQfv6Ky_pa81-opNKahykcDzBIlzhdM'],
-  browserifyEntry         :   './src/domain/stackmates/siteLanding/js/index.js',
-  styleEntry              :   './src/domain/stackmates/siteLanding/style/main.css',
-  images                  :   [ './src/domain/stackmates/common/images/**/*' ],
-  fonts                   :   [ 'src/common/fonts/**/*' ],
+  browserifyEntry         :   './src/domain/stackmates/appPinboard/js/index.js',
+  styleEntry              :   './src/domain/stackmates/appPinboard/style/main.css',
+  images                  :   [
+                                './src/domain/stackmates/common/images/**/*'
+                              ],
+  fonts                   :   [
+                                'src/common/fonts/ionicons/**/*'
+                              ],
   icons                   :   [
                                 'src/common/icons/**/*',
                                 'src/domain/stackmates/_shared/icons/**/*'
@@ -19,7 +23,7 @@ module.exports = {
   watchScripts            :   [
                                 './src/common/util_modules/**/*.js',
                                 './src/common/ux_patterns/**/*.js',
-                                './src/domain/stackmates/siteLanding/js/**/*.js'
+                                './src/domain/stackmates/appPinboard/js/**/*.js'
                               ],
   watchStyles             :   [
                                 './src/common/style/rework/**/*.css',

@@ -6,7 +6,9 @@ module.exports = {
   browserifyEntry         :   './src/domain/stackmates/siteLanding/js/index.js',
   styleEntry              :   './src/domain/stackmates/siteLanding/style/main.css',
   images                  :   [ './src/domain/stackmates/common/images/**/*' ],
-  fonts                   :   [ 'src/common/fonts/**/*' ],
+  fonts                   :   [
+                                'src/common/fonts/ionicons/**/*'
+                              ],
   icons                   :   [
                                 'src/common/icons/**/*',
                                 'src/domain/stackmates/_shared/icons/**/*'

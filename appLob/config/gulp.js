@@ -31,7 +31,9 @@ module.exports = {
   images                  : [
                               './src/domain/stackmates/_shared/images/**/*'
                             ],
-  fonts                   : [ 'src/common/fonts/**/*' ],
+  fonts                   : [
+                              'src/common/fonts/ionicons/**/*'
+                            ],
   icons                   : [
                               'src/domain/stackmates/_shared/icons/**/*'
                             ],
