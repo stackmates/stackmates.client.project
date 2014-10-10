@@ -44,6 +44,10 @@
 @import "./src/common/ux_patterns/molecules/navigation/slide_nav";
 @import "./src/common/ux_patterns/molecules/navigation/toggle";
 
+
+@import "./src/domain/stackmates/_shared/style/ux_patterns/navigation";
+
+
 @import "./src/common/ux_patterns/molecules/popup";
 @import "./src/common/ux_patterns/molecules/progressbar";
 

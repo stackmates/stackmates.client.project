@@ -2,17 +2,7 @@
 /* read this http://suitcss.github.io/  */
 
 /*
- *
- * This goal is to make patterns that can be set by variables in the local
- * structure and connection files where sensible.
- * But wherever you want more control just copy the file locally and
- * use from there.
- *
- * There are editorial issues to address, it would be nice to be able to have
- * A project 'working set' of files that are being used.
- *
- * For purposes of navigation it could be an idea to prefix app / site specific
- * in your patterns in css names eg drmgComponent
+ * KEEP THIS AS LEAN AS POSSIBLE
  *
  *
  */
@@ -47,7 +37,6 @@
 @import "../../../../common/ux_patterns/screenviews/basic_container";
 
 
-
 /* Quarks - micro rules core */
 @import "../../../../common/style/rework/quarks/dimension";
 @import "../../../../common/style/rework/quarks/display";
@@ -80,7 +69,3 @@
 
 /*Organisms*/
 @import "../../../../common/ux_patterns/organisms/cards/haiku";
-
-
-
-

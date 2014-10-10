@@ -21,3 +21,8 @@
   font-size: 0.48em;
   line-height: 3.2;
 }*/
+
+
+.dt-highlightedText {
+  background: yellow;
+}

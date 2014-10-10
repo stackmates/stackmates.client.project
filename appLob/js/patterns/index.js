@@ -120,6 +120,12 @@ module.exports = angular.module('app.bootstrap', [
           controllerAs: 'typeaheadDemo',
           templateUrl: 'patterns/templates/typeahead-demo.html'
       })
+      .state('app.pattern.ui-select', {
+        url: '/ui-select',
+          controller: 'DemoUISelectController',
+          controllerAs: 'uiSelectDemo',
+          templateUrl: 'patterns/templates/ui-select-demo.html'
+      })
   }
 )
 
@@ -143,6 +149,7 @@ module.exports = angular.module('app.bootstrap', [
 .controller('DemoTimepickerController', require('./controllers/timepicker_controller'))
 .controller('DemoTooltipController', require('./controllers/tooltip_controller'))
 .controller('DemoTypeaheadController', require('./controllers/typeahead_controller'))
+.controller('DemoUISelectController', require('./controllers/ui_select_controller'))
 
 
 ;

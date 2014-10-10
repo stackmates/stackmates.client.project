@@ -1,6 +1,6 @@
 {
-  "name": "drmg-brand",
-  "style": "d_brand.css",
+  "name": "navigation",
+  "style": "d_navigation",
   "author": {
     "name": "@howzus Matt Mischewski"
   }
