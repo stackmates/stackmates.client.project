@@ -1,0 +1,40 @@
+
+<style>
+  body {
+    font: 10px sans-serif;
+  }
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  .x.axis path {
+    display: none;
+  }
+  .line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+  }
+</style>
+
+<div>
+  <line-single></line-single>
+</div>
+
+
+<h3>Single line</h3>
+
+
+<input type="text" ng-model='search'>
+<table>
+  <th><td>Type</td><td>date</td><td>value</td></th>
+  <th ng-repeat='row in results.flattened'>
+    <td>{{row.impression_type}}</td>
+    <td>{{row.date}}</td>
+    <td>{{row.value}}</td>
+  </th>
+
+</table>
+

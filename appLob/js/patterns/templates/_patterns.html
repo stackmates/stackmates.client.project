@@ -1,28 +1,12 @@
-
-<h2>Patterns</h2>
-
 <div class="Grid">
   <div class="Grid-cell u-size2of6">
 
+    <h3>Patterns</h3>
+
     <ul>
-      <li><a ui-sref="app.pattern.accordion">Accordion</a></li>
-      <li><a ui-sref="app.pattern.alert">Alert</a></li>
-      <li><a ui-sref="app.pattern.buttons">Buttons</a></li>
-      <li><a ui-sref="app.pattern.carousel">Carousel</a></li>
-      <li><a ui-sref="app.pattern.collapse">Collapse</a></li>
-      <li><a ui-sref="app.pattern.datepicker">Datepicker</a></li>
-      <li><a ui-sref="app.pattern.dropdown">Dropdown</a></li>
-      <li><a ui-sref="app.pattern.input">Inputs</a></li>
-      <li><a ui-sref="app.pattern.modal">Modal</a></li>
-      <li><a ui-sref="app.pattern.pagination">Pagination</a></li>
-      <li><a ui-sref="app.pattern.popover">Popover</a></li>
-      <li><a ui-sref="app.pattern.progressbar">Progress Bar</a></li>
-      <li><a ui-sref="app.pattern.rating">Rating</a></li>
-      <li><a ui-sref="app.pattern.tabs">Tabs</a></li>
-      <li><a ui-sref="app.pattern.timepicker">Timepicker</a></li>
-      <li><a ui-sref="app.pattern.tooltip">Tooltip</a></li>
-      <li><a ui-sref="app.pattern.typeahead">Typeahead</a></li>
-      <li><a ui-sref="app.pattern.ui-select">UI Select</a></li>
+      <li class="List" ng-repeat='pattern in patterns'>
+        <a ui-sref="{{pattern.link}}">{{pattern.text}}</a>
+      </li>
     </ul>
 
   </div>

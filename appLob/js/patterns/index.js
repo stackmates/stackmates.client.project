@@ -125,6 +125,11 @@ module.exports = angular.module('app.bootstrap', [
           controllerAs: 'uiSelectDemo',
           templateUrl: 'patterns/templates/ui-select-demo.html'
       })
+      .state('app.pattern.ui-select--special', {
+        url: '/ui-select-special',
+          controller: 'DemoUISelectController',
+          templateUrl: 'patterns/templates/ui-select-special-demo.html'
+      });
   }
 )
 
