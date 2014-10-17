@@ -4,7 +4,7 @@ module.exports = angular.module('app.shared.directives', [
 
 ])
 
-.directive('focus', require('./focus'))
+.directive('focus', require('./utils'))
 .directive('logo', require('./logo'))
 
 ;

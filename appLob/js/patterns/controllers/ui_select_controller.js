@@ -6,11 +6,13 @@ module.exports = /*@ngInject*/
   function ($scope, $http, $sce, PodioService )  {
 
     $scope.isCollapsed = true;
+    $scope.search = {};
 
     PodioService.getContent()
       .then(
         function (content) {
           $scope.podioList = content;
+          TESTING.podioList = $scope.podioList;
           // flattenedResponse(content);
         },
         function (result){
@@ -18,7 +20,7 @@ module.exports = /*@ngInject*/
         }
       );
 
-    $scope.search = {};
+
 
     $scope.gotoLink = function(space) {
       window.open(space.url)
@@ -32,23 +34,51 @@ module.exports = /*@ngInject*/
     };
 
     $scope.$watch('search.text', function(newValue, oldValue) {
-      console.log(newValue, oldValue);
+      // console.log(newValue, oldValue);
+
     });
+
+
+    var organisationsArr = _.pluck($scope.podioList, 'name');
+
+    $scope.hasChildRecords = function(orgName, search) {
+
+      if (search) {
+
+        // console.log('orgName', orgName.name);
+        // console.log('search', search);
+
+        var organisation = _.filter($scope.podioList, { 'name': orgName.name });
+        // console.log('organisation', organisation);
+        var spaces = _.flatten(_.pluck(organisation, 'spaces'));
+        // console.log('spaces', spaces);
+
+        var names = _.pluck(spaces, 'name');
+        // console.log('names', names);
+
+        var hasChildrenInSearch = _.some( names, function(name) {
+                                                return _.contains(name, search )})
+
+        return hasChildrenInSearch;
+
+      } else {
+        // if no search term show everything by default
+        return true;
+      }
+
+
+
+    }
+
+
+
+
+
+
+
 
   }
 
 
-function flattenedResponse (response) {
-  var flattened = [];
-  for (var i = response.length -1; i >= 0; i--) {
-    flattened.push({"org": response[i].name, "space": response[i].name, "url":response[i].url});
-    for (var j = response[i].spaces.length - 1; j >= 0; j--) {
-      flattened.push({
-        "org":   response[i].name,
-        "space": response[i].spaces[j].name,
-        "url":   response[i].spaces[j].url
-      })
-    };
-  };
-  return flattened;
-};
+
+

@@ -6,8 +6,12 @@ var content = null;
 // John Papa Style
 // public methods at the top
 // alphabetiized
+module.exports = angular.module('app.shared.service.podio', [
+])
 
-module.exports = /*@ngInject*/
+
+.factory('PodioService',
+  /*@ngInject*/
   function PodioService ($http, $q) {
 
     $http.defaults.transformResponse = [];
@@ -41,5 +45,6 @@ module.exports = /*@ngInject*/
 
     };
 
-  };
+  }
 
+);

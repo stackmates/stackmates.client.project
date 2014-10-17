@@ -2,7 +2,7 @@
 
 
 module.exports = angular.module('app.shared', [
-  require('./directives').name,
+  require('./modules').name,
   require('./filters').name,
   require('./services').name
 ])

@@ -8,7 +8,6 @@ module.exports = angular.module('app.shared.services', [
 .factory('route',  require('./route'))
 .factory('util',   require('./util'))
 .factory('ContentService', require('./content_service'))
-.factory('PodioService',   require('./podio_service'))
 
 
 ;

@@ -7,7 +7,7 @@ module.exports = {
   styleEntry              : './src/domain/stackmates/appLob/style/main.css',
   watchJS                 : './src/domain/stackmates/appLob/js/**/*.js',
   indexHtml               : 'src/domain/stackmates/appLob/index.html',
-  jsonData                : './src/domain/stackmates/_shared/data/**/*.json',
+  jsonData                : './src/domain/stackmates/_shared/assets/data/**/*.json',
   templatesHtmlIn         : [
                               './src/domain/stackmates/appLob/js/**/*.html',
                               './src/domain/stackmates/_shared/angular/**/*.html',
@@ -29,18 +29,18 @@ module.exports = {
   templatesJsOut          : './src/domain/stackmates/appLob/js/templates',
   karmaTestHelpers        : './src/domain/stackmates/appLob/test/helpers/**/*.js',
   images                  : [
-                              './src/domain/stackmates/_shared/images/**/*'
+                              './src/domain/stackmates/_shared/assets/images/**/*'
                             ],
   fonts                   : [
                               'src/common/fonts/ionicons/**/*'
                             ],
   icons                   : [
-                              'src/domain/stackmates/_shared/icons/**/*'
+                              'src/domain/stackmates/_shared/assets/icons/**/*'
                             ],
   data                    : [
-                              'src/domain/stackmates/_shared/data/metalsmith_out/**/*'
+                              'src/domain/stackmates/_shared/assets/data/metalsmith_out/**/*'
                             ],
-  meta                    :  './src/domain/stackmates/_shared/meta',
+  meta                    :  './src/domain/stackmates/_shared/assets/meta',
   watchStyles             : [
                               './src/common/style/rework/**/*.css',
                               './src/common/ux_patterns/**/*.css',

@@ -22,6 +22,9 @@
     ]
   },
   "browserify-shim": {
+    "lodash": {
+      "exports": "_"
+    },
     "angular": {
       "exports": "angular"
     },
