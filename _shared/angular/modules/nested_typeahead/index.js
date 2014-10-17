@@ -1,13 +1,13 @@
 'use strict';
 
-// require('angular/angular');
-// require('./user_service');
 
-module.exports = angular.module( 'app.component.nestedtypeahead', [
+module.exports = angular.module( 'app.component.true.nestedtypeahead', [
 ])
 
-.controller( 'TypeaheadController', require('./controllers/nested_typeahead_controller'))
-.directive( 'NestedTypeahead', require('./directives/nested_typeahead_directive'))
+.controller( 'smNestedTypeaheadController', require('./controllers/nested_typeahead_controller'))
+
+.directive( 'smNestedTypeahead',            require('./directives/nested_typeahead_directive'))
+.directive( 'smNestedTypeaheadItem',        require('./directives/nested_typeahead_item_directive'))
 
 
 ;

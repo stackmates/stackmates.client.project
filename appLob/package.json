@@ -18,7 +18,7 @@
   "license": "MIT",
   "browserify": {
     "transform": [
-      "browserify-shim"
+      "browserify-shim", "brfs"
     ]
   },
   "browserify-shim": {
@@ -42,14 +42,14 @@
     "angular-sanitize": "./node_modules/bower_components/angular-sanitize/angular-sanitize.js",
     "angular-messages": "./node_modules/bower_components/angular-messages/angular-messages.js",
     "angular-touch": "./node_modules/bower_components/angular-touch/angular-touch.js",
-    "angular-translate": "./node_modules/bower_components/angular-translate/angular-translate.js"
+    "angular-translate": "./node_modules/bower_components/angular-translate/angular-translate.js",
+    "angular-ui-select": "./node_modules/bower_components/angular-ui-select/dist/select.js"
   },
   "dependencies": {
     "angular-form-for": "^1.2.16",
     "angular-ui-router": "^0.2.11",
     "baconjs": "~0.7.6",
     "center": "git://github.com/npm-dom/center",
-    "component-transitionend-property": "git://github.com/npmcomponent/component-transitionend-property",
     "d3": "^3.4.11",
     "debug": "^2.0.0",
     "domquery": "^1.2.0",
@@ -64,5 +64,8 @@
     "restangular": "^1.4.0",
     "rome": "^1.0.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "browserify": "^6.1.0",
+    "browserify-shim": "^3.8.0"
+  }
 }

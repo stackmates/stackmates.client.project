@@ -1,20 +1,7 @@
 
  /*
-  * PRINCIPLES
+  * STACKMATES LINE OF BUSINESS APPLICATION
   *
-  * Modularity
-  * Cohesion
-  * Composable and configurable
-  * Loose coupling
-  * Soft encapsulation
-  *
-  * Follow guidelines for suit.css at http://suitcss.github.io
-  *
-  * Write small, independent components that are well documented to describe
-  * how the components should be used, and why specific CSS properties are needed
-  * in the implementation.
-  *
-  * DO NOT ASSUME THAT CSS IS SELF-DOCUMENTING
   *
   */
 
@@ -44,12 +31,11 @@
 @import "./src/common/ux_patterns/molecules/navigation/slide_nav";
 @import "./src/common/ux_patterns/molecules/navigation/toggle";
 
-
 @import "./src/domain/stackmates/_shared/style/ux_patterns/navigation";
-
 
 @import "./src/common/ux_patterns/molecules/popup";
 @import "./src/common/ux_patterns/molecules/progressbar";
+@import "./src/common/ux_patterns/molecules/ui-select";
 
 
 /*Organisms*/

@@ -48,31 +48,29 @@ module.exports = /*@ngInject*/
         var organisation = _.filter($scope.podioList, { 'name': orgName.name });
 
         // check if the organisation in search
-        var orgInSearch = _.contains(organisation.name, search);
+        // var orgInSearch = _.contains(organisation.name, search);
 
-        if (orgInSearch) {
-          return true;
-        } else {
+        // if (orgInSearch) {
+        //   return true;
+        // } else {
 
           // console.log('organisation', organisation);
           var spaces = _.flatten(_.pluck(organisation, 'spaces'));
-          // console.log('spaces', spaces);
+          console.log('spaces', spaces);
 
           var names = _.pluck(spaces, 'name');
-          // console.log('names', names);
+          console.log('names', names);
 
           var hasChildrenInSearch = _.some( names, function(name) {
                                                   return _.contains(name, search )})
 
           return hasChildrenInSearch;
-        }
+        // }
 
       } else {
         // if no search term show everything by default
         return true;
       }
-
-
 
     }
 

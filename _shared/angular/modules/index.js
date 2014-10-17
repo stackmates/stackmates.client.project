@@ -1,11 +1,10 @@
 'use strict';
 
 module.exports = angular.module('app.shared.directives', [
-
+  require('./nested_typeahead').name
 ])
 
 .directive('focus', require('./utils'))
 .directive('logo', require('./logo'))
-.directive('nestedTypeahead', require('./nested_typeahead'))
 
 ;

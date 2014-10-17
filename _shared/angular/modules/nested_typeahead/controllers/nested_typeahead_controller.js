@@ -3,7 +3,7 @@
 var _o;
 
 module.exports = /*@ngInject*/
-  function nestedTypeAheadController ($scope) {
+  function nestedTypeaheadController ($scope, $attrs) {
 
 
     $scope.items = [];

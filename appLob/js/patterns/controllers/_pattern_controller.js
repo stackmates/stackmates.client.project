@@ -2,7 +2,7 @@
 
 module.exports = /*@ngInject*/
   function PatternController ($scope, $state) {
-    $state.transitionTo('app.pattern.accordion');
+    // $state.transitionTo('app.pattern.accordion');
 
     $scope.patterns = [
       { "link": "app.pattern.accordion", "text": "Accordion" },
@@ -23,7 +23,7 @@ module.exports = /*@ngInject*/
       { "link": "app.pattern.tooltip", "text": "Tooltip" },
       { "link": "app.pattern.typeahead", "text": "Typeahead" },
       { "link": "app.pattern.ui-select", "text": "UI Select" },
-      { "link": "app.pattern.ui-select-special", "text": "UI Select Special" }
+      { "link": "app.pattern.ui-select--special", "text": "UI Select Special" }
     ];
 
   };
