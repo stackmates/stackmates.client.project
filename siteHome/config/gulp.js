@@ -7,21 +7,21 @@ module.exports = {
   styleEntry              :   './src/domain/stackmates/siteHome/style/main.css',
   images                  :   [ './src/domain/stackmates/common/images/**/*' ],
   fonts                   :   [
-                                'src/common/fonts/ionicons/**/*'
+                                'src/common/assets/fonts/ionicons/**/*'
                               ],
   icons                   :   [
-                                'src/common/icons/**/*',
-                                'src/domain/stackmates/_shared/icons/**/*'
+                                'src/common/assets/icons/**/*',
+                                'src/domain/stackmates/_shared/assets/icons/**/*'
                               ],
   data                    :   [
-                                'src/domain/stackmates/_shared/data/metalsmith_in'
+                                'src/domain/stackmates/_shared/assets/data/metalsmith_in'
                               ],
-  dataOut                 :   './src/domain/stackmates/_shared/data/metalsmith_out',
-  meta                    :   './src/domain/stackmates/_shared/meta',
+  dataOut                 :   './src/domain/stackmates/_shared/assets/data/metalsmith_out',
+  meta                    :   './src/domain/stackmates/_shared/assets/meta',
   watchScripts            :   [
                                 './src/common/util_modules/**/*.js',
                                 './src/common/ux_patterns/**/*.js',
-                                './src/domain/stackmates/**/*.js'
+                                './src/domain/stackmates/siteHome/**/*.js'
                               ],
   watchStyles             :   [
                                 './src/common/style/rework/**/*.css',

@@ -1,6 +1,8 @@
 'use strict';
 
+
 var _o;
+var fs = require('fs');
 
 module.exports = /*@ngInject*/
   function nestedTypeAheadDirective () {
@@ -10,7 +12,8 @@ module.exports = /*@ngInject*/
       transclude: true,
       replace: true,
       controller: 'smNestedTypeaheadController',
-      template: '<div><form><input ng-model="term" ng-change="query()" type="text" autocomplete="off" /></form><div ng-transclude></div></div>',
+      // template: '<div><form><input ng-model="term" ng-change="query()" type="text" autocomplete="off" /></form><div ng-transclude></div></div>',
+      template: fs.readFileSync(__dirname + '/templates/input.html'),
       scope: {
         // search: "&",
         // select: "&",

@@ -1,15 +1,15 @@
 module.exports = {
-  ghpages                 : 'ghpages/stackmates/appLob',
+  ghpages                 : 'ghpages/stackmates/appAngular',
   baseURL                 : 'app.stackmat.es',
   contentDir              : '/Users/wik/googledrive/dreams/private/stackmates/external/',
-  browserifyEntry         : './src/domain/stackmates/appLob/js/index.js',
-  browserifySpecs         : './src/domain/stackmates/appLob/**/*.spec.js',
-  styleEntry              : './src/domain/stackmates/appLob/style/main.css',
-  watchJS                 : './src/domain/stackmates/appLob/js/**/*.js',
-  indexHtml               : 'src/domain/stackmates/appLob/index.html',
+  browserifyEntry         : './src/domain/stackmates/appAngular/js/index.js',
+  browserifySpecs         : './src/domain/stackmates/appAngular/**/*.spec.js',
+  styleEntry             :  './src/domain/stackmates/appAngular/style/main.css',
+  watchJS                 : './src/domain/stackmates/appAngular/js/**/*.js',
+  indexHtml               : 'src/domain/stackmates/appAngular/index.html',
   jsonData                : './src/domain/stackmates/_shared/assets/data/**/*.json',
   templatesHtmlIn         : [
-                              './src/domain/stackmates/appLob/js/**/*.html',
+                              './src/domain/stackmates/appAngular/js/**/*.html',
                               './src/domain/stackmates/_shared/angular/**/*.html',
                               './src/common/ux_patterns/atoms/tooltip/angular/templates/**/*.html',
                               './src/common/ux_patterns/molecules/accordion/angular/templates/**/*.html',
@@ -27,14 +27,14 @@ module.exports = {
                               './src/common/ux_patterns/molecules/ui-select/angular/templates/**/*.html',
                               './src/common/ux_patterns/organisms/dynamic_list/angular/templates/**/*.html'
                             ],
-  templatesJsOut          : './src/domain/stackmates/appLob/js/templates',
-  karmaTestHelpers        : './src/domain/stackmates/appLob/test/helpers/**/*.js',
+  templatesJsOut          : './src/domain/stackmates/appAngular/js/templates',
+  karmaTestHelpers        : './src/domain/stackmates/appAngular/test/helpers/**/*.js',
   images                  : [
                               './src/domain/stackmates/_shared/assets/images/**/*'
                             ],
   fonts                   : [
-                              'src/common/fonts/ionicons/**/*',
-                              'src/common/fonts/source_sans_pro/**/*'
+                              'src/common/assets/fonts/ionicons/**/*',
+                              'src/common/assets/fonts/source_sans_pro/**/*'
                             ],
   icons                   : [
                               'src/domain/stackmates/_shared/assets/icons/**/*'
@@ -45,8 +45,9 @@ module.exports = {
   meta                    :  './src/domain/stackmates/_shared/assets/meta',
   watchStyles             : [
                               './src/common/style/rework/**/*.css',
-                              './src/common/ux_patterns/**/*.css',
-                              './src/domain/stackmates/**/*.css'
+                              './src/common/ux_patterns/style/**/*.css',
+                              './src/domain/stackmates/_shared/style/**/*.css',
+                              './src/domain/stackmates/appAngular/**/*.css'
                             ],
   handlebarsHelpers       :   '../src/domain/stackmates/_shared/templates/helpers'
 }
