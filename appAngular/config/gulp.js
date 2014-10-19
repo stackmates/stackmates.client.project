@@ -28,7 +28,13 @@ module.exports = {
                               './src/common/ux_patterns/organisms/dynamic_list/angular/templates/**/*.html'
                             ],
   templatesJsOut          : './src/domain/stackmates/appAngular/js/templates',
-  karmaTestHelpers        : './src/domain/stackmates/appAngular/test/helpers/**/*.js',
+  karmaTestHelpers        : [
+                              'node_modules/jquery/dist/jquery.js',
+                              'node_modules/bower_components/angular/angular.js',
+                              'node_modules/bower_components/angular-mocks/angular-mocks.js',
+                              './test/helpers/**/*.js',
+                              'build/test/bundle-tests.js'
+                            ],
   images                  : [
                               './src/domain/stackmates/_shared/assets/images/**/*'
                             ],
