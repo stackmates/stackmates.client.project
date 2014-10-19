@@ -1,3 +1,8 @@
+'use strict';
+
+var multiline = require('multiline');
+
+module.exports = multiline(function(){/*
 <h3>Accordion</h3>
 
 <div>
@@ -30,3 +35,4 @@
     </accordion-group>
   </accordion>
 </div>
+*/});

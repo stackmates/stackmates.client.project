@@ -1,3 +1,8 @@
+'use strict';
+
+var multiline = require('multiline');
+
+module.exports = multiline(function(){/*
 <h3>Timepicker</h3>
 
 <div>
@@ -24,3 +29,4 @@
   <button class="btn btn-danger" ng-click="clear()">Clear</button>
 
 </div>
+*/});

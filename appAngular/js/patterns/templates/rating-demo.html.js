@@ -1,3 +1,6 @@
+'use strict';
+var multiline = require('multiline');
+module.exports = multiline(function(){/*
 <h3>Rating</h3>
 
 <div>
@@ -15,3 +18,4 @@
     <div ng-init="x = 5"><rating ng-model="x" max="15" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'"></rating> <b>(<i>Rate:</i> {{x}})</b></div>
     <div ng-init="y = 2"><rating ng-model="y" rating-states="ratingStates"></rating> <b>(<i>Rate:</i> {{y}})</b></div>
 </div>
+*/});

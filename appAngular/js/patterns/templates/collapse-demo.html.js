@@ -1,3 +1,6 @@
+'use strict';
+var multiline = require('multiline');
+module.exports = multiline(function(){/*
 <h3>Collapse</h3>
 
 <div>
@@ -7,3 +10,4 @@
     <div class="well well-lg">Some content</div>
   </div>
 </div>
+*/});

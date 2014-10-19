@@ -1,3 +1,6 @@
+'use strict';
+var multiline = require('multiline');
+module.exports = multiline(function(){/*
 <h3>Carousel</h3>
 
 <div>
@@ -22,3 +25,4 @@
     </div>
   </div>
 </div>
+*/});

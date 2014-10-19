@@ -1,3 +1,6 @@
+'use strict';
+var multiline = require('multiline');
+module.exports = multiline(function(){/*
 <h3>Tooltip</h3>
 
 <div>
@@ -35,3 +38,4 @@
       </div>
     </form>
 </div>
+*/});

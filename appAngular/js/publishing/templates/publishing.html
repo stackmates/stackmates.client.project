@@ -1,0 +1,119 @@
+
+<h2><a ui-sref="app.publishing">Publishing</a></h2>
+
+<div class="Grid">
+  <div class="Grid-cell u-size3of10">
+
+    <h3>List</h3>
+
+      <div ng-repeat='published in publishedList'>
+        <div class='PostType--{{published.content.postType}}'>
+          {{ published.content.message }}
+          <div class="ListActions">
+            <a ui-sref="app.publishing.details({ id: published.id })"
+               ui-sref-opts="{ reload: true }">Details</a>
+            <a ui-sref="app.publishing.edit({ id: published.id })"
+               ui-sref-opts="{ reload: true }">Edit</a>
+
+          </div>
+        </div>
+      </div>
+
+  </div>
+  <div class="Grid-cell u-size7of10">
+
+    <div ui-view></div>
+
+    <div ng-show="$state.current.name === 'app.publishing'">
+
+      <form form-for='publishData' service="PublishingForm" class='Form PublishForm'>
+
+        <div class="CrudActions">
+          <button ng-click='publish()'>Publish</button>
+        </div>
+
+        <div class='PublishForm-content'>
+          <h3 class="Form--categoryHeading">Content</h3>
+
+          <div class="Form-item PublishForm-contentMessage">
+            <label class="Form-label" for="publishData-contentMessage">Message</label>
+            <input type="text"
+              class="Form-input" id="publishData-contentMessage"
+              placeholder="Message"
+              ng-model="publishData.content.message"
+              required >
+          </div>
+
+          <div class="Form-item PublishForm-contentNetwork">
+            <label class="Form-label" for="publishData-contentNetwork">Network</label>
+            <input type="text"
+              class="Form-input" id="publishData-contentNetwork"
+              placeholder="Network"
+              ng-model="publishData.content.network"
+              required >
+          </div>
+
+          <div class="Form-item PublishForm-contentPostType">
+            <label class="Form-label" for="publishData-contentPostType">Post Type</label>
+            <input type="text"
+              class="Form-input" id="publishData-contentPostType"
+              placeholder="Post Type"
+              ng-model="publishData.content.postType"
+              required >
+          </div>
+
+          <div class='PublishForm-content-media'>
+            <h3 class="Form--categoryHeading">Images</h3>
+            [drag and drop media]
+          </div>
+
+        </div>
+
+        <div class="PublishForm-tags">
+          <h3 class="Form--categoryHeading">Tags</h3>
+
+        </div>
+        <div class="PublishForm-status">
+          <h3 class="Form--categoryHeading">Status</h3>
+
+        </div>
+
+        <div class="PublishForm-channels">
+          <h3 class="Form--categoryHeading">Channels</h3>
+
+        </div>
+
+        <div class="PublishForm-scheduled">
+          <h3 class="Form--categoryHeading">Scheduled</h3>
+
+        </div>
+
+        <div class="PublishForm-geo Geo">
+          <h3 class="Form--categoryHeading">Geolocation</h3>
+
+          <div class='Geo-countries'>
+            <h3 class="Form--subCategoryHeading">Countries</h3>
+          </div>
+          <div class='Geo-languages'>
+            <h3 class="Form--subCategoryHeading">Languages</h3>
+          </div>
+          <div class='Geo-cities'>
+            <h3 class="Form--subCategoryHeading">Cities</h3>
+          </div>
+          <div class='Geo-regions'>
+            <h3 class="Form--subCategoryHeading">Regions</h3>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="Development" ng-if="development">
+  <pre>
+    {{ publishedList | json }}
+  </pre>
+</div>

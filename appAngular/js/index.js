@@ -10,8 +10,6 @@ require('angular-touch');
 
 require('angular-ui-router');
 require('angular-translate');
-// require('angular-ui-select');
-// require('angular-ui-bootstrap');
 
 require('center');
 require('restangular');

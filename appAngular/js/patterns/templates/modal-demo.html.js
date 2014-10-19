@@ -1,5 +1,9 @@
-<h3>Modal</h3>
+'use strict';
 
+var multiline = require('multiline');
+
+module.exports = multiline(function(){/*
+<h3>Modal</h3>
 <div>
     <script type="text/ng-template" id="myModalContent.html">
         <div class="modal-header">
@@ -24,3 +28,4 @@
     <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
     <div ng-show="selected">Selection from a modal: {{ selected }}</div>
 </div>
+*/});

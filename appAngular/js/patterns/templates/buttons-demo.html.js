@@ -1,3 +1,8 @@
+'use strict';
+
+var multiline = require('multiline');
+
+module.exports = multiline(function(){/*
 <h3>Buttons</h3>
 
 <div>
@@ -26,3 +31,4 @@
         <label class="btn btn-success" ng-model="radioModel" btn-radio="'Right'" uncheckable>Right</label>
     </div>
 </div>
+*/});

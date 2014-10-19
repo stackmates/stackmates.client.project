@@ -1,3 +1,8 @@
+'use strict';
+
+var multiline = require('multiline');
+
+module.exports = multiline(function(){/*
 <h3>Datepicker</h3>
 
 <div>
@@ -31,3 +36,4 @@
     <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
     <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" tooltip="After today restriction">Min date</button>
 </div>
+*/});

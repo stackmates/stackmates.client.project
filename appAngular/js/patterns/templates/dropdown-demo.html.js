@@ -1,3 +1,8 @@
+'use strict';
+
+var multiline = require('multiline');
+
+module.exports = multiline(function(){/*
 <h3>Dropdowns</h3>
 
 <div>
@@ -50,3 +55,4 @@
     </p>
 
 </div>
+*/});

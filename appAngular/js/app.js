@@ -3,7 +3,6 @@
 window._ = require('lodash');
 // var $ = require('jquery');
 var moment = require('moment');
-// var socketio = require('socket.io-client');
 
 
 module.exports = angular.module('app', [
@@ -12,11 +11,10 @@ module.exports = angular.module('app', [
   'ngSanitize',
   'pascalprecht.translate',
   'restangular',
-  // 'ui.select',
-  // 'ui.bootstrap',
   'ui.router',
   'app.templates',
   'app.shared',
+  require('util_modules/angular/socket_io').name,
   require('ux_patterns/atoms/buttons/angular').name,
   require('ux_patterns/molecules/accordion/angular').name,
   require('ux_patterns/molecules/alert/angular').name,
@@ -33,13 +31,11 @@ module.exports = angular.module('app', [
   require('ux_patterns/molecules/timepicker/angular').name,
   require('ux_patterns/molecules/typeahead/angular').name,
   require('ux_patterns/molecules/navigation/slide_nav/angular').name,
-  // require('ux_patterns/molecules/ui-select/angular').name,
-  require('./layout').name,
   require('../../_shared/angular/modules/auth').name,
+  require('./layout').name,
   require('./patterns').name,
+  require('./publishing').name,
   require('./viz').name,
-  // 'app.account',
-  // 'app.admin',
   require('./main').name
 ])
 

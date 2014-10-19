@@ -1,3 +1,6 @@
+'use strict';
+var multiline = require('multiline');
+module.exports = multiline(function(){/*
 <h3>Typeahead</h3>
 
 <div class=''>
@@ -22,4 +25,4 @@
     <pre>Model: {{customSelected | json}}</pre>
     <input type="text" ng-model="customSelected" placeholder="Custom template" typeahead="state as state.name for state in statesWithFlags | filter:{name:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control">
 </div>
-
+*/});

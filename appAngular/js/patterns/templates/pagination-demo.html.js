@@ -1,3 +1,8 @@
+'use strict';
+
+var multiline = require('multiline');
+
+module.exports = multiline(function(){/*
 <h3>Pagination</h3>
 
 <div>
@@ -19,3 +24,4 @@
     <pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
     <pre>Page: {{bigCurrentPage}} / {{numPages}}</pre>
 </div>
+*/});

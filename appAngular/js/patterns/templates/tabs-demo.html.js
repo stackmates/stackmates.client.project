@@ -1,3 +1,7 @@
+'use strict';
+var multiline = require('multiline');
+
+module.exports = multiline(function(){/*
 <h3>Tabs</h3>
 
 <div>
@@ -39,3 +43,4 @@
     <tab heading="Long Justified">Long Labeled Justified content</tab>
   </tabset>
 </div>
+*/});

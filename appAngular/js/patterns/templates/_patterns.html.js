@@ -1,3 +1,8 @@
+'use strict';
+
+var multiline = require('multiline');
+
+module.exports = multiline(function(){/*
 <div class="Grid">
   <div class="Grid-cell u-size2of6">
 
@@ -16,3 +21,6 @@
 
   </div>
 </div>
+*/});
+
+

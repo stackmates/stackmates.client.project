@@ -1,6 +1,7 @@
+'use strict';
+var multiline = require('multiline');
+module.exports = multiline(function(){/*
 <h3>Progress bar</h3>
-
-
 <div>
 
     <h3>Static</h3>
@@ -25,3 +26,4 @@
     <progress><bar ng-repeat="bar in stacked track by $index" value="bar.value" type="{{bar.type}}"><span ng-hide="bar.value < 5">{{bar.value}}%</span></bar></progress>
 
 </div>
+*/});
