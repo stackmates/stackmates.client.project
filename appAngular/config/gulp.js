@@ -3,7 +3,7 @@ module.exports = {
   baseURL                 : 'app.stackmat.es',
   contentDir              : '/Users/wik/googledrive/dreams/private/stackmates/external/',
   browserifyEntry         : './src/domain/stackmates/appAngular/js/index.js',
-  browserifySpecs         : './src/domain/stackmates/appAngular/**/*.spec.js',
+  browserifySpecs         : './src/domain/stackmates/appAngular/js/**/*.spec.js',
   styleEntry             :  './src/domain/stackmates/appAngular/style/main.css',
   watchJS                 : './src/domain/stackmates/appAngular/js/**/*.js',
   indexHtml               : 'src/domain/stackmates/appAngular/index.html',

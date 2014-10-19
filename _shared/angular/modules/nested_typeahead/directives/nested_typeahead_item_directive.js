@@ -13,12 +13,25 @@ module.exports = /*@ngInject*/
 
 function link (scope, element, attrs, controller) {
 
-    var item = scope.$eval(attrs.nestedTypeaheadItem);
+    console.log("scope", scope);
 
-    scope.$watch(function() { return controller.isActive(item); }, function(active) {
+    var item = scope.$eval(attrs.smNestedTypeaheadItem);
+
+    console.log('nested dir item from attrs ', item )
+
+    scope.$watch(
+      function() {
+        console.log('NESTED DIR watch if item is active on controller.isActive ', item )
+        var active = controller.isActive(item);
+        console.log('NESTED DIR active result ', active );
+        return active;
+      },
+      function(active) {
         if (active) {
+            console.log('add active class');
             element.addClass('active');
         } else {
+            console.log('remove active class');
             element.removeClass('active');
         }
     });

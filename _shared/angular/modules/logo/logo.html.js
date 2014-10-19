@@ -1,3 +1,8 @@
+'use strict';
+
+var multiline = require('multiline');
+
+module.exports = multiline(function(){/*
 <div class="LogoContainer">
 
   <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -28,3 +33,4 @@
 
 
 </div>
+*/});

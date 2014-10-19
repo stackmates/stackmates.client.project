@@ -3,49 +3,68 @@
 var _o;
 
 module.exports = /*@ngInject*/
-  function nestedTypeaheadController ($scope, $attrs) {
+  function nestedTypeaheadController ($scope, $attrs, $filter) {
 
 
     $scope.items = [];
     $scope.hide = false;
 
+    console.log("controller items", $scope.items);
+
+    $scope.logSomething=function(somevalue){
+        console.log(somevalue+" is logged");
+    }
+
     this.activate = function(item) {
-        $scope.active = item;
+      console.log("controller activate item ", item);
+      $scope.active = item;
     };
 
     this.activateNextItem = function() {
-        var index = $scope.items.indexOf($scope.active);
-        this.activate($scope.items[(index + 1) % $scope.items.length]);
+      console.log("controller activate next item");
+      var index = $scope.items.indexOf($scope.active);
+      this.activate($scope.items[(index + 1) % $scope.items.length]);
     };
 
     this.activatePreviousItem = function() {
-        var index = $scope.items.indexOf($scope.active);
-        this.activate($scope.items[index === 0 ? $scope.items.length - 1 : index - 1]);
+      console.log("controller activate previous item");
+      var index = $scope.items.indexOf($scope.active);
+      this.activate($scope.items[index === 0 ? $scope.items.length - 1 : index - 1]);
     };
 
     this.isActive = function(item) {
-        return $scope.active === item;
+      console.log("controller is active, item", item);
+      return $scope.active === item;
     };
 
     this.selectActive = function() {
-        this.select($scope.active);
+      console.log("controller select active");
+      this.select($scope.active);
     };
 
     this.select = function(item) {
-        $scope.hide = true;
-        $scope.focused = true;
-        $scope.select({item:item});
+      console.log("controller select item:", item);
+      $scope.hide = true;
+      $scope.focused = true;
+      $scope.select({item:item});
     };
 
     $scope.isVisible = function() {
-        return !$scope.hide && ($scope.focused || $scope.mousedOver);
+      console.log('controller isVisible');
+      return !$scope.hide && ($scope.focused || $scope.mousedOver);
     };
 
     $scope.query = function() {
-        $scope.hide = false;
-        $scope.search({term:$scope.term});
+
+
+
+      console.log('controller query: SEARCH term ', term);
+      $filter('fuzzy')(term);
+
+      $scope.hide = false;
+      $scope.search({term:$scope.term});
+
+
     }
-
-
 
   };

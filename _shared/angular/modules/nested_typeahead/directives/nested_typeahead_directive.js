@@ -5,20 +5,24 @@ var _o;
 var fs = require('fs');
 
 module.exports = /*@ngInject*/
-  function nestedTypeAheadDirective () {
+  function smNestedTypeahead ($timeout) {
+
+    _o = {
+      $timeout: $timeout
+    }
 
     return {
       restrict: 'E',
       transclude: true,
       replace: true,
       controller: 'smNestedTypeaheadController',
-      // template: '<div><form><input ng-model="term" ng-change="query()" type="text" autocomplete="off" /></form><div ng-transclude></div></div>',
-      template: fs.readFileSync(__dirname + '/templates/input.html'),
+      template: '<div><form><input ng-model="search.term" ng-change="query()" type="text" autocomplete="off" /></form><div ng-transclude></div></div>',
+      // template: '<div><form><input ng-model="search.term" type="text" autocomplete="off" /></form><div ng-transclude></div></div>',
       scope: {
-        // search: "&",
-        // select: "&",
+        search: "&",
+        select: "&",
         items: "=",
-        // term: "="
+        term: "="
       },
       link: link
     }
@@ -27,59 +31,80 @@ module.exports = /*@ngInject*/
 
 function link (scope, element, attrs, controller) {
 
+  console.log('scope items', scope.items);
+
   var $input = element.find('form > input');
+  // var $input = element;
+
   var $list = element.find('> div');
 
+  console.log("list", $list);
+
+  element.bind("click", function(e){
+    scope.logSomething( scope.items );
+  });
+
+
   $input.bind('focus', function() {
-      scope.$apply(function() { scope.focused = true; });
+    console.log('ta focus');
+    scope.$apply(function() { scope.focused = true; });
   });
 
   $input.bind('blur', function() {
-      scope.$apply(function() { scope.focused = false; });
+    console.log('ta blur');
+    scope.$apply(function() { scope.focused = false; });
   });
 
   $list.bind('mouseover', function() {
-      scope.$apply(function() { scope.mousedOver = true; });
+    console.log('ta mouseover');
+    scope.$apply(function() { scope.mousedOver = true; });
   });
 
   $list.bind('mouseleave', function() {
-      scope.$apply(function() { scope.mousedOver = false; });
+    console.log('ta mouseleave');
+    scope.$apply(function() { scope.mousedOver = false; });
   });
 
   $input.bind('keyup', function(e) {
-      if (e.keyCode === 9 || e.keyCode === 13) {
-          scope.$apply(function() { controller.selectActive(); });
-      }
+    if (e.keyCode === 9 || e.keyCode === 13) {
+      console.log('keyup 9 || 13 controller selectActive', e);
+      scope.$apply(function() { controller.selectActive(); });
+    }
 
-      if (e.keyCode === 27) {
-          scope.$apply(function() { scope.hide = true; });
-      }
+    if (e.keyCode === 27) {
+      console.log('keyup 27 apply scope hide is true');
+      scope.$apply(function() { scope.hide = true; });
+    }
   });
 
   $input.bind('keydown', function(e) {
-      if (e.keyCode === 9 || e.keyCode === 13 || e.keyCode === 27) {
-          e.preventDefault();
-      };
+    if (e.keyCode === 9 || e.keyCode === 13 || e.keyCode === 27) {
+        console.log('key down 9, 13, 27', e);
+        e.preventDefault();
+    };
 
-      if (e.keyCode === 40) {
-          e.preventDefault();
-          scope.$apply(function() { controller.activateNextItem(); });
-      }
+    if (e.keyCode === 40) {
+        e.preventDefault();
+        console.log('key code 40 ctrl activate next');
+        scope.$apply(function() { controller.activateNextItem(); });
+    }
 
-      if (e.keyCode === 38) {
-          e.preventDefault();
-          scope.$apply(function() { controller.activatePreviousItem(); });
-      }
+    if (e.keyCode === 38) {
+        e.preventDefault();
+        console.log('key code 38 ctrl activate previous');
+        scope.$apply(function() { controller.activatePreviousItem(); });
+    }
   });
 
   scope.$watch('items', function(items) {
-      controller.activate(items.length ? items[0] : null);
+    console.log('watched items', items);
+    controller.activate(items.length ? items[0] : null);
   });
 
   scope.$watch('focused', function(focused) {
-      if (focused) {
-          $timeout(function() { $input.focus(); }, 0, false);
-      }
+    if (focused) {
+        _o.$timeout(function() { $input.focus(); }, 0, false);
+    }
   });
 
   scope.$watch('isVisible()', function(visible) {

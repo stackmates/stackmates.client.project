@@ -2,5 +2,7 @@
 
 module.exports = /*@ngInject*/
   function VisualizationController ($state) {
-    $state.transitionTo('app.viz.donut');
+    // $state.transitionTo('app.viz.donut');
+
+
   };

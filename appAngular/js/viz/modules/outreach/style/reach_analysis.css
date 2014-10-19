@@ -1,0 +1,54 @@
+/* CSS for reach graph */
+
+
+/*.ChartWrapper {
+  height: 400px;
+  width: 600px;
+}
+*/
+.ReachChart {
+  height: 90vh;
+  width: 100%;
+}
+
+.ReachChart {
+  display: block;
+  z-index: 0;
+  overflow: hidden;
+  font-size: 10px;
+}
+.ReachChart circle{
+  fill: red;
+  opacity: 1;
+  cursor: pointer;
+  stroke-width: 2;
+}
+.ReachChart circle:hover {
+  stroke: black;
+}
+.ReachChart  text{
+  fill: gray;
+  stroke: none;
+}
+.ReachChart .x-axis path,
+.ReachChart .y-axis path {
+  stroke: none;
+  fill: none;
+}
+.ReachChart .x-axis line,
+.ReachChart .y-axis line {
+  stroke: rgba(255, 255, 255, 0.4);
+}
+.scatter-1{
+  width: 30%;
+}
+.scatter-2{
+  width: 70%;
+}
+.scatter-3{
+  width: 100%;
+}
+.scatter-1, .scatter-2, .scatter-3{
+  height: 50%;
+  float: left;
+}
