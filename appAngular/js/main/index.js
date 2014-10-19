@@ -3,7 +3,7 @@
 // var angular = require('angular');
 
 module.exports = angular.module('app.main', [
-
+  require('../../../_shared/angular/resources/cms/content').name
 ])
 
 // Routes

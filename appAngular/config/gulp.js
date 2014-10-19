@@ -23,8 +23,8 @@ module.exports = {
                               './src/common/ux_patterns/molecules/progressbar/angular/templates/**/*.html',
                               './src/common/ux_patterns/molecules/rating/angular/templates/**/*.html',
                               './src/common/ux_patterns/molecules/timepicker/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/typeahead/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/ui-select/angular/templates/**/*.html',
+                              // './src/common/ux_patterns/molecules/typeahead/angular/templates/**/*.html',
+                              // './src/common/ux_patterns/molecules/ui-select/angular/templates/**/*.html',
                               './src/common/ux_patterns/organisms/dynamic_list/angular/templates/**/*.html'
                             ],
   templatesJsOut          : './src/domain/stackmates/appAngular/js/templates',

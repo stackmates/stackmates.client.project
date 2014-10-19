@@ -1,0 +1,20 @@
+'use strict';
+var multiline = require('multiline');
+module.exports = multiline(function(){/*
+<h3>Scatter</h3>
+
+<div class="ScatterChart scatter" style="height:100%;width:100%">
+  <scatter data="employers" selected-point="selectEmployer"> </scatter>
+</div>
+
+<div class="detail">
+  <div ng-show="selectEmployer">
+    <h2>{{selectEmployer.name }}</h2>
+    <h3>Employees: {{selectEmployer.value }}M</h3>
+  </div>
+  <div ng-show="!selectEmployer">
+    <h2> [hover over a company] </h2>
+  </div>
+</div>
+{{ employers || json }}
+*/});

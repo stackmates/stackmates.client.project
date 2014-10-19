@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function HomeController($http, AppConstants, ContentService ) {
+  function HomeController($http, AppConstants, ContentResource ) {
 
     var vm = this;
 
@@ -10,7 +10,7 @@ module.exports = /*@ngInject*/
       vm.taxrate = result;
     });
 
-    ContentService.getContent()
+    ContentResource.getContent()
       .then(
         function (content) {
           vm.haikuExternal = content.externalProvoke;

@@ -2,7 +2,7 @@
 
 module.exports = angular.module('app.bootstrap', [
   'ui.router',
-  require('../../../_shared/angular/services/podio_service').name
+  require('../../../_shared/angular/resources/spaces/spaces').name
 ])
 
 .config(

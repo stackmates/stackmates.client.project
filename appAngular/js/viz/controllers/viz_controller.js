@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function VisualizationController ($state) {
+  function VisualizationController ($scope, $state) {
     // $state.transitionTo('app.viz.donut');
 
 
