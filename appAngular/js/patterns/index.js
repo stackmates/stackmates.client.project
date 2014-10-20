@@ -13,7 +13,7 @@ module.exports = angular.module('app.patterns', [
         views: {
           '@': {
             controller: 'PatternController',
-            template: require('./templates/_patterns.html.js')
+            templateUrl: 'patterns/templates/_patterns.html'
           }
         }
       })
@@ -21,103 +21,103 @@ module.exports = angular.module('app.patterns', [
         url: '/accordion',
           controller: 'DemoAccordionController',
           controllerAs: 'accordionDemo',
-          template: require('./templates/accordion-demo.html.js')
+          templateUrl: 'patterns/templates/accordion-demo.html'
       })
       .state('app.pattern.alert', {
         url: '/alerts',
           controller: 'DemoAlertController',
           controllerAs: 'alertDemo',
-          template: require('./templates/alert-demo.html.js')
+          templateUrl: 'patterns/templates/alert-demo.html'
       })
       .state('app.pattern.buttons', {
         url: '/buttons',
           controller: 'DemoButtonsController',
           controllerAs: 'buttonDemo',
-          template: require('./templates/buttons-demo.html.js')
+          templateUrl: 'patterns/templates/buttons-demo.html'
       })
       .state('app.pattern.carousel', {
         url: '/carousel',
           controller: 'DemoCarouselController',
           controllerAs: 'carouselDemo',
-          template: require('./templates/carousel-demo.html.js')
+          templateUrl: 'patterns/templates/carousel-demo.html'
       })
       .state('app.pattern.collapse', {
         url: '/collapse',
           controller: 'DemoCollapseController',
           controllerAs: 'collapseDemo',
-          template: require('./templates/collapse-demo.html.js')
+          templateUrl: 'patterns/templates/collapse-demo.html'
       })
       .state('app.pattern.datepicker', {
         url: '/datepicker',
           controller: 'DemoDatepickerController',
           controllerAs: 'datepickerDemo',
-          template: require('./templates/datepicker-demo.html.js')
+          templateUrl: 'patterns/templates/datepicker-demo.html'
       })
       .state('app.pattern.dropdown', {
         url: '/dropdown',
           controller: 'DemoDropdownController',
           controllerAs: 'dropdownDemo',
-          template: require('./templates/dropdown-demo.html.js')
+          templateUrl: 'patterns/templates/dropdown-demo.html'
       })
       .state('app.pattern.input', {
         url: '/input',
           controller: 'DemoInputController',
           controllerAs: 'inputDemo',
-          template: require('./templates/input-demo.html.js')
+          templateUrl: 'patterns/templates/input-demo.html'
       })
       .state('app.pattern.modal', {
         url: '/modal',
           controller: 'DemoModalController',
           controllerAs: 'modalDemo',
-          template: require('./templates/modal-demo.html.js')
+          templateUrl: 'patterns/templates/modal-demo.html'
       })
       .state('app.pattern.pagination', {
         url: '/pagination',
           controller: 'DemoPaginationController',
           controllerAs: 'paginationDemo',
-          template: require('./templates/pagination-demo.html.js')
+          templateUrl: 'patterns/templates/pagination-demo.html'
       })
       .state('app.pattern.popover', {
         url: '/popover',
           controller: 'DemoPopoverController',
           controllerAs: 'popoverDemo',
-          template: require('./templates/popover-demo.html.js')
+          templateUrl: 'patterns/templates/popover-demo.html'
       })
       .state('app.pattern.progressbar', {
         url: '/progressbar',
           controller: 'DemoProgressbarController',
           controllerAs: 'progressbarDemo',
-          template: require('./templates/progressbar-demo.html.js')
+          templateUrl: 'patterns/templates/progressbar-demo.html'
       })
       .state('app.pattern.rating', {
         url: '/rating',
           controller: 'DemoRatingController',
           controllerAs: 'ratingDemo',
-          template: require('./templates/rating-demo.html.js')
+          templateUrl: 'patterns/templates/rating-demo.html'
       })
       .state('app.pattern.tabs', {
         url: '/tabs',
           controller: 'DemoTabsController',
           controllerAs: 'tabsDemo',
-          template: require('./templates/tabs-demo.html.js')
+          templateUrl: 'patterns/templates/tabs-demo.html'
       })
       .state('app.pattern.timepicker', {
         url: '/timepicker',
           controller: 'DemoTimepickerController',
           controllerAs: 'timepickerDemo',
-          template: require('./templates/timepicker-demo.html.js')
+          templateUrl: 'patterns/templates/timepicker-demo.html'
       })
       .state('app.pattern.tooltip', {
         url: '/tooltip',
           controller: 'DemoTooltipController',
           controllerAs: 'tooltipDemo',
-          template: require('./templates/tooltip-demo.html.js')
+          templateUrl: 'patterns/templates/tooltip-demo.html'
       })
       .state('app.pattern.typeahead', {
         url: '/typeahead',
           controller: 'DemoTypeaheadController',
           controllerAs: 'typeaheadDemo',
-          template: require('./templates/typeahead-demo.html.js')
+          templateUrl: 'patterns/templates/typeahead-demo.html'
       });
   }
 )

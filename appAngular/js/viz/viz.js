@@ -24,7 +24,7 @@ module.exports = angular.module( 'app.viz', [
           '@': {
             controller: 'VizController',
             controllerAs: 'viz',
-            template: require('./modules/line_single/templates/single_line_demo.html.js')
+            templateUrl: 'viz/modules/line_single/templates/single_line_demo.html'
           }
         }
       })
@@ -32,17 +32,17 @@ module.exports = angular.module( 'app.viz', [
         url: '/scatter-plot',
         controller: 'ScatterController',
         controllerAs: 'scatter',
-        template: require('./modules/scatter_plot/templates/scatter_plot_demo.html.js')
+        templateUrl: 'viz/modules/scatter_plot/templates/scatter_plot_demo.html'
       })
       .state('app.viz.scatter-music', {
         url: '/scatter-plot-music',
         controller: 'VizController',
-        template: require('./modules/scatter_last_fm/templates/scatter_music_demo.html.js')
+        templateUrl: 'viz/modules/scatter_last_fm/templates/scatter_music_demo.html'
       })
       .state('app.viz.outreach', {
         url: '/outreach',
         controller: 'OutreachController',
-        template: require('./modules/scatter_last_fm/templates/scatter_music_demo.html.js')
+        templateUrl: 'viz/modules/scatter_last_fm/templates/scatter_music_demo.html'
       });
   }
 )

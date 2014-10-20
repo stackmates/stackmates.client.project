@@ -1,0 +1,48 @@
+<div class='u-paddingAl'>
+
+
+
+  <h5>Specs</h5>
+  <ul>
+    <li ng-repeat='spec in nestedTypeaheadBehaviour'>
+      <p ng-class="{strike: spec.done}">{{ spec.functionality }} - {{ spec.success }}</p>
+    </li>
+  </ul>
+
+  <pre>Selected: {{chosenSpace.space}}</pre>
+
+  <div style="border:1px solid red"
+    resize
+    ng-style="resizeWithRatio(80)"
+    notifier="notifyServiceOnChange(params)">
+  </div>
+
+<!-- ng-style="resizeWithRatio(90)" -->
+
+  <!--   <div class="Topbar">
+      <a ng-click="isCollapsed = !isCollapsed">Go to space</a>
+    </div>
+
+    <div class='SpaceFinder' collapse="isCollapsed">
+
+      <ui-select style="width: 400px;"
+        ng-model="chosenSpace.space"
+        ng-disabled="disabled"
+        theme="select2"
+        on-select="gotoLink($item)" >
+        <ui-select-match placeholder="Select space...">{{$item.space}}</ui-select-match>
+        <ui-select-choices
+          group-by="'org'"
+          repeat="space in podioSpaces | propsFilter: {space: $select.search, org: $select.search}">
+
+            <div ng-bind-html="space.space | highlight: $select.search"></div>
+
+        </ui-select-choices>
+      </ui-select>
+
+    </div> -->
+
+
+</div>
+
+

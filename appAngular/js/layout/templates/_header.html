@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="Grid-cell u-size5of6">
-         <a ng-click="isCollapsed = !isCollapsed">Go to space</a>
+         <a class='u-paddingAl' ng-click="isCollapsed = !isCollapsed" style="line-height:80px">Go to space</a>
       </div>
     </div>
   </div>
@@ -21,6 +21,8 @@
       on-select="gotoLink($item)" >
       <ui-select-match placeholder="Select space...">{{$item.space}}</ui-select-match>
       <ui-select-choices
+        resize
+        ng-style="resizeWithRatio(60)"
         group-by="'org'"
         repeat="space in podioSpaces | propsFilter: {space: $select.search, org: $select.search}">
 

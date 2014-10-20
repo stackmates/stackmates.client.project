@@ -51,4 +51,9 @@ module.exports = /*@ngInject*/
     ];
 
 
+    $scope.notifyServiceOnChange = function(){
+       console.log($scope.windowHeight);
+    };
+
+
   };

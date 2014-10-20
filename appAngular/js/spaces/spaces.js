@@ -13,7 +13,7 @@ module.exports = angular.module('app.spaces', [
         views: {
           '@': {
             controller: 'SpacesController',
-            template: require('./templates/spaces.html.js')
+            templateUrl: 'spaces/templates/spaces.html'
           }
         }
       });

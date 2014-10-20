@@ -15,6 +15,7 @@ module.exports = angular.module('app', [
   'app.templates',
   'app.shared',
   require('util_modules/angular/socket_io').name,
+  require('ux_patterns/_helpers/angular/resize').name,
   require('ux_patterns/atoms/buttons/angular').name,
   require('ux_patterns/molecules/accordion/angular').name,
   require('ux_patterns/molecules/alert/angular').name,

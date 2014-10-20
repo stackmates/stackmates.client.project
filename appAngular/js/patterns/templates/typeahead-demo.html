@@ -1,9 +1,20 @@
-'use strict';
-var multiline = require('multiline');
-module.exports = multiline(function(){/*
-<div class='u-paddingAl'>
+<h3>Typeahead</h3>
+<div class=''>
+    <h4>The test</h4>
+    <p>Array of objects (with groupBy)</p>
+    <ui-select multiple ng-model="multipleDemo.selectedPeopleWithGroupBy" theme="select2" ng-disabled="disabled" style="width: 400px;">
+      <ui-select-match placeholder="Select space...">{{$item.name}} &lt;{{$item.email}}&gt;</ui-select-match>
+      <ui-select-choices group-by="someGroupFn" repeat="person in people | propsFilter: {name: $select.search, age: $select.search}">
+        <div ng-bind-html="person.name | highlight: $select.search"></div>
+        <small>
+          email: {{person.email}}
+          age: <span ng-bind-html="''+person.age | highlight: $select.search"></span>
+        </small>
+      </ui-select-choices>
+    </ui-select>
+    <p>Selected: {{multipleDemo.selectedPeopleWithGroupBy}}</p>
 
-  <h3>Typeahead</h3>
+    <h4>UI Select Original</h4>
 
     <p>Array of objects (with groupBy)</p>
     <ui-select multiple ng-model="multipleDemo.selectedPeopleWithGroupBy" theme="select2" ng-disabled="disabled" style="width: 400px;">
@@ -17,8 +28,6 @@ module.exports = multiline(function(){/*
       </ui-select-choices>
     </ui-select>
     <p>Selected: {{multipleDemo.selectedPeopleWithGroupBy}}</p>
-
-
 
     <h4>Static arrays</h4>
     <pre>Model: {{selected | json}}</pre>
@@ -69,4 +78,3 @@ module.exports = multiline(function(){/*
     </ul>
 
 </div>
-*/});
