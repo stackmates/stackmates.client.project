@@ -25,7 +25,7 @@ module.exports = multiline(function(){/*
   <h5>Specs</h5>
   <ul>
     <li ng-repeat='spec in nestedTypeaheadBehaviour'>
-      <p>{{ spec.functionality }} - {{ spec.success }}</p>
+      <p ng-class="{strike: spec.done}">{{ spec.functionality }} - {{ spec.success }}</p>
     </li>
   </ul>
 

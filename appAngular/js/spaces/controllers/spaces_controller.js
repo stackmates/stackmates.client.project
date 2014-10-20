@@ -6,21 +6,10 @@ module.exports = /*@ngInject*/
   function SpacesController ($scope, $http, $timeout, $window, SpacesResource)  {
 
     // nested typeahead desired behaviour
-
-
-
+    // pass this in and overwrite select function
     $scope.gotoLink = function(space) {
       $window.open(space.url)
     };
-
-    $scope.desiredDataFormat = [
-      { 'org': 'Podio',       'space': 'This one', 'url': 'this url'},
-      { 'org': 'Podio',       'space': 'This one', 'url': 'this url'},
-      { 'org': 'Podio',       'space': 'This one', 'url': 'this url'},
-      { 'org': 'Copenhagen',  'space': 'matt',     'url': 'this url'},
-      { 'org': 'Copenhagen',  'space': 'milla',    'url': 'this url'},
-      { 'org': 'Copenhagen',  'space': 'ollie',    'url': 'this url'}
-    ];
 
     getFlattenedSpacesList();
 
@@ -30,7 +19,7 @@ module.exports = /*@ngInject*/
         .then(
           function (results) {
             $scope.podioSpaces = results;
-            window.podioSpaces = $scope.podioSpaces;
+            // window.podioSpaces = $scope.podioSpaces;
           },
           function (result){
             console.log('Failed to load content: ' + result)
@@ -39,22 +28,19 @@ module.exports = /*@ngInject*/
 
     };
 
-
-
     $scope.nestedTypeaheadBehaviour = [
-      { 'functionality': 'List filter', 'success': 'Matches any string in parent or child name'},
-      { 'functionality': 'List filter', 'success': 'Ignores case of search'},
-      { 'functionality': 'List filter', 'success': 'Clearing input field shows all results'},
-      { 'functionality': 'List filter', 'success': 'If child record matches search parent must be visible'},
-      { 'functionality': 'List filter', 'success': 'If full match first item must be highlighted'},
-      { 'functionality': 'Text filter', 'success': 'The text matching part of the search query should be highlighted yellow'},
-      { 'functionality': 'List nav',    'success': 'Up and down with arrow keys highlighting active'},
-      { 'functionality': 'List nav',    'success': 'Enter go to link of active element'},
-      { 'functionality': 'List nav',    'success': 'Enter go to link of active element'},
-      { 'functionality': 'Scroll',      'success': 'Must have max height of 80% screen'},
-      { 'functionality': 'Scroll',      'success': 'Resonds to viewport resizing'},
-      { 'functionality': 'Scroll',      'success': 'If list of organisation longer than height add scroll bar'},
-      { 'functionality': 'Scroll',      'success': 'When using keyboard nav, expect scroll to respond'}
+      { 'functionality': 'List filter', 'done': true, 'success': 'Matches any string in parent or child name'},
+      { 'functionality': 'List filter', 'done': true, 'success': 'Ignores case of search'},
+      { 'functionality': 'List filter', 'done': true, 'success': 'Clearing input field shows all results'},
+      { 'functionality': 'List filter', 'done': true, 'success': 'If child record matches search parent must be visible'},
+      { 'functionality': 'List filter', 'done': true, 'success': 'If full match first item must be highlighted'},
+      { 'functionality': 'Text filter', 'done': false, 'success': 'The text matching part of the search query should be highlighted yellow'},
+      { 'functionality': 'List nav',    'done': true, 'success': 'Up and down with arrow keys highlighting active'},
+      { 'functionality': 'List nav',    'done': false, 'success': 'Enter go to link of active element'},
+      { 'functionality': 'Scroll',      'done': false, 'success': 'Must have max height of 80% screen'},
+      { 'functionality': 'Scroll',      'done': false, 'success': 'Resonds to viewport resizing'},
+      { 'functionality': 'Scroll',      'done': true, 'success': 'If list of organisation longer than height add scroll bar'},
+      { 'functionality': 'Scroll',      'done': true, 'success': 'When using keyboard nav, expect scroll to respond'}
     ];
 
 

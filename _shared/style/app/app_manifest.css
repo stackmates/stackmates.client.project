@@ -41,3 +41,11 @@
 @import "../../../../../common/ux_patterns/organisms/timeline";
 
 @import "../ux_patterns/bootstrap";
+
+
+
+
+.strike {
+  text-decoration: line-through;
+  color: gray;
+}
