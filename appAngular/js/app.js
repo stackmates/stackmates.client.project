@@ -35,6 +35,7 @@ module.exports = angular.module('app', [
   require('../../_shared/angular/modules/auth').name,
   require('./layout').name,
   require('./patterns').name,
+  require('./spaces').name,
   require('./publishing').name,
   require('./viz').name,
   require('./main').name

@@ -37,7 +37,7 @@ module.exports = angular.module('app.shared.resource.spaces', [
             Podio.listOrgWithSpaceName = flattenResults(Podio.rawContent);
 
             // deferred.resolve(Podio.listOrgWithSpaceName);
-          deferred.resolve(Podio.listOrgWithSpaceName);
+            deferred.resolve(Podio.listOrgWithSpaceName);
           })
           .error(function (response) {
             deferred.reject(response);

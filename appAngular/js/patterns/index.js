@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = angular.module('app.bootstrap', [
+module.exports = angular.module('app.patterns', [
   'ui.router',
   require('../../../_shared/angular/resources/spaces/spaces').name
 ])

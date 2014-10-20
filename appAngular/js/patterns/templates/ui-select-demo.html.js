@@ -5,6 +5,8 @@ module.exports = multiline(function(){/*
 
 <div class=''>
 
+
+
     <h4>The test</h4>
 
     <p>Array of objects (with groupBy)</p>

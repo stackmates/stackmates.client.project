@@ -6,9 +6,6 @@ var window = require('global');
 module.exports = /*@ngInject*/
   function ($scope, $http, $sce, $timeout, $window, PodioResource )  {
 
-    $scope.search = {};
-
-    $scope.isCollapsed = true;
 
     $scope.gotoLink = function(space) {
       $window.open(space.url)
