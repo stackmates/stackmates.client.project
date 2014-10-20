@@ -34,6 +34,10 @@
 @import "../../../../../common/ux_patterns/molecules/popup";
 @import "../../../../../common/ux_patterns/molecules/progressbar";
 
+@import "../../../../../common/ux_patterns/molecules/ui-select";
+@import "../../../../../common/ux_patterns/molecules/ui-select/style/select2_bootstrap";
+
 /*Organisms*/
 @import "../../../../../common/ux_patterns/organisms/timeline";
 
+@import "../ux_patterns/bootstrap";

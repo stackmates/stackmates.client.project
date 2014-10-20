@@ -31,6 +31,7 @@ module.exports = angular.module('app', [
   require('ux_patterns/molecules/timepicker/angular').name,
   require('ux_patterns/molecules/typeahead/angular').name,
   require('ux_patterns/molecules/navigation/slide_nav/angular').name,
+  require('ux_patterns/molecules/ui-select/angular').name,
   require('../../_shared/angular/modules/auth').name,
   require('./layout').name,
   require('./patterns').name,
@@ -52,15 +53,18 @@ module.exports = angular.module('app', [
   }
 )
 
-.config(function($httpProvider) {
+.config(
+  function($httpProvider) {
     //Enable cross domain calls
     $httpProvider.defaults.useXDomain = true;
     $httpProvider.interceptors.push('AuthInterceptor');
     // delete $httpProvider.defaults.headers.common['X-Requested-With'];
-})
+  }
+)
 
 // Set Restangular base URL.
-.config(function (RestangularProvider, AppConstants) {
+.config(
+  function (RestangularProvider, AppConstants) {
     RestangularProvider
       .setBaseUrl(AppConstants.baseUrl)
       .setDefaultHttpFields({ withCredentials: true })
@@ -71,6 +75,11 @@ module.exports = angular.module('app', [
   }
 )
 
+.config(
+  function(uiSelectConfig) {
+    uiSelectConfig.theme = 'bootstrap';
+  }
+)
 
 //Attach variables to $rootScope.
 .run(
@@ -87,48 +96,5 @@ module.exports = angular.module('app', [
     });
   }
 )
-
-
-// Connect to socket.io server.
-// .run(
-//   function () {
-//     var retryInterval = 5000,
-//         retryTimer;
-
-//     (function connect() {
-//       clearInterval(retryTimer);
-
-//       var socket = global.socket = socketio.connect('', {
-//         'force new connection': true,
-//         'max reconnection attempts': Infinity,
-//         'reconnection limit': 10 * 1000
-//       });
-
-//       socket.on('connect', function () {
-//         socket.emit('info', {
-//           // modernizr: Modernizr,
-//           navigator: _.transform(navigator, function (result, val, key) {
-//             if (_.isString(val)) {
-//               result[key] = val;
-//             }
-//           })
-//         });
-//       });
-
-//       socket.on('test', function (data) {
-//         console.log(data);
-//         socket.emit('test', { hello: 'from browser world' });
-//       });
-
-//       retryTimer = setInterval(function () {
-//         if (!socket.socket.connected &&
-//             !socket.socket.connecting &&
-//             !socket.socket.reconnecting) {
-//           connect();
-//         }
-//       }, retryInterval);
-//     }());
-//   }
-// )
 
 ;

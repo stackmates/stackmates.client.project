@@ -143,7 +143,5 @@ module.exports = angular.module('app.bootstrap', [
 .controller('DemoTooltipController', require('./controllers/tooltip_controller'))
 .controller('DemoTypeaheadController', require('./controllers/typeahead_controller'))
 // .controller('DemoUISelectController', require('./controllers/ui_select_controller'))
-.controller('SpecialSelectController', require('./controllers/ui_select_special_controller'))
-
 
 ;

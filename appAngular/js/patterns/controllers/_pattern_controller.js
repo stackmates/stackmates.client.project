@@ -21,8 +21,7 @@ module.exports = /*@ngInject*/
       { "link": "app.pattern.tabs", "text": "Tabs" },
       { "link": "app.pattern.timepicker", "text": "Timepicker" },
       { "link": "app.pattern.tooltip", "text": "Tooltip" },
-      { "link": "app.pattern.typeahead", "text": "Typeahead" },
-      { "link": "app.pattern.ui-select", "text": "UI Select" }
+      { "link": "app.pattern.typeahead", "text": "Typeahead" }
     ];
 
   };

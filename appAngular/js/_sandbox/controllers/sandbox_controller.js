@@ -4,7 +4,7 @@ var _ = require('lodash');
 var window = require('global');
 
 module.exports = /*@ngInject*/
-  function ($scope, $http, $sce, $timeout, $window, PodioService )  {
+  function ($scope, $http, $sce, $timeout, $window, PodioResource )  {
 
     $scope.search = {};
 
@@ -90,3 +90,4 @@ module.exports = /*@ngInject*/
 
 
   }
+

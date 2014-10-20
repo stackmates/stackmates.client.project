@@ -24,7 +24,7 @@ module.exports = {
                               './src/common/ux_patterns/molecules/rating/angular/templates/**/*.html',
                               './src/common/ux_patterns/molecules/timepicker/angular/templates/**/*.html',
                               // './src/common/ux_patterns/molecules/typeahead/angular/templates/**/*.html',
-                              // './src/common/ux_patterns/molecules/ui-select/angular/templates/**/*.html',
+                              './src/common/ux_patterns/molecules/ui-select/angular/templates/**/*.html',
                               './src/common/ux_patterns/organisms/dynamic_list/angular/templates/**/*.html'
                             ],
   templatesJsOut          : './src/domain/stackmates/appAngular/js/templates',
@@ -36,11 +36,13 @@ module.exports = {
                               'build/test/bundle-tests.js'
                             ],
   images                  : [
+                              './src/common/assets/images/select2/**/*',
                               './src/domain/stackmates/_shared/assets/images/**/*'
                             ],
   fonts                   : [
                               'src/common/assets/fonts/ionicons/**/*',
-                              'src/common/assets/fonts/source_sans_pro/**/*'
+                              'src/common/assets/fonts/source_sans_pro/**/*',
+                              'src/common/assets/fonts/glyphicons/**/*'
                             ],
   icons                   : [
                               'src/domain/stackmates/_shared/assets/icons/**/*'
