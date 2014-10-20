@@ -100,6 +100,10 @@
   --Modal-border-radius:                     5px;
 
 
+  /*UI-SELECT*/
+
+   --uiselect-highlightBgColor:              var(--yellow700);
+
 }
 
 /* COLOR MODIFIER CLASSES */
