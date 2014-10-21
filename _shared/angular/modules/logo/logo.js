@@ -1,10 +1,11 @@
 'use strict';
 
+var fs = require('fs');
 
 module.exports = /*@ngInject*/
   function logo () {
     return {
-      template: require('./logo.html.js')
+      template: fs.readFileSync(__dirname + '/logo.html')
     };
   };
 
