@@ -1,6 +1,6 @@
-
-
 'use strict';
+
+var fs = require('fs');
 
 module.exports = angular.module( 'app.viz', [
   'ui.router',
@@ -24,7 +24,7 @@ module.exports = angular.module( 'app.viz', [
           '@': {
             controller: 'VizController',
             controllerAs: 'viz',
-            templateUrl: 'viz/modules/line_single/templates/single_line_demo.html'
+            template: fs.readFileSync(__dirname + '/modules/line_single/templates/single_line_demo.html')
           }
         }
       })
@@ -32,17 +32,17 @@ module.exports = angular.module( 'app.viz', [
         url: '/scatter-plot',
         controller: 'ScatterController',
         controllerAs: 'scatter',
-        templateUrl: 'viz/modules/scatter_plot/templates/scatter_plot_demo.html'
+        template: fs.readFileSync(__dirname + '/modules/scatter_plot/templates/scatter_plot_demo.html')
       })
       .state('app.viz.scatter-music', {
         url: '/scatter-plot-music',
         controller: 'VizController',
-        templateUrl: 'viz/modules/scatter_last_fm/templates/scatter_music_demo.html'
+        template: fs.readFileSync(__dirname + '/modules/scatter_last_fm/templates/scatter_music_demo.html')
       })
       .state('app.viz.outreach', {
         url: '/outreach',
         controller: 'OutreachController',
-        templateUrl: 'viz/modules/scatter_last_fm/templates/scatter_music_demo.html'
+        tempate: fs.readFileSync(__dirname + '/modules/outreach/templates/line.html')
       });
   }
 )

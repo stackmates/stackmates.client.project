@@ -1,5 +1,7 @@
 'use strict';
 
+var fs = require('fs');
+
 module.exports = angular.module('app.patterns', [
   'ui.router',
   require('../../../_shared/angular/resources/spaces/spaces').name
@@ -13,7 +15,7 @@ module.exports = angular.module('app.patterns', [
         views: {
           '@': {
             controller: 'PatternController',
-            templateUrl: 'patterns/templates/_patterns.html'
+            template: fs.readFileSync(__dirname + '/templates/_patterns.html')
           }
         }
       })
@@ -21,103 +23,103 @@ module.exports = angular.module('app.patterns', [
         url: '/accordion',
           controller: 'DemoAccordionController',
           controllerAs: 'accordionDemo',
-          templateUrl: 'patterns/templates/accordion-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/accordion-demo.html')
       })
       .state('app.pattern.alert', {
         url: '/alerts',
           controller: 'DemoAlertController',
           controllerAs: 'alertDemo',
-          templateUrl: 'patterns/templates/alert-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/alert-demo.html')
       })
       .state('app.pattern.buttons', {
         url: '/buttons',
           controller: 'DemoButtonsController',
           controllerAs: 'buttonDemo',
-          templateUrl: 'patterns/templates/buttons-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/buttons-demo.html')
       })
       .state('app.pattern.carousel', {
         url: '/carousel',
           controller: 'DemoCarouselController',
           controllerAs: 'carouselDemo',
-          templateUrl: 'patterns/templates/carousel-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/carousel-demo.html')
       })
       .state('app.pattern.collapse', {
         url: '/collapse',
           controller: 'DemoCollapseController',
           controllerAs: 'collapseDemo',
-          templateUrl: 'patterns/templates/collapse-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/collapse-demo.html')
       })
       .state('app.pattern.datepicker', {
         url: '/datepicker',
           controller: 'DemoDatepickerController',
           controllerAs: 'datepickerDemo',
-          templateUrl: 'patterns/templates/datepicker-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/datepicker-demo.html')
       })
       .state('app.pattern.dropdown', {
         url: '/dropdown',
           controller: 'DemoDropdownController',
           controllerAs: 'dropdownDemo',
-          templateUrl: 'patterns/templates/dropdown-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/dropdown-demo.html')
       })
       .state('app.pattern.input', {
         url: '/input',
           controller: 'DemoInputController',
           controllerAs: 'inputDemo',
-          templateUrl: 'patterns/templates/input-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/input-demo.html')
       })
       .state('app.pattern.modal', {
         url: '/modal',
           controller: 'DemoModalController',
           controllerAs: 'modalDemo',
-          templateUrl: 'patterns/templates/modal-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/modal-demo.html')
       })
       .state('app.pattern.pagination', {
         url: '/pagination',
           controller: 'DemoPaginationController',
           controllerAs: 'paginationDemo',
-          templateUrl: 'patterns/templates/pagination-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/pagination-demo.html')
       })
       .state('app.pattern.popover', {
         url: '/popover',
           controller: 'DemoPopoverController',
           controllerAs: 'popoverDemo',
-          templateUrl: 'patterns/templates/popover-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/popover-demo.html')
       })
       .state('app.pattern.progressbar', {
         url: '/progressbar',
           controller: 'DemoProgressbarController',
           controllerAs: 'progressbarDemo',
-          templateUrl: 'patterns/templates/progressbar-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/progressbar-demo.html')
       })
       .state('app.pattern.rating', {
         url: '/rating',
           controller: 'DemoRatingController',
           controllerAs: 'ratingDemo',
-          templateUrl: 'patterns/templates/rating-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/rating-demo.html')
       })
       .state('app.pattern.tabs', {
         url: '/tabs',
           controller: 'DemoTabsController',
           controllerAs: 'tabsDemo',
-          templateUrl: 'patterns/templates/tabs-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/tabs-demo.html')
       })
       .state('app.pattern.timepicker', {
         url: '/timepicker',
           controller: 'DemoTimepickerController',
           controllerAs: 'timepickerDemo',
-          templateUrl: 'patterns/templates/timepicker-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/timepicker-demo.html')
       })
       .state('app.pattern.tooltip', {
         url: '/tooltip',
           controller: 'DemoTooltipController',
           controllerAs: 'tooltipDemo',
-          templateUrl: 'patterns/templates/tooltip-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/tooltip-demo.html')
       })
       .state('app.pattern.typeahead', {
         url: '/typeahead',
           controller: 'DemoTypeaheadController',
           controllerAs: 'typeaheadDemo',
-          templateUrl: 'patterns/templates/typeahead-demo.html'
+          template: fs.readFileSync(__dirname + '/templates/typeahead-demo.html')
       });
   }
 )
