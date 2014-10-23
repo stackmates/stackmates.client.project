@@ -1,7 +1,6 @@
 'use strict';
 
-// require('angular/angular');
-// require('./user_service');
+var fs = require('fs');
 
 module.exports = angular.module( 'app.auth', [
   require('./services').name
@@ -14,8 +13,8 @@ module.exports = angular.module( 'app.auth', [
         url: '/login',
         views: {
           '@': {
-            controller:     'LoginController',
-            templateUrl:    'modules/auth/templates/login.html'
+            controller:  'LoginController',
+            template:    fs.readFileSync(__dirname + '/templates/login.html')
           }
         }
       })
@@ -24,7 +23,7 @@ module.exports = angular.module( 'app.auth', [
         views: {
           '@': {
             controller:     'RegisterController',
-            templateUrl:    'modules/auth/templates/register.html'
+            template:    fs.readFileSync(__dirname + '/templates/register.html')
           }
         }
       });

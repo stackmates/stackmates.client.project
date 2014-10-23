@@ -1,6 +1,6 @@
 'use strict';
 
-// var angular = require('angular');
+var fs = require('fs');
 
 module.exports = angular.module('app.main', [
   require('../../../_shared/angular/resources/cms/content').name
@@ -16,7 +16,7 @@ module.exports = angular.module('app.main', [
           '@': {
             controller: 'HomeController',
             controllerAs: 'home',
-            templateUrl: 'main/templates/home.html'
+            template: fs.readFileSync(__dirname + '/templates/home.html')
           }
         },
         // resolve: {
@@ -31,7 +31,7 @@ module.exports = angular.module('app.main', [
           '@': {
             controller: 'CardDetailController',
             controllerAs: 'cardDetails',
-            templateUrl: 'main/templates/card_detail.html'
+            template: fs.readFileSync(__dirname + '/templates/card_detail.html')
           }
         }
       });

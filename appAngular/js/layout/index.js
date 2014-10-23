@@ -1,22 +1,23 @@
 'use strict';
 
+var fs = require('fs');
 
 var _views = {
   alert: {
     controller: 'AlertController',
-    templateUrl: 'layout/templates/_alert.html'
+    template: fs.readFileSync(__dirname + '/templates/_alert.html')
   },
   footer: {
     controller: 'FooterController',
-    templateUrl: 'layout/templates/_footer.html'
+    template: fs.readFileSync(__dirname + '/templates/_footer.html')
   },
   header: {
     controller: 'HeaderController',
-    templateUrl: 'layout/templates/_header.html'
+    template: fs.readFileSync(__dirname + '/templates/_header.html')
   },
   nav: {
     controller: 'NavController',
-    templateUrl: 'layout/templates/_nav.html'
+    template: fs.readFileSync(__dirname + '/templates/_nav.html')
   }
 }
 

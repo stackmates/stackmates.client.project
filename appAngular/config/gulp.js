@@ -9,8 +9,8 @@ module.exports = {
   indexHtml               : 'src/domain/stackmates/appAngular/index.html',
   jsonData                : './src/domain/stackmates/_shared/assets/data/**/*.json',
   templatesHtmlIn         : [
-                              './src/domain/stackmates/appAngular/js/**/*.html',
-                              './src/domain/stackmates/_shared/angular/**/*.html',
+                              // './src/domain/stackmates/appAngular/js/**/*.html',
+                              // './src/domain/stackmates/_shared/angular/**/*.html',
                               './src/common/ux_patterns/atoms/tooltip/angular/templates/**/*.html',
                               './src/common/ux_patterns/molecules/accordion/angular/templates/**/*.html',
                               './src/common/ux_patterns/molecules/alert/angular/templates/**/*.html',

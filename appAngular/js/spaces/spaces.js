@@ -1,5 +1,7 @@
 'use strict';
 
+var fs = require('fs');
+
 module.exports = angular.module('app.spaces', [
   'ui.router',
   require('../../../_shared/angular/resources/spaces/spaces').name
@@ -13,7 +15,7 @@ module.exports = angular.module('app.spaces', [
         views: {
           '@': {
             controller: 'SpacesController',
-            templateUrl: 'spaces/templates/spaces.html'
+            template: fs.readFileSync(__dirname + '/templates/spaces.html')
           }
         }
       });

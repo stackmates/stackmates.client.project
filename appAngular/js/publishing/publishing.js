@@ -1,5 +1,6 @@
 'use strict';
 
+var fs = require('fs');
 
 module.exports = angular.module('app.publishing', [
   'ui.router',
@@ -20,7 +21,7 @@ module.exports = angular.module('app.publishing', [
           '@': {
             controller: 'PublishingController',
             controllerAs: 'publishing',
-            templateUrl: 'publishing/templates/publishing.html'
+            template: fs.readFileSync(__dirname + '/templates/publishing.html')
           }
         }
       })
@@ -33,7 +34,7 @@ module.exports = angular.module('app.publishing', [
         },
         controller: 'PublishingControllerDetails',
         controllerAs: 'publishingDetails',
-        templateUrl: 'publishing/templates/publishing-details.html'
+        template: fs.readFileSync(__dirname + '/templates/publishing-details.html')
       })
       .state('app.publishing.edit', {
         url: '/edit/:id',
@@ -44,7 +45,7 @@ module.exports = angular.module('app.publishing', [
         },
         controller: 'PublishingControllerDetails',
         controllerAs: 'publishingEdit',
-        templateUrl: 'publishing/templates/publishing-edit.html'
+        template: fs.readFileSync(__dirname + '/templates/publishing-edit.html')
       });
   }
 )
