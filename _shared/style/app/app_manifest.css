@@ -16,8 +16,9 @@
 @import "../../../../../common/ux_patterns/molecules/datepicker";
 @import "../../../../../common/ux_patterns/molecules/dropdown";
 
-@import "../../../../../common/ux_patterns/molecules/groups/button_group";
-@import "../../../../../common/ux_patterns/molecules/groups/list_group";
+@import "../../../../../common/ux_patterns/molecules/button_group";
+
+@import "../../../../../common/ux_patterns/molecules/lists/list_group";
 @import "../../../../../common/ux_patterns/molecules/modal";
 
 @import "../../../../../common/ux_patterns/molecules/navigation/nav";

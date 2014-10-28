@@ -44,7 +44,8 @@ module.exports = angular.module('app', [
 
 // .constant('baseUrl', 'http://192.168.50.4:8080' )
 .constant('AppConstants', {
-  'baseUrl': 'http://localhost:4000',
+  // 'baseUrl': 'http://localhost:4000',
+  'baseUrl': 'http://node.dev/api',
   'homeState': 'app.home'
 })
 

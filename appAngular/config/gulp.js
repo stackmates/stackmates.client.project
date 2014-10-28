@@ -9,23 +9,8 @@ module.exports = {
   indexHtml               : 'src/domain/stackmates/appAngular/index.html',
   jsonData                : './src/domain/stackmates/_shared/assets/data/**/*.json',
   templatesHtmlIn         : [
-                              // './src/domain/stackmates/appAngular/js/**/*.html',
-                              // './src/domain/stackmates/_shared/angular/**/*.html',
-                              './src/common/ux_patterns/atoms/tooltip/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/accordion/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/alert/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/carousel/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/datepicker/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/modal/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/navigation/pagination/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/navigation/tabs/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/popup/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/progressbar/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/rating/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/timepicker/angular/templates/**/*.html',
-                              // './src/common/ux_patterns/molecules/typeahead/angular/templates/**/*.html',
-                              './src/common/ux_patterns/molecules/ui-select/angular/templates/**/*.html',
-                              './src/common/ux_patterns/organisms/dynamic_list/angular/templates/**/*.html'
+                              './src/common/ux_patterns/molecules/ui-select/angular/directives/templates/**/*.html',
+                              './src/common/ux_patterns/molecules/lists/dynamic_list/angular/directives/**/*.html'
                             ],
   templatesJsOut          : './src/domain/stackmates/appAngular/js/templates',
   karmaTestHelpers        : [
