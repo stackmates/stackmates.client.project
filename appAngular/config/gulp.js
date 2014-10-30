@@ -1,5 +1,6 @@
 module.exports = {
-  ghpages                 : 'ghpages/stackmates/appAngular',
+  // ghpages                 : 'ghpages/stackmates/appAngular',
+  ghpages                 : './src/domain/stackmates/_deploy/appAngular',
   baseURL                 : 'app.stackmat.es',
   contentDir              : '/Users/wik/googledrive/dreams/private/stackmates/external/',
   browserifyEntry         : './src/domain/stackmates/appAngular/js/index.js',

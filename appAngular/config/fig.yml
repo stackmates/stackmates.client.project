@@ -1,0 +1,11 @@
+front:
+  build: images/nginx
+  ports:
+    - "80:80"
+    - "9000:9000"
+  links:
+    - mysql:db
+    - memcached:cache
+  volumes:
+    - www:/var/www
+    - sites:/etc/nginx/sites-enabled
