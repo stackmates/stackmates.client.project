@@ -1,5 +1,6 @@
 module.exports = {
-  ghpages                 :   'ghpages/stackmates/home',
+  // ghpages              :   'ghpages/stackmates/home',
+  ghpages                 :   './src/domain/stackmates/_deploy/siteHome',
   baseURL                 :   'stackmat.es',
   contentDir              :   './src/domain/stackmates/siteHome/markdown/',
   sheets                  :   ['1x0Fy072BB8hYg2d1j9xpOTG8AW1qHPQo6bENY-0Vx78'],
@@ -7,7 +8,8 @@ module.exports = {
   styleEntry              :   './src/domain/stackmates/siteHome/style/main.css',
   images                  :   [ './src/domain/stackmates/common/images/**/*' ],
   fonts                   :   [
-                                'src/common/assets/fonts/ionicons/**/*'
+                                'src/common/assets/fonts/ionicons/**/*',
+                                'src/common/assets/fonts/source_sans_pro/**/*'
                               ],
   icons                   :   [
                                 'src/common/assets/icons/**/*',

@@ -2,7 +2,9 @@
 /* read this http://suitcss.github.io/  */
 
 
-@import "./src/domain/stackmates/_shared/style";
+@import "./src/domain/stackmates/_shared/style/_common";
+
+/*@import "./src/domain/stackmates/_shared/style/app";*/
 
 /*@import "./src/projects/dreamineering/_shared/style/ux_/check";*/
 
