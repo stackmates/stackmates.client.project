@@ -1,6 +1,0 @@
-client:
-  build: stackmates/client
-  ports:
-    - "80:80"
-  volumes:
-    - .:/var/stackmates

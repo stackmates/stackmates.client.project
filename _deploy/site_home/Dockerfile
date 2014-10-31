@@ -33,24 +33,3 @@ EXPOSE 80
 
 CMD ["service", "nginx", "start"]
 
-
-
-
-# workdir /blog
-# run bundle install -j8
-
-# add . /blog
-
-# run rm /etc/nginx/sites-available/default
-
-# add nginx/nathanleclaire.com /etc/nginx/sites-available/nathanleclaire.com
-# add nginx/boot2docker /etc/nginx/sites-available/boot2docker
-# run ln -s /etc/nginx/sites-available/nathanleclaire.com /etc/nginx/sites-enabled/nathanleclaire.com
-# run ln -s /etc/nginx/sites-available/boot2docker /etc/nginx/sites-enabled/boot2docker
-
-
-# run echo "daemon off;" >>/etc/nginx/nginx.conf
-
-# expose 80
-
-# cmd ["service", "nginx", "start"]
