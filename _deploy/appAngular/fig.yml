@@ -1,6 +1,0 @@
-app:
-  build: drmg/app_angular
-  ports:
-    - "80:80"
-  volumes:
-    - ./www:/var/www/html/stackmates_app_angular

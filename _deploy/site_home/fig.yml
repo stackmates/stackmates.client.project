@@ -1,0 +1,6 @@
+front:
+  image: stackmates/sitehome
+  ports:
+    - "8000:80"
+  volumes:
+    - $PWD/www:/var/www/stackmates
