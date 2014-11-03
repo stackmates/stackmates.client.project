@@ -1,7 +1,6 @@
 module.exports = {
-  // ghpages              :   'ghpages/stackmates/home',
-  ghpages                 :   './src/domain/stackmates/_deploy/site_home',
-  baseURL                 :   'stackmat.es',
+  ghpages                 :   './src/domain/stackmates/_deploy/game_play',
+  baseURL                 :   'play.stackmat.es',
   contentDir              :   './src/domain/stackmates/siteHome/markdown/',
   sheets                  :   ['1x0Fy072BB8hYg2d1j9xpOTG8AW1qHPQo6bENY-0Vx78'],
   browserifyEntry         :   './src/domain/stackmates/siteHome/js/index.js',

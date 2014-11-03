@@ -16,11 +16,10 @@ RUN mkdir -p /var/www
 # Prepare nginx
 RUN rm /etc/nginx/sites-available/default
 
-#ADD nginx/nginx.conf /etc/nginx/nginx.conf
-#ADD nginx/global.conf /etc/nginx/conf.d/
+
 # production
-#ADD nginx/stackmat.es /etc/nginx/sites-available/stackmat.es
-#RUN ln -s /etc/nginx/sites-available/stackmat.es /etc/nginx/sites-enabled/stackmat.es
+ADD nginx/stackmat.es /etc/nginx/sites-available/stackmat.es
+RUN ln -s /etc/nginx/sites-available/stackmat.es /etc/nginx/sites-enabled/stackmat.es
 
 # development
 ADD nginx/localdev /etc/nginx/sites-available/localdev
