@@ -2,7 +2,7 @@ server {
   listen 80;
   index index.html;
   autoindex off;
-  server_name localdev:8000;
+  server_name localdev:8010;
   server_name_in_redirect on;
   port_in_redirect on;
 
