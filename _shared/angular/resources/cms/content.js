@@ -27,8 +27,20 @@ module.exports = angular.module('app.shared.resource.cms', [
         $http.get('assets/data/stackmat.es.json')
           .success(function(result){
 
-            content = JSON.parse(result);
-            deferred.resolve(content);
+            try
+            {
+               content = JSON.parse(result);
+            }
+            catch(e)
+            {
+               console.log('invalid json');
+               content = result;
+            }
+
+            console.log(result)
+            // content = JSON.parse(result);
+
+            deferred.resolve(result);
           })
           .error(function (response) {
             deferred.reject(response);
