@@ -65,6 +65,12 @@ module.exports = angular.module('app', [
   }
 )
 
+.config(
+  function ($socketProvider, AppConstants) {
+    $socketProvider.setConnectionUrl(AppConstants.baseUrl);
+  }
+)
+
 // Set Restangular base URL.
 .config(
   function (RestangularProvider, AppConstants) {

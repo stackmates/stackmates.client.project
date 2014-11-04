@@ -6,7 +6,7 @@ var debug = require('debug')('pubService');
 module.exports = /*@ngInject*/
   function PublishingResource ($http, $q, $socket, $state, AppConstants ) {
 
-    var _baseurl = AppConstants + '/publish';
+    var _baseurl = AppConstants.baseUrl + '/publish';
 
     var Publishing = {};
 
@@ -16,10 +16,7 @@ module.exports = /*@ngInject*/
     Publishing.getPublishedList = function () {
       var deferred = $q.defer();
 
-      // if(Publishing.listContent !== null) {
-      //   deferred.resolve(Publishing.listContent);
-      // } else {
-        $http.get('http://localhost:3000/publish')
+        $http.get(_baseurl)
           .success(function(result){
 
             if (result.ok) {
@@ -31,7 +28,7 @@ module.exports = /*@ngInject*/
           .error(function(error) {
             deferred.reject(error);
           });
-      // }
+
       return deferred.promise;
     };
 
@@ -40,7 +37,7 @@ module.exports = /*@ngInject*/
       debug('return publish details', id)
       var deferred = $q.defer();
 
-      $http.get('http://localhost:3000/publish/' + id)
+      $http.get(_baseurl + '/' + id)
         .success(function(result){
 
           debug('return publish details', result);
@@ -57,7 +54,7 @@ module.exports = /*@ngInject*/
     };
 
     Publishing.publishNew = function (formData) {
-      return $http.post('http://localhost:3000/publish', formData )
+      return $http.post(_baseurl, formData )
         .then(
           function (results) {
 
@@ -86,7 +83,7 @@ module.exports = /*@ngInject*/
     };
 
     Publishing.publishUpdate = function (id, formData) {
-      return $http.put('http://localhost:3000/publish/' + id, formData )
+      return $http.put(_baseurl + '/' + id, formData )
         .then(
           function (results) {
             // TODO find existing record and update
@@ -99,7 +96,7 @@ module.exports = /*@ngInject*/
 
     Publishing.publishDelete = function (id) {
       debug('publish delete', id)
-      return $http.delete('http://localhost:3000/publish/' + id )
+      return $http.delete(_baseurl + '/' + id )
         .then(
           function (results) {
             _.remove(Publishing.listContent, { 'id': id });
