@@ -1,9 +1,9 @@
 server {
   listen 80;
-  listen [::]:80 ipv6only=on;
+  #listen [::]:80 ipv6only=on;
   index index.html;
   autoindex off;
-  server_name production:8000;
+  server_name production:4444;
   server_name_in_redirect on;
   port_in_redirect on;
 

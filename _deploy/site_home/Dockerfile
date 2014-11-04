@@ -10,8 +10,10 @@ RUN apt-get update && \
 # RUN apt-get install -y nodejs npm
 RUN apt-get install -y -q nginx
 
+RUN mkdir -p /var/www/stackmates
 
-RUN mkdir -p /var/www
+RUN chown -R www-data:www-data /var/www/stackmates
+RUN chmod 755 /var/www
 
 # Prepare nginx
 RUN rm /etc/nginx/sites-available/default
