@@ -15,8 +15,6 @@ RUN mkdir -p /var/www
 
 # Prepare nginx
 RUN rm /etc/nginx/sites-available/default
-
-
 # production
 ADD nginx/stackmat.es /etc/nginx/sites-available/stackmat.es
 RUN ln -s /etc/nginx/sites-available/stackmat.es /etc/nginx/sites-enabled/stackmat.es

@@ -1,5 +1,6 @@
 server {
   listen 80;
+  listen [::]:80 ipv6only=on;
   index index.html;
   autoindex off;
   server_name localdev:8010;
