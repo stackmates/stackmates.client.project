@@ -1,6 +1,6 @@
 site:
   build: .
   ports:
-    - "8000:80"
+    - "4444:80"
   volumes:
     - $PWD/www:/var/www/stackmates
