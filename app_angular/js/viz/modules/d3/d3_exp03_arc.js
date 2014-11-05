@@ -46,12 +46,15 @@ function link (scope, el, attr) {
     .append("svg")
       .attr("height", _o.height)
       .attr("width", _o.width)
-      .selectAll('path').data(_o.rainbow).enter().append('path')
-      .attr({
-        d: arcGenerator,
-        transform: 'translate(200,200)',
-        fill: function(d) { return d }
-      });
+      .selectAll('path')
+        .data(_o.rainbow)
+        .enter()
+        .append('path')
+          .attr({
+            d: arcGenerator,
+            transform: 'translate(200,200)',
+            fill: function(d) { return d }
+          });
 
 }
 
