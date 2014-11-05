@@ -17,30 +17,32 @@
 }
 /*// fill parent*/
 
-scatter{
+scatter-plot {
   display: block;
   z-index: 0;
   overflow: hidden;
   font-size: 10px;
 }
-scatter circle{
+scatter-plot circle{
   fill: yellow;
   opacity: 1;
   cursor: pointer;
   stroke-width: 2;
 }
-scatter circle:hover{
+scatter-plot circle:hover{
   stroke: white;
 }
-scatter text{
+scatter-plot text{
   fill: white;
   stroke: none;
 }
-scatter .x-axis path, scatter .y-axis path{
+scatter-plot .x-axis path,
+scatter-plot .y-axis path {
   stroke: none;
   fill: none;
 }
-scatter .x-axis line, scatter .y-axis line{
+scatter-plot .x-axis line,
+scatter-plot .y-axis line {
   stroke: rgba(255, 255, 255, 0.2);
 }
 .scatter-1{

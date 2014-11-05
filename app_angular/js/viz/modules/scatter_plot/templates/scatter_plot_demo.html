@@ -1,10 +1,7 @@
-'use strict';
-var multiline = require('multiline');
-module.exports = multiline(function(){/*
 <h3>Scatter</h3>
 
 <div class="ScatterChart scatter" style="height:100%;width:100%">
-  <scatter data="employers" selected-point="selectEmployer"> </scatter>
+  <scatter-plot data="employers" selected-point="selectEmployer"> </scatter-plot>
 </div>
 
 <div class="detail">
@@ -17,4 +14,3 @@ module.exports = multiline(function(){/*
   </div>
 </div>
 {{ employers || json }}
-*/});

@@ -4,7 +4,7 @@
 
 @import "../_common";
 
-@import "../../../../../common/ux_patterns/screenviews/slide_menu_layout";
+
 
 /*Atoms*/
 @import "../../../../../common/ux_patterns/atoms/tooltip";
@@ -18,7 +18,7 @@
 
 @import "../../../../../common/ux_patterns/molecules/button_group";
 
-@import "../../../../../common/ux_patterns/molecules/lists/list_group";
+@import "../../../../../common/ux_patterns/molecules/list_group";
 @import "../../../../../common/ux_patterns/molecules/modal";
 
 @import "../../../../../common/ux_patterns/molecules/navigation/nav";
@@ -34,16 +34,15 @@
 
 @import "../../../../../common/ux_patterns/molecules/popup";
 @import "../../../../../common/ux_patterns/molecules/progressbar";
-
+@import "../../../../../common/ux_patterns/molecules/timeline";
 @import "../../../../../common/ux_patterns/molecules/ui-select";
 @import "../../../../../common/ux_patterns/molecules/ui-select/style/select2_bootstrap";
 
-/*Organisms*/
-@import "../../../../../common/ux_patterns/organisms/timeline";
 
 @import "../ux_patterns/bootstrap";
 
 
+@import "../../../../../common/ux_patterns/views/slide_menu_layout";
 
 
 .strike {

@@ -24,9 +24,15 @@ module.exports = angular.module( 'app.viz', [
           '@': {
             controller: 'VizController',
             controllerAs: 'viz',
-            template: fs.readFileSync(__dirname + '/modules/line_single/templates/single_line_demo.html')
+            template: fs.readFileSync(__dirname + '/templates/viz.html')
           }
         }
+      })
+      .state('app.viz.singleline', {
+        url: '/single-line',
+        controller: 'ScatterController',
+        controllerAs: 'scatter',
+        template: fs.readFileSync(__dirname + '/modules/line_single/templates/single_line.html')
       })
       .state('app.viz.scatter', {
         url: '/scatter-plot',
@@ -47,7 +53,7 @@ module.exports = angular.module( 'app.viz', [
   }
 )
 
-.controller( 'VizController', require('./controllers/viz_controller'))
+.controller( 'VizController', require('./controllers/_viz_controller'))
 
 
 ;

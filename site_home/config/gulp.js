@@ -1,11 +1,10 @@
 module.exports = {
-  // ghpages              :   'ghpages/stackmates/home',
-  ghpages                 :   './src/domain/stackmates/_deploy/site_home',
+  ghpages                 :   './_deploy/stackmates/site_home',
   baseURL                 :   'stackmat.es',
-  contentDir              :   './src/domain/stackmates/siteHome/markdown/',
+  contentDir              :   './src/domain/stackmates/site_home/markdown/',
   sheets                  :   ['1x0Fy072BB8hYg2d1j9xpOTG8AW1qHPQo6bENY-0Vx78'],
-  browserifyEntry         :   './src/domain/stackmates/siteHome/js/index.js',
-  styleEntry              :   './src/domain/stackmates/siteHome/style/main.css',
+  browserifyEntry         :   './src/domain/stackmates/site_home/js/index.js',
+  styleEntry              :   './src/domain/stackmates/site_home/style/main.css',
   images                  :   [ './src/domain/stackmates/common/images/**/*' ],
   fonts                   :   [
                                 'src/common/assets/fonts/ionicons/**/*',
@@ -23,7 +22,7 @@ module.exports = {
   watchScripts            :   [
                                 './src/common/util_modules/**/*.js',
                                 './src/common/ux_patterns/**/*.js',
-                                './src/domain/stackmates/siteHome/**/*.js'
+                                './src/domain/stackmates/site_home/js/**/*.js'
                               ],
   watchStyles             :   [
                                 './src/common/style/rework/**/*.css',

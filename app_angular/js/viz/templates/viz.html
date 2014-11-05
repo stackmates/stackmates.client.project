@@ -1,0 +1,18 @@
+<div class="Grid">
+  <div class="Grid-cell u-size2of6">
+
+    <h3>Visualizations</h3>
+
+    <ul>
+      <li class="List" ng-repeat='viz in vizualizations'>
+        <a ui-sref="{{viz.link}}">{{viz.text}}</a>
+      </li>
+    </ul>
+
+  </div>
+  <div class="Grid-cell u-size4of6">
+
+    <div ui-view></div>
+
+  </div>
+</div>

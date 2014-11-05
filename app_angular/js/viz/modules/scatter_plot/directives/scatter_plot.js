@@ -3,7 +3,7 @@
 var d3 = require('d3');
 
 module.exports = /*@ngInject*/
-  function scatter () {
+  function scatterPlot () {
     return {
       link: link,
       restrict: 'E',

@@ -35,7 +35,7 @@
 /* layout */
 @import "../../../../../common/style/rework/layout/grid";
 @import "../../../../../common/style/rework/layout/sections";
-@import "../../../../../common/ux_patterns/screenviews/basic_container";
+@import "../../../../../common/ux_patterns/views/basic_container";
 
 
 /* Quarks - micro rules core */
@@ -69,4 +69,4 @@
 @import "../ux_patterns/markdown";
 
 /*Organisms*/
-@import "../../../../../common/ux_patterns/organisms/cards/haiku";
+@import "../../../../../common/ux_patterns/molecules/cards/haiku";
