@@ -8,4 +8,5 @@
 @import "./src/domain/stackmates/_shared/style/app";
 
 
+@import "./src/domain/stackmates/app_angular/js/viz/modules/d3/style";
 @import "./src/domain/stackmates/app_angular/js/viz/modules/scatter_plot/style";

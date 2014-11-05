@@ -1,0 +1,14 @@
+
+
+
+.svgLine path {
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.svgSolid path {
+  /*stroke: black;*/
+  /*stroke-width: 2px;*/
+  /*fill: none;*/
+}

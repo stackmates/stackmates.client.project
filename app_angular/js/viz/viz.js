@@ -6,6 +6,7 @@ module.exports = angular.module( 'app.viz', [
   'ui.router',
   'restangular',
   require('../../../_shared/angular/resources/reach').name,
+  require('./modules/d3').name,
   require('./modules/donut').name,
   require('./modules/line_adaptive').name,
   require('./modules/line_single').name,
@@ -27,6 +28,11 @@ module.exports = angular.module( 'app.viz', [
             template: fs.readFileSync(__dirname + '/templates/viz.html')
           }
         }
+      })
+      .state('app.viz.d3', {
+        url: '/d3',
+        controller: 'VizController',
+        template: fs.readFileSync(__dirname + '/modules/d3/d3.html')
       })
       .state('app.viz.singleline', {
         url: '/single-line',

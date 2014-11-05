@@ -1,6 +1,7 @@
 'use strict';
 
 // See http://projects.delimited.io/experiments/last-fm/
+// http://www.delimited.io/blog/2014/7/16/d3-directives-in-angularjs
 
 module.exports = /*@ngInject*/
   function artistsChart ($window) {
