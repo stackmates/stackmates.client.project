@@ -23,7 +23,20 @@
   stroke: #aec7e8;
   stroke-width: 2;
 }
-.svgArea circle {
+
+.svgArea circle,
+.svgChord circle {
   stroke: white;
   fill: steelblue;
+}
+
+.svgChord path {
+  stroke: white;
+  stroke-width: 2;
+  fill: steelblue;
+}
+.svgChord .plot {
+  fill: none;
+  stroke: #aec7e8;
+  stroke-width: 2;
 }

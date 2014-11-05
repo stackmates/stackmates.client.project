@@ -9,5 +9,6 @@ module.exports = angular.module('sm.viz.d3', [])
 .directive('d3ExpThree',  require('./d3_exp03_arc'))
 .directive('d3Donut',     require('./d3_exp04_donut'))
 .directive('d3Area',      require('./d3_exp05_area'))
+.directive('d3Chord',     require('./d3_exp06_chord'))
 
 ;
