@@ -29,22 +29,22 @@ function link(scope, el, attr){
   var yAxis = d3.svg.axis().scale(y).orient('left');
   var m = 50;
 
-  // scope.$watch(function(){
-  //   w = el.clientWidth;
-  //   h = el.clientHeight;
-  //   return w + h;
-  // }, resize);
+  scope.$watch(function(){
+    w = el.clientWidth;
+    h = el.clientHeight;
+    return w + h;
+  }, resize);
 
-  // function resize(){
-  //   svg.attr({width: w, height: h});
-  //   x.range([m, w - m]);
-  //   y.range([h - m, m]);
-  //   xAxis.tickSize(-h + 2 * m);
-  //   yAxis.tickSize(-w + 2 * m);
-  //   xAxisG.attr('transform', 'translate(' + [0, y.range()[0] + 0.5] + ')');
-  //   yAxisG.attr('transform', 'translate(' + [x.range()[0], 0] + ')');
-  //   update();
-  // }
+  function resize(){
+    svg.attr({width: w, height: h});
+    x.range([m, w - m]);
+    y.range([h - m, m]);
+    xAxis.tickSize(-h + 2 * m);
+    yAxis.tickSize(-w + 2 * m);
+    xAxisG.attr('transform', 'translate(' + [0, y.range()[0] + 0.5] + ')');
+    yAxisG.attr('transform', 'translate(' + [x.range()[0], 0] + ')');
+    update();
+  }
 
   scope.$watch('data', update);
 

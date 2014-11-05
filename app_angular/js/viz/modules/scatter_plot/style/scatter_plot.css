@@ -24,7 +24,7 @@ scatter-plot {
   font-size: 10px;
 }
 scatter-plot circle{
-  fill: yellow;
+  fill: blue;
   opacity: 1;
   cursor: pointer;
   stroke-width: 2;
