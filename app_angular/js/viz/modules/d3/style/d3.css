@@ -40,3 +40,12 @@
   stroke: #aec7e8;
   stroke-width: 2;
 }
+
+.svgD3-diagonal circle {
+  fill: orange;
+  stroke: #333;
+}
+.svgD3-diagonal path {
+  fill: none;
+  stroke: #ccc;
+}
