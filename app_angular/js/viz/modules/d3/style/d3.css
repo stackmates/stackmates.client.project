@@ -1,5 +1,12 @@
 
-
+.tick text {
+  font-size: 10px;
+}
+.x.axis path,
+.x.axis line {
+  fill: none;
+  stroke: black;
+}
 
 .svgLine path {
   stroke: black;
@@ -8,9 +15,6 @@
 }
 
 .svgSolid path {
-  /*stroke: black;*/
-  /*stroke-width: 2px;*/
-  /*fill: none;*/
 }
 
 .svgArea path {
@@ -61,8 +65,13 @@
   stroke: #333;
 }
 
+
 .D3-barChart rect {
   stroke: red;
   stroke-width: 1;
   fill: black;
+}
+
+.Axes_text {
+  font-size: 10px;
 }
