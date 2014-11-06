@@ -49,3 +49,20 @@
   fill: none;
   stroke: #ccc;
 }
+
+
+.svgD3-lineRadial path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 4;
+}
+.svgD3-lineRadial circle {
+  fill: orange;
+  stroke: #333;
+}
+
+.D3-barChart rect {
+  stroke: red;
+  stroke-width: 1;
+  fill: black;
+}

@@ -2,7 +2,7 @@
 
 // THE DIAGONAL GENERATOR
 var d3  = require('d3');
-var _o  = {};                    // shared configuration object
+var _o  = {};                    // configuration object
 
 // layout settings
 _o.width = 400;
@@ -50,7 +50,7 @@ function link (scope, el, attr) {
       .attr("height", _o.height)
       .attr("width", _o.width)
     .append("g")
-      .attr("transform", "translate(" + 50 + ", 50 )");
+      .attr("transform", "translate(" + 50 + ", " + 50 + ")");
 
   // Generators
   var diagonalGenerator = d3.svg.diagonal()

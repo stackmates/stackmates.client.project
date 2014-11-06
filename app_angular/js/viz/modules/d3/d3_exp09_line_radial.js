@@ -16,12 +16,18 @@ _o.margin = {
   left: 10
 };
 
-//
-_o.data = [];
+var n = 1000;
+var max_r = 250;
+var rotations = 10;
+
+var data = d3.range(n).map(function(d){
+  var t = d / (n - 1);
+  return [ t * max_r, t * Math.PI * rotations * 2 ];
+})
+
 
 module.exports = /*@ngInject*/
   function d3LineRadial () {
-
     return {
       link: link,
       restrict: 'E'
@@ -42,11 +48,14 @@ function link (scope, el, attr) {
     .append("g")
       .attr("transform", "translate(" + _o.width / 2 + "," + _o.height / 2 + ")");
 
-  // Draw contents
+  // Generator
+  var lineRadialGenerator = d3.svg.line.radial();
+
+  // Draw
   svg
-    .append('g')
-      .selectAll('path')
-      .data()
+    .append('path')
+      .datum(data)
+      .attr('d', lineRadialGenerator);
 
 }
 

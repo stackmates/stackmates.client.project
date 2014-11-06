@@ -14,4 +14,6 @@ module.exports = angular.module('sm.viz.d3', [])
 .directive('d3Diagonal',    require('./d3_exp08_diagonal'))
 .directive('d3LineRadial',  require('./d3_exp09_line_radial'))
 
+
+
 ;

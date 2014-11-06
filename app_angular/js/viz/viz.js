@@ -4,9 +4,8 @@ var fs = require('fs');
 
 module.exports = angular.module( 'app.viz', [
   'ui.router',
-  'restangular',
-  require('../../../_shared/angular/resources/reach').name,
   require('./modules/d3').name,
+  require('./modules/bar_chart').name,
   require('./modules/donut').name,
   require('./modules/line_adaptive').name,
   require('./modules/line_single').name,
@@ -14,7 +13,6 @@ module.exports = angular.module( 'app.viz', [
   require('./modules/scatter_last_fm').name,
   require('./modules/scatter_plot').name
 ])
-
 
 .config(
   function($stateProvider) {
@@ -34,15 +32,20 @@ module.exports = angular.module( 'app.viz', [
         controller: 'VizController',
         template: fs.readFileSync(__dirname + '/modules/d3/d3.html')
       })
+      .state('app.viz.barchart', {
+        url: '/bar-chart',
+        controller: 'VizController',
+        template: fs.readFileSync(__dirname + '/modules/bar_chart/templates/bar_chart.html')
+      })
       .state('app.viz.singleline', {
         url: '/single-line',
-        controller: 'ScatterController',
+        controller: 'VizController',
         controllerAs: 'scatter',
         template: fs.readFileSync(__dirname + '/modules/line_single/templates/single_line.html')
       })
       .state('app.viz.scatter', {
         url: '/scatter-plot',
-        controller: 'ScatterController',
+        controller: 'VizController',
         controllerAs: 'scatter',
         template: fs.readFileSync(__dirname + '/modules/scatter_plot/templates/scatter_plot_demo.html')
       })
@@ -53,7 +56,7 @@ module.exports = angular.module( 'app.viz', [
       })
       .state('app.viz.outreach', {
         url: '/outreach',
-        controller: 'OutreachController',
+        controller: 'VizController',
         tempate: fs.readFileSync(__dirname + '/modules/outreach/templates/line.html')
       });
   }

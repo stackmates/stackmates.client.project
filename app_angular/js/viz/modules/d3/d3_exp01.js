@@ -2,7 +2,9 @@
 
 // the most basic d3 directive
 
+var window = require('global');
 var d3  = require('d3');
+window.d3 = d3;
 var _   = require('lodash');
 var _o  = {};                    // shared configuration object
 

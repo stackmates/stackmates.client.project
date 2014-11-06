@@ -8,7 +8,7 @@ var _o  = {};                    // shared configuration object
 
 // layout settings
 _o.width = 400;
-_o.height = 400;
+_o.height = 300;
 _o.margin = {
   top:    10,
   right:  10,

@@ -33,9 +33,10 @@ var lineData = [{
 }];
 
 module.exports = /*@ngInject*/
-  function simpleLineChart (ReachResource) {
+  // function simpleLineChart (ReachResource) {
+  function simpleLineChart () {
 
-    _o.ReachResource = ReachResource;
+    _o.ReachResource = [];
 
     return {
       link: link,
