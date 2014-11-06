@@ -95,40 +95,4 @@ function link (scope, el, attr) {
     .attr('class', 'x axis')
     .attr('transform', 'translate(0,' + (_o.height - _o.margin.bottom ) + ')');
 
-
 }
-
-
-
-
-// var width = 700, height = 100;
-// var svg = d3.select('body').append('svg');
-// // worlds latest buildings
-// var data = [
-//   ["Burj Khalifa"                  , 2717],
-//   ["Shanghai Tower"                , 2073],
-//   ["Makkah Royal Clock Tower Hotel", 1971],
-//   ["One World Trade Center"        , 1776],
-//   ["Taipei 101"                    , 1670]
-// ];
-// var scale = d3.scale.linear()
-//   .domain(d3.extent(data, function(d){ return d[1]; }))
-//   .range([10, width]);
-// // add the data points
-// svg.selectAll('circle').data(data)
-//   .enter().append('circle').attr('r', 4).attr('transform', function(d){
-//     return 'translate(' + scale(d[1]) + ', ' + height + ')'
-//   });
-// // add the labels
-// svg.selectAll('text').data(data)
-//   .enter().append('text').text(function(d){ return d[0] })
-//   .attr('transform', function(d){
-//     return 'translate(' + scale(d[1]) + ', ' + height + ') '
-//       + 'rotate(-20) translate(5,-5)';
-//   });
-// // create the axis
-// var axis = d3.svg.axis().scale(scale)
-//   .tickFormat(function(d){ return d3.format(',.0f')(d) + 'ft' }).ticks(5);
-// // add the axis inside a new `g`
-// svg.append('g').call(axis).attr('class', 'x axis')
-//   .attr('transform', 'translate(0,' + height + ')');

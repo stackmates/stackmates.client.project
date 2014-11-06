@@ -5,6 +5,7 @@ var fs = require('fs');
 module.exports = angular.module( 'app.viz', [
   'ui.router',
   require('./modules/d3').name,
+  require('./modules/animation').name,
   require('./modules/axes').name,
   require('./modules/bar_chart').name,
   require('./modules/donut').name,
@@ -32,6 +33,11 @@ module.exports = angular.module( 'app.viz', [
         url: '/d3',
         controller: 'VizController',
         template: fs.readFileSync(__dirname + '/modules/d3/d3.html')
+      })
+      .state('app.viz.animation', {
+        url: '/animation',
+        controller: 'VizController',
+        template: fs.readFileSync(__dirname + '/modules/animation/animation.html')
       })
       .state('app.viz.axes', {
         url: '/axes',
