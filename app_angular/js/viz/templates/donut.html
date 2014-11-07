@@ -1,7 +1,7 @@
 <h3>Donut</h3>
 
 <div ng-init="chart=[{value: 10}, {value: 20}, {value: 30}]">
-  <donut-chart data="chart" style="float:right"></donut-chart>
+  <d3-donut-chart data="chart" style="float:right"></d3-donut-chart>
   <button ng-click="chart.push({value: 10})">add slice</button>
   <button ng-click="chart.pop()">remove slice</button>
   <div ng-repeat="slice in chart track by $index">

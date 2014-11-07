@@ -1,5 +1,7 @@
 'use strict';
 
+// http://henning.kropponline.de/2014/08/10/responsive-d3-js-modules-angularjs/
+
 var d3 = require('d3');
 var _o = {};
 

@@ -2,8 +2,6 @@
 
 module.exports = angular.module('sm.viz.d3', [])
 
-// the most basic setup
-.directive('d3ExpOne',      require('./d3_exp01'))
 // generators
 .directive('d3ExpTwo',      require('./d3_exp02_line'))
 .directive('d3ExpThree',    require('./d3_exp03_arc'))

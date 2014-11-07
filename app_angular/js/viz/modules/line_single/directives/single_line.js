@@ -12,25 +12,7 @@ _o.WIDTH = 600;
 _o.HEIGHT = 300;
 _o.MARGINS = { top: 20, right: 20, bottom: 20, left: 50 };
 
-var lineData = [{
-  x: 1,
-  y: 5
-}, {
-  x: 20,
-  y: 20
-}, {
-  x: 40,
-  y: 10
-}, {
-  x: 60,
-  y: 40
-}, {
-  x: 80,
-  y: 5
-}, {
-  x: 100,
-  y: 60
-}];
+var lineData = [{x:1,y:5},{x:20,y:20},{x:40,y:10},{x:60,y:40},{x:80,y:5},{x:100,y:60}];
 
 module.exports = /*@ngInject*/
   // function simpleLineChart (ReachResource) {
@@ -49,7 +31,7 @@ function link (scope, el, attr) {
 
   // setup the core angular elements
   _o.attr = attr;
-  _o.el = el[0];
+  el = el[0];
   _o.scope = scope;
 
   _o.data = _o.ReachResource.flattenedResults;
@@ -58,7 +40,7 @@ function link (scope, el, attr) {
 
 
   // DRAW AND APPEND the CONTAINER
-  _o.svg = d3.select(_o.el)
+  _o.svg = d3.select(el)
       .append("svg")
         .attr("height", _o.HEIGHT)
         .attr("width", _o.WIDTH)
@@ -66,19 +48,13 @@ function link (scope, el, attr) {
           .attr("transform","translate(" + _o.MARGINS.left + "," + -5 + ")");
 
 
-  setupRangesAndAxis();
-
-}
-
-
-function setupRangesAndAxis() {
-
   var xRange = d3.scale.linear()
                 .range([_o.MARGINS.left, _o.WIDTH - _o.MARGINS.right])
                 .domain([
                   d3.min(lineData, function(d) { return d.date; }),
                   d3.max(lineData, function(d) { return d.date; })
                 ]);
+
 
   var yRange = d3.scale.linear()
                 .range([_o.HEIGHT - _o.MARGINS.bottom, _o.MARGINS.top])
@@ -109,12 +85,7 @@ function setupRangesAndAxis() {
     .interpolate('linear');
 
 
-  drawGraph(xAxis, yAxis, lineFunc);
-
-}
-
-
-function drawGraph(xAxis, yAxis, lineFunc) {
+  // DRAW
 
   _o.svg.append('svg:g')
     .attr('class', 'x axis')
@@ -131,5 +102,6 @@ function drawGraph(xAxis, yAxis, lineFunc) {
     .attr('stroke', 'blue')
     .attr('stroke-width', 2)
     .attr('fill', 'none');
+
 
 }

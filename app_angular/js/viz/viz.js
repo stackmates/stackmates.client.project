@@ -25,7 +25,7 @@ module.exports = angular.module( 'app.viz', [
           '@': {
             controller: 'VizController',
             controllerAs: 'viz',
-            template: fs.readFileSync(__dirname + '/templates/viz.html')
+            template: fs.readFileSync(__dirname + '/templates/_viz.html')
           }
         }
       })
@@ -49,6 +49,11 @@ module.exports = angular.module( 'app.viz', [
         controller: 'VizController',
         template: fs.readFileSync(__dirname + '/modules/bar_chart/templates/bar_chart.html')
       })
+      .state('app.viz.donut', {
+        url: '/donut',
+        controller: 'VizController',
+        template: fs.readFileSync(__dirname + '/templates/donut.html')
+      })
       .state('app.viz.singleline', {
         url: '/single-line',
         controller: 'VizController',
@@ -59,7 +64,7 @@ module.exports = angular.module( 'app.viz', [
         url: '/scatter-plot',
         controller: 'VizController',
         controllerAs: 'scatter',
-        template: fs.readFileSync(__dirname + '/modules/scatter_plot/templates/scatter_plot_demo.html')
+        template: fs.readFileSync(__dirname + '/templates/scatter_plot.html')
       })
       .state('app.viz.scatter-music', {
         url: '/scatter-plot-music',

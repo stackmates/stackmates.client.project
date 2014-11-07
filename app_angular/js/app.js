@@ -35,7 +35,7 @@ module.exports = angular.module('app', [
   require('ux_patterns/molecules/ui-select/angular').name,
   require('../../_shared/angular/modules/auth').name,
   require('./layout').name,
-  require('./patterns').name,
+  require('./ux_patterns').name,
   require('./publishing').name,
   require('./viz').name,
   require('./main').name

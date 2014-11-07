@@ -2,6 +2,6 @@
 
 module.exports = angular.module('sm.viz.donut', [])
 
-.directive('donut', require('./directives/donut'))
+.directive('d3DonutChart', require('./donut'))
 
 ;

@@ -6,16 +6,19 @@ var debug = require('debug')('reachService');
 module.exports = /*@ngInject*/
   function ReachResource ($http, $q, $socket, AppConstants ) {
 
-    var _baseurl = AppConstants + '/reach';
-
-    var Reach = {};
-
+    // CONTANTS
     var IMPRESSION_TYPES = [
       'post_impressions',
       'post_impressions_organic',
       'post_impressions_viral',
       'post_impressions_paid'
     ];
+    // private
+    var _baseurl = AppConstants.baseUrl + '/reach';
+
+    // public object
+    var Reach = {};
+
 
     Reach.listContent = null;
     Reach.flattenedResults = null;
@@ -23,7 +26,7 @@ module.exports = /*@ngInject*/
     Reach.getReachData = function () {
       var deferred = $q.defer();
 
-      $http.get('http://localhost:3000/reach')
+      $http.get(_baseurl)
         .success(function(result){
           if (result.ok) {
             Reach.listContent = result.published;
@@ -45,7 +48,7 @@ module.exports = /*@ngInject*/
 
     Reach.reachNew = function (formData) {
 
-      return $http.post('http://localhost:3000/reach', formData )
+      return $http.post(_baseurl, formData )
         .then(
           function (results) {
 
