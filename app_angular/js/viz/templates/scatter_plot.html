@@ -1,7 +1,11 @@
 <h3>Scatter</h3>
 
-<div class="ScatterChart scatter" style="height:100%;width:100%">
-  <scatter-plot data="employers" selected-point="selectEmployer"> </scatter-plot>
+<div class="ResponsiveBox">
+  <viz-scatter-plot
+    class="ResponsiveBox_content"
+    data="employers"
+    selected-point="selectEmployer">
+  </viz-scatter-plot>
 </div>
 
 <div class="detail">
@@ -13,4 +17,3 @@
     <h2> [hover over a company] </h2>
   </div>
 </div>
-{{ employers || json }}

@@ -1,4 +1,21 @@
 
+.ResponsiveBox {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+/*// 16:9 ratio*/
+.ResponsiveBox:after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+.ResponsiveBox_content {
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0;
+    background-color: rgb(0, 140, 200);
+}
+
 .tick text {
   font-size: 10px;
 }

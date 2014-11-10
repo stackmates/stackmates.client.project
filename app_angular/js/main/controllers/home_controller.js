@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function HomeController($http, AppConstants, ContentResource ) {
+  function HomeController($http, $window, AppConstants, ContentResource ) {
 
     var vm = this;
 

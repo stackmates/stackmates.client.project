@@ -1,60 +1,32 @@
 
-.ResponsiveWrapper {
-    width: 50%;
-    display: inline-block;
-    position: relative;
-}
-/*// 16:9 ratio*/
-.ResponsiveWrapper:after {
-    padding-top: 56.25%;
-    display: block;
-    content: '';
-}
-.main {
-    position: absolute;
-    top: 0; bottom: 0; right: 0; left: 0;
-    background-color: rgb(0, 140, 200); /*demo*/
-}
-/*// fill parent*/
 
-scatter-plot {
+/*// fill parent*/
+viz-scatter-plot {
   display: block;
   z-index: 0;
   overflow: hidden;
   font-size: 10px;
 }
-scatter-plot circle{
+viz-scatter-plot circle {
   fill: blue;
   opacity: 1;
   cursor: pointer;
   stroke-width: 2;
 }
-scatter-plot circle:hover{
+viz-scatter-plot circle:hover {
   stroke: white;
 }
-scatter-plot text{
+viz-scatter-plot text {
   fill: white;
   stroke: none;
 }
-scatter-plot .x-axis path,
-scatter-plot .y-axis path {
+viz-scatter-plot .x-axis path,
+viz-scatter-plot .y-axis path {
   stroke: none;
   fill: none;
 }
-scatter-plot .x-axis line,
-scatter-plot .y-axis line {
+viz-scatter-plot .x-axis line,
+viz-scatter-plot .y-axis line {
   stroke: rgba(255, 255, 255, 0.2);
 }
-.scatter-1{
-  width: 30%;
-}
-.scatter-2{
-  width: 70%;
-}
-.scatter-3{
-  width: 100%;
-}
-.scatter-1, .scatter-2, .scatter-3{
-  height: 50%;
-  float: left;
-}
+

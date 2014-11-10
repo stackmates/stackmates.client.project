@@ -29,13 +29,13 @@ module.exports = angular.module( 'app.viz', [
           }
         }
       })
-      .state('app.viz.d3', {
-        url: '/d3',
+      .state('app.viz.shapes', {
+        url: '/shapes',
         controller: 'VizController',
         template: fs.readFileSync(__dirname + '/modules/d3/d3.html')
       })
-      .state('app.viz.animation', {
-        url: '/animation',
+      .state('app.viz.animations', {
+        url: '/animations',
         controller: 'VizController',
         template: fs.readFileSync(__dirname + '/modules/animation/animation.html')
       })
@@ -44,37 +44,26 @@ module.exports = angular.module( 'app.viz', [
         controller: 'VizController',
         template: fs.readFileSync(__dirname + '/modules/axes/axes.html')
       })
-      .state('app.viz.barchart', {
-        url: '/bar-chart',
+      .state('app.viz.barcharts', {
+        url: '/bar-charts',
         controller: 'VizController',
         template: fs.readFileSync(__dirname + '/modules/bar_chart/templates/bar_chart.html')
       })
-      .state('app.viz.donut', {
-        url: '/donut',
+      .state('app.viz.donuts', {
+        url: '/donuts',
         controller: 'VizController',
         template: fs.readFileSync(__dirname + '/templates/donut.html')
       })
-      .state('app.viz.singleline', {
-        url: '/single-line',
+      .state('app.viz.linecharts', {
+        url: '/line-charts',
         controller: 'VizController',
-        controllerAs: 'scatter',
-        template: fs.readFileSync(__dirname + '/modules/line_single/templates/single_line.html')
+        template: fs.readFileSync(__dirname + '/templates/line_charts.html')
       })
-      .state('app.viz.scatter', {
-        url: '/scatter-plot',
+      .state('app.viz.scatterplots', {
+        url: '/scatter-plots',
         controller: 'VizController',
         controllerAs: 'scatter',
         template: fs.readFileSync(__dirname + '/templates/scatter_plot.html')
-      })
-      .state('app.viz.scatter-music', {
-        url: '/scatter-plot-music',
-        controller: 'VizController',
-        template: fs.readFileSync(__dirname + '/modules/scatter_last_fm/templates/scatter_music_demo.html')
-      })
-      .state('app.viz.outreach', {
-        url: '/outreach',
-        controller: 'VizController',
-        tempate: fs.readFileSync(__dirname + '/modules/outreach/templates/line.html')
       });
   }
 )

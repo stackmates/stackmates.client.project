@@ -1,31 +1,29 @@
 'use strict';
 
+
 var d3 = require('d3');
 var _o = {};              // configuration object
 
-// LAYOUT SETTINGS
-_o.width = 800;
-_o.height = 300;
-_o.margin = {
-  top: 10,
-  right: 10,
-  bottom: 10,
-  left: 10
-};
+module.exports = angular.module('app.viz.donut.chart', [
+  require('../../services/d3_layout_service').name
+])
 
-// RAW DATA
-// var data = [];
+.directive('d3DonutChart',
+  /*@ngInject*/
+  function donutChart (D3LayoutService) {
+    _o = {
+      width: D3LayoutService.width,
+      height: D3LayoutService.height,
+      margin: D3LayoutService.margin
+    }
 
-// DIRECTIVE DEFINITION OBJECT
-module.exports = /*@ngInject*/
-  function donutChart () {
     return {
       link: link,
       restrict: 'E',
       scope: { data: '=' }   // simple data init in html
     }
   }
-
+)
 
 function link(scope, el, attr){
 
@@ -56,15 +54,11 @@ function link(scope, el, attr){
       .outerRadius(min / 2 * 0.9)
       .innerRadius(min / 2 * 0.5);
 
-
   // DRAW
-  // add the <path>s for each arc slice
   var arcs = svg.selectAll('path');
 
   // REACTIONS
-  // redraw on data change
   scope.$watch('data', function(data){
-
     // apply new data
     arcs = arcs.data(pieGenerator(data));
     // add path tags if new slices are added
@@ -81,7 +75,6 @@ function link(scope, el, attr){
     arcs.attr('d', arcGenerator);
 
   }, true); // look for changes within the object
-
 
 }
 
