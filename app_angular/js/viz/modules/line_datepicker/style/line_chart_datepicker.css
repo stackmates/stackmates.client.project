@@ -1,0 +1,24 @@
+
+
+
+
+viz-line-chart-with-datepicker .axis path,
+viz-line-chart-with-datepicker .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+viz-line-chart-with-datepicker .x.axis path {
+  display: none;
+}
+
+viz-line-chart-with-datepicker .line {
+  fill: none;
+  stroke: white;
+  stroke-width: 1.5px;
+}
+
+viz-line-chart-with-datepicker .tick {
+  font-size: 10px;
+}

@@ -1,0 +1,21 @@
+
+
+line-scaling-adaptive .axis path,
+line-scaling-adaptive .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+line-scaling-adaptive .x.axis path {
+  display: none;
+}
+
+line-scaling-adaptive .line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+line-scaling-adaptive .tick {
+  font-size: 10px;
+}

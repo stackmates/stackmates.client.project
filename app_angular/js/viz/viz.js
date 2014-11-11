@@ -9,10 +9,8 @@ module.exports = angular.module( 'app.viz', [
   require('./modules/axes').name,
   require('./modules/bar_chart').name,
   require('./modules/donut').name,
+  require('./modules/line_datepicker').name,
   require('./modules/line_adaptive').name,
-  require('./modules/line_single').name,
-  require('./modules/outreach').name,
-  require('./modules/scatter_last_fm').name,
   require('./modules/scatter_plot').name
 ])
 

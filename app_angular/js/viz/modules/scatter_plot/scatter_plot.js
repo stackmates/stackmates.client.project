@@ -9,10 +9,11 @@ module.exports = angular.module('app.viz.scatterplot.chart', [
 
 .directive('vizScatterPlot',
   /*@ngInject*/
-  function vizScatterPlot ($timeout, D3LayoutService) {
+  function vizScatterPlot ($timeout, $window, D3LayoutService) {
 
     _o = {
       $timeout: $timeout,
+      $window: $window,
       width: D3LayoutService.width,
       height: D3LayoutService.height,
       margin: D3LayoutService.margin
@@ -40,33 +41,40 @@ function link(scope, el, attr, controller){
   el = el[0];
   var svg = d3.select(el)
     .append('svg');
-    //   .attr("height", _o.height)
-    //   .attr("width", _o.width)
-    // .append("g")
-    //   .attr("transform", "translate(" + _o.width + "," + _o.height + ")");
 
   // GENERATORS
   var xAxis =
     d3.svg.axis()
       .scale(x)
       .orient('bottom')
-      .tickFormat(function(d, i){ return i + 1; }); // 1 index the company ranks
+      .tickFormat(function(d, i){ return i + 1; });
 
   var yAxis =
     d3.svg.axis()
       .scale(y)
       .orient('left');
 
+  var lineGen
+    = d3.svg.line()
+      .x(function (d, i) { return x(i); })
+      .y(function (d) { return y(d.value); })
+      .interpolate("linear");
+
 
   // RENDER
   var xAxisG = svg.append('g').attr('class', 'x-axis');
   var yAxisG = svg.append('g').attr('class', 'y-axis');
-  var points = svg.append('g').attr('class', 'points').selectAll('g.point');
+  var points = svg.append('g').attr('class', 'points')
+                    .selectAll('g.point');
 
+  var lines = svg.append("g").attr('class', 'lines').selectAll('g.line');
+
+  // UPDATE
   function update(){
 
     if (renderTimeout) {
       _o.$timeout.cancel(renderTimeout);
+      renderTimeout = undefined;
     }
     renderTimeout = _o.$timeout(
       function () {
@@ -82,8 +90,13 @@ function link(scope, el, attr, controller){
 
         // RENDER
         points = points.data(data);
+
         points.exit().remove();
-        var point = points.enter().append('g').attr('class', 'point');
+
+        var point =
+          points.enter()
+                .append('g')
+                  .attr('class', 'point');
 
         point.append('circle').attr('r', 5)
           .on('mouseover', function(d){
@@ -97,6 +110,17 @@ function link(scope, el, attr, controller){
           return 'translate(' + [x(i), y(d.value)] + ')';
         });
 
+
+        lines = lines.data([data]);
+
+        lines.exit().remove();
+
+        lines
+          .enter()
+          .append('path')
+            .attr('class', 'line')
+            .attr('d', lineGen);
+
         xAxisG.call(xAxis);
         yAxisG.call(yAxis);
 
@@ -107,7 +131,7 @@ function link(scope, el, attr, controller){
 
   };
 
-  // REACTIONS
+  // REACTIVITY
   scope.$watch('data', update);
   // responsive
   scope.$watch(function(){
@@ -115,6 +139,11 @@ function link(scope, el, attr, controller){
     _o.height = el.clientHeight;
     return _o.width * _o.height;
   }, resize );
+
+  // apply chart resize
+  _o.$window.onresize = function() {
+    scope.$apply();
+  };
 
   function resize(){
     svg.attr({width: _o.width, height: _o.height});

@@ -3,11 +3,6 @@
 module.exports = /*@ngInject*/
   function VisualizationController ($scope, $state, $window ) {
 
-    // required for responsive chart
-    angular.element($window).on('resize', function() {
-      $scope.$apply();
-    });
-
     $scope.vizualizations = [
       { "link": "app.viz.shapes",        "text": "Shapes" },
       { "link": "app.viz.animations",    "text": "Animation" },
@@ -29,13 +24,19 @@ module.exports = /*@ngInject*/
       , { value: 1.4, name: 'Indian Railways' }
       , { value: 1.3, name: 'Indian Armed Forces' }
       , { value: 1.2, name: 'Hon Hai Precision Industry (Foxconn)' }
-    ]
+    ];
 
     $scope.journals = [
-      { title: 'be good', day: '01/10/14'},
-      { title: 'be bad', day: '01/11/14'},
-      { title: 'be average', day: '01/12/14'},
-      { title: 'be nice', day: '01/01/15'},
-    ]
+      { cnt: 3, day: '10/01/14', title: 'be good' },
+      { cnt: 6, day: '11/11/14', title: 'be bad' },
+      { cnt: 5, day: '11/30/14', title: 'be average' },
+      { cnt: 8, day: '01/01/15', title: 'be nice', },
+    ];
+
+    $scope.adaptiveLineChartConfig = {
+      lines: 4,
+      points: 4
+    };
+
 
   };

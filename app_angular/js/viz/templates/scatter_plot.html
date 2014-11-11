@@ -10,10 +10,11 @@
 
 <div class="detail">
   <div ng-show="selectEmployer">
-    <h2>{{selectEmployer.name }}</h2>
-    <h3>Employees: {{selectEmployer.value }}M</h3>
+    <h4>Employees: {{selectEmployer.value }}M</h4>
+    <p>{{selectEmployer.name }}</p>
+
   </div>
   <div ng-show="!selectEmployer">
-    <h2> [hover over a company] </h2>
+    <h3> [hover over a company] </h3>
   </div>
 </div>
