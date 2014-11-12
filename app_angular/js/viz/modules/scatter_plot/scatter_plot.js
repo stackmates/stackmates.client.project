@@ -29,7 +29,7 @@ module.exports = angular.module('app.viz.scatterplot.chart', [
   }
 )
 
-function link(scope, el, attr, controller){
+function link(scope, el, attr){
 
   var renderTimeout;
   // PREPARE DATA
@@ -67,7 +67,8 @@ function link(scope, el, attr, controller){
   var points = svg.append('g').attr('class', 'points')
                     .selectAll('g.point');
 
-  var lines = svg.append("g").attr('class', 'lines').selectAll('g.line');
+  var lines = svg.append("g").attr('class', 'lines').selectAll('.line');
+  // var lines = svg.selectAll('.line');
 
   // UPDATE
   function update(){
@@ -147,12 +148,15 @@ function link(scope, el, attr, controller){
 
   function resize(){
     svg.attr({width: _o.width, height: _o.height});
+    // lines.attr({width: _o.width, height: _o.height});
+
     x.range([m, _o.width - m]);
     y.range([_o.height - m, m]);
     xAxis.tickSize(-_o.height + 2 * m);
     yAxis.tickSize(-_o.width + 2 * m);
     xAxisG.attr('transform', 'translate(' + [0, y.range()[0] + 0.5] + ')');
     yAxisG.attr('transform', 'translate(' + [x.range()[0], 0] + ')');
+
     update();
   }
 

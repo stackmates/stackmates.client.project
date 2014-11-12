@@ -1,7 +1,6 @@
 'use strict';
 
 
-
 module.exports = /*@ngInject*/
   function LoginController( $scope, alert, AuthService ) {
 
@@ -27,7 +26,7 @@ module.exports = /*@ngInject*/
         } else {
           throw new Error('Failed to login.');
         }
-        console.log(res);
+        //console.log(res);
       });
 
     };

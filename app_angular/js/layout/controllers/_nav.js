@@ -26,12 +26,12 @@ module.exports = /*@ngInject*/
           $scope.user = user;
         },
         function(result) {
-          console.log('Failed to validate token ' + result );
+          //.log('Failed to validate token ' + result );
         }
       );
 
     $scope.$on('user-signedin', function(evt, user){
-      console.log('received');
+      // console.log('received');
       $scope.user = user;
     });
     // $scope.$watch('authService.user', function(){
