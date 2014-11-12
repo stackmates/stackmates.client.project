@@ -58,7 +58,7 @@ function getUser () {
       function(results) {
 
         _o.currentUser = results.data.user;
-        console.log(results.data.user);
+        //console.log(results.data.user);
         deferred.resolve(_o.currentUser);
       },
       function(response) {

@@ -43,7 +43,7 @@ module.exports = angular.module('app', [
 
 // .constant('baseUrl', 'http://192.168.50.4:8080' )
 .constant('AppConstants', {
-  'baseUrl': 'http://localhost:4000',
+  'baseUrl': 'http://localdev:4000',
   // 'baseUrl': 'http://api.stackmat.es',
   'homeState': 'app.home'
 })

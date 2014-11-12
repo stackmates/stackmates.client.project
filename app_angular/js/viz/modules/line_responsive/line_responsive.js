@@ -24,8 +24,6 @@ module.exports = angular.module('app.viz.line.chart', [
       link: link,
       restrict: 'E',
       scope: {
-        data: '=',
-        selectedPoint: '='
       }
     }
   }
@@ -100,7 +98,7 @@ function link(scope, el, attr){
         );
 
         svg.append("path")
-          .datum(dataResampled)
+          .data(dataResampled)
           .attr("class", "line")
           .attr("d", line);
 
@@ -237,3 +235,6 @@ function link(scope, el, attr){
 
 
 }
+
+
+// reference https://blog.safaribooksonline.com/2014/02/17/building-responsible-visualizations-d3-js/
