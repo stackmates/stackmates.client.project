@@ -14,7 +14,7 @@ module.exports = angular.module('app', [
   'ui.router',
   'app.templates',
   'app.shared',
-  require('util_modules/angular/socket_io').name,
+  require('utils/angular/socket_io').name,
   require('ux_patterns/_helpers/angular/resize').name,
   require('ux_patterns/atoms/buttons/angular').name,
   require('ux_patterns/molecules/accordion/angular').name,
@@ -41,7 +41,6 @@ module.exports = angular.module('app', [
   require('./main').name
 ])
 
-// .constant('baseUrl', 'http://192.168.50.4:8080' )
 .constant('AppConstants', {
   'baseUrl': 'http://localdev:4000',
   // 'baseUrl': 'http://api.stackmat.es',

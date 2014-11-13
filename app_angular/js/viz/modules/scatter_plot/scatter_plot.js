@@ -112,15 +112,15 @@ function link(scope, el, attr){
         });
 
 
-        lines = lines.data([data]);
+        // lines = lines.data([data]);
 
-        lines.exit().remove();
+        // lines.exit().remove();
 
-        lines
-          .enter()
-          .append('path')
-            .attr('class', 'line')
-            .attr('d', lineGen);
+        // lines
+        //   .enter()
+        //   .append('path')
+        //     .attr('class', 'line')
+        //     .attr('d', lineGen);
 
         xAxisG.call(xAxis);
         yAxisG.call(yAxis);
@@ -132,7 +132,7 @@ function link(scope, el, attr){
 
   };
 
-  // REACTIVITY
+  // EVENTS
   scope.$watch('data', update);
   // responsive
   scope.$watch(function(){

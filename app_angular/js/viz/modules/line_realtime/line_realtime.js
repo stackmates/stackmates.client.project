@@ -42,8 +42,15 @@ function link(scope, el, attr){
   var xScale, yScale, xAxisGen, yAxisGen, lineGen;
 
 
-  var rawSvg = elem.find("svg")[0];
-  var svg = d3.select(rawSvg);
+  // APPEND SVG TO ELEMENT
+  // get the actual element not the jqlite wrapped object
+  el = el[0];
+  var svg = d3.select(el)
+    .append('svg');
+
+
+  // var rawSvg = elem.find("svg")[0];
+  // var svg = d3.select(rawSvg);
 
 
   function update(){

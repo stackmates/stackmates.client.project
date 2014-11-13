@@ -16,42 +16,35 @@
 @import "./connection/fonts";
 @import "./connection/icons";
 
-@import "../../../../../common/style/rework/_helpers/bootstrap";
-@import "../../../../../common/style/rework/_helpers/clearfix";
-@import "../../../../../common/style/rework/_helpers/collapse";
-
-/* Animation */
-@import "../../../../../common/style/rework/animation/fade_in";
+/* Helpers */
+@import "../../../../../common/ux_patterns/_helpers/css/bootstrap";
+@import "../../../../../common/ux_patterns/_helpers/css/clearfix";
+@import "../../../../../common/ux_patterns/_helpers/css/collapse";
+@import "../../../../../common/ux_patterns/_helpers/css/animation/fade_in";
 
 
 /* Base */
-@import "../../../../../common/style/rework/base/normalize";
-@import "../../../../../common/style/rework/base/suit-base";
-@import "../../../../../common/style/rework/base/elements";
-@import "../../../../../common/style/rework/base/typography";
+@import "../../../../../common/ux_patterns/_base/normalize";
+@import "../../../../../common/ux_patterns/_base/suit-base";
+@import "../../../../../common/ux_patterns/_base/elements";
+@import "../../../../../common/ux_patterns/_base/typography";
 @import "../ux_patterns/typography";
 
 
-/* layout */
-@import "../../../../../common/style/rework/layout/grid";
-@import "../../../../../common/style/rework/layout/sections";
-@import "../../../../../common/ux_patterns/views/basic_container";
-
-
-/* Quarks - micro rules core */
-@import "../../../../../common/style/rework/quarks/dimension";
-@import "../../../../../common/style/rework/quarks/display";
-@import "../../../../../common/style/rework/quarks/layout";
-@import "../../../../../common/style/rework/quarks/link";
-@import "../../../../../common/style/rework/quarks/offset";
-@import "../../../../../common/style/rework/quarks/space";
-@import "../../../../../common/style/rework/quarks/state";
-@import "../../../../../common/style/rework/quarks/text";
-@import "../../../../../common/style/rework/quarks/zindex";
-
-/* Quarks - micro rules community */
-@import "../../../../../common/style/rework/quarks/lists";
-@import "../../../../../common/style/rework/quarks/labels";
+/* Utilities */
+@import "../../../../../common/utils/css/dimension";
+@import "../../../../../common/utils/css/display";
+@import "../../../../../common/utils/css/labels";
+@import "../../../../../common/utils/css/layout_grid";
+@import "../../../../../common/utils/css/layout_sections";
+@import "../../../../../common/utils/css/layout";
+@import "../../../../../common/utils/css/lists";
+@import "../../../../../common/utils/css/link";
+@import "../../../../../common/utils/css/offset";
+@import "../../../../../common/utils/css/space";
+@import "../../../../../common/utils/css/state";
+@import "../../../../../common/utils/css/text";
+@import "../../../../../common/utils/css/zindex";
 
 /*Atoms*/
 @import "../ux_patterns/brand";
@@ -70,3 +63,6 @@
 
 /*Organisms*/
 @import "../../../../../common/ux_patterns/molecules/cards/haiku";
+
+/* Views */
+@import "../../../../../common/ux_patterns/views/basic_container";

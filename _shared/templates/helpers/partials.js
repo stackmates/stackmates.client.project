@@ -6,10 +6,17 @@ var path = require('path');
 module.exports = function(cfg, Handlebars) {
 
   // directories
-  var standardHtmlDir = path.join( __dirname, '../../../../../', 'common/ux_patterns/_main/');
-  var atomsDir        = path.join( __dirname, '../../../../../', 'common/ux_patterns/atoms/');
-  var moleculesDir    = path.join( __dirname, '../../../../../', 'common/ux_patterns/molecules/');
-  var organismsDir    = path.join( __dirname, '../../../../../', 'common/ux_patterns/organisms/');
+  var standardHtmlDir =
+    path.join( __dirname, '../../../../../', 'common/ux_patterns/_helpers/handlebars/standard_html');
+
+  var atomsDir =
+    path.join( __dirname, '../../../../../', 'common/ux_patterns/atoms/');
+
+  var moleculesDir =
+    path.join( __dirname, '../../../../../', 'common/ux_patterns/molecules/');
+
+  var viewsDir =
+    path.join( __dirname, '../../../../../', 'common/ux_patterns/views/');
 
   // use common partials
   // standardHTML
@@ -48,8 +55,6 @@ module.exports = function(cfg, Handlebars) {
   Handlebars.registerPartial('m_TopBar--scroll', topBarScrollTemplate);
 
 
-
-  // use organisms
   var headerLoopTemplate = fs.readFileSync(organismsDir + 'banners/o_Header--loop.hbs', 'utf8');
   Handlebars.registerPartial('m_Header--loop', headerLoopTemplate);
 
