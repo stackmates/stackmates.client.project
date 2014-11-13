@@ -5,14 +5,15 @@
   *
   */
 
-@import "./src/domain/stackmates/_shared/style/app";
+/*@import "./src/domain/stackmates/_shared/style/app";*/
+@import "../../_shared/style/app";
 
 
-@import "./src/domain/stackmates/app_angular/js/viz/style";
-@import "./src/domain/stackmates/app_angular/js/viz/modules/d3/style";
+@import "../js/viz/style";
+@import "../js/viz/modules/d3/style";
 
-@import "./src/domain/stackmates/app_angular/js/viz/modules/line_adaptive/style";
-@import "./src/domain/stackmates/app_angular/js/viz/modules/line_datepicker/style";
-@import "./src/domain/stackmates/app_angular/js/viz/modules/line_responsive/style";
+@import "../js/viz/modules/line_adaptive/style";
+@import "../js/viz/modules/line_datepicker/style";
+@import "../js/viz/modules/line_responsive/style";
 
-@import "./src/domain/stackmates/app_angular/js/viz/modules/scatter_plot/style";
+@import "../js/viz/modules/scatter_plot/style";
