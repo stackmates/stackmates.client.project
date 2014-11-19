@@ -3,7 +3,11 @@
 var _ = require('lodash');
 var debug = require('debug')('pubService');
 
-module.exports = /*@ngInject*/
+module.exports = angular.module('app.publishing.resource', [
+])
+
+.factory('PublishingResource',
+  /*@ngInject*/
   function PublishingResource ($http, $q, $socket, $state, AppConstants ) {
 
     var _baseurl = AppConstants.baseUrl + '/publish';
@@ -12,6 +16,12 @@ module.exports = /*@ngInject*/
 
     Publishing.listContent = null;
     Publishing.details = null;
+
+    // listeners
+    $socket.on('publish-data', function (data) {
+      Publishing.addRealtimeData(data);
+    });
+
 
     Publishing.getPublishedList = function () {
       var deferred = $q.defer();
@@ -73,12 +83,12 @@ module.exports = /*@ngInject*/
 
     Publishing.addRealtimeData = function (realtimeData) {
 
-      console.log('realtimeData', realtimeData);
+      debug('realtimeData', realtimeData);
 
       if (!_.contains(Publishing.listContent,{ 'id': realtimeData.id }) ) {
         Publishing.listContent.push(realtimeData.data);
-        console.log('new data added', realtimeData.data);
-        console.log('the realtime list', Publishing.listContent);
+        debug('new data added', realtimeData.data);
+        debug('the realtime list', Publishing.listContent);
       }
     };
 
@@ -107,5 +117,5 @@ module.exports = /*@ngInject*/
 
     return Publishing;
 
-
-  };
+  }
+)

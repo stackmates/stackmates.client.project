@@ -19,6 +19,12 @@ module.exports = angular.module('app.patterns', [
           }
         }
       })
+      .state('app.pattern.styleguide', {
+        url: '/styleguide',
+          controller: 'PatternController',
+          controllerAs: 'styleguide',
+          template: fs.readFileSync(__dirname + '/templates/styleguide.html')
+      })
       .state('app.pattern.accordion', {
         url: '/accordion',
           controller: 'DemoAccordionController',

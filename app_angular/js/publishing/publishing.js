@@ -4,7 +4,9 @@ var fs = require('fs');
 
 module.exports = angular.module('app.publishing', [
   'ui.router',
-   require('./services').name
+   require('./services/publishing_resource').name,
+  // require('./publishing_form_service').name,
+   require('./controllers/publishing_controller').name
 ])
 
 .config(
@@ -20,7 +22,7 @@ module.exports = angular.module('app.publishing', [
         views: {
           '@': {
             controller: 'PublishingController',
-            controllerAs: 'publishing',
+            controllerAs: 'vm',
             template: fs.readFileSync(__dirname + '/templates/publishing.html')
           }
         }
@@ -33,7 +35,7 @@ module.exports = angular.module('app.publishing', [
           }
         },
         controller: 'PublishingControllerDetails',
-        controllerAs: 'publishingDetails',
+        controllerAs: 'vm',
         template: fs.readFileSync(__dirname + '/templates/publishing-details.html')
       })
       .state('app.publishing.edit', {
@@ -44,13 +46,13 @@ module.exports = angular.module('app.publishing', [
           }
         },
         controller: 'PublishingControllerDetails',
-        controllerAs: 'publishingEdit',
+        controllerAs: 'vm',
         template: fs.readFileSync(__dirname + '/templates/publishing-edit.html')
       });
   }
 )
 
-.controller( 'PublishingController', require('./controllers/publishing_controller' ))
+
 .controller( 'PublishingControllerEdit', require('./controllers/publishing_controller_details'))
 .controller( 'PublishingControllerDetails', require('./controllers/publishing_controller_details'))
 

@@ -6,7 +6,7 @@
 
     <h3>List</h3>
 
-      <div ng-repeat='published in publishedList'>
+      <div ng-repeat='published in vm.publishedList'>
         <div class='PostType--{{published.content.postType}}'>
           {{ published.content.message }}
           <div class="ListActions">
@@ -27,61 +27,97 @@
 
       <h3 class="Form--categoryHeading">Add</h3>
 
-      <form form-for='publishData' service="PublishingForm" class='Form PublishForm'>
+      <form
+        class='Form'
+        form-for='publishData'
+        service="PublishingForm"
+        novalidate >
 
-        <div class='PublishForm-content'>
+        <div class='Form-categoryPanel'>
 
-          <div class="Form-item PublishForm-contentMessage">
-            <label class="Form-label" for="publishData-contentMessage">Message</label>
-            <input type="text"
-              class="Form-input" id="publishData-contentMessage"
-              placeholder="Message"
-              ng-model="publishData.content.message"
-              required >
+          <div class='Form-categoryPanelInner'>
+            <h3 class="t-Form-categoryHeading">Message</h3>
           </div>
 
-          <div class="Form-item PublishForm-contentNetwork">
-            <label class="Form-label" for="publishData-contentNetwork">Network</label>
-            <input type="text"
-              class="Form-input" id="publishData-contentNetwork"
-              placeholder="Network"
-              ng-model="publishData.content.network"
-              required >
-          </div>
+          <hr>
 
-          <div class="Form-item PublishForm-contentPostType">
-            <label class="Form-label" for="publishData-contentPostType">Post Type</label>
-            <input type="text"
-              class="Form-input" id="publishData-contentPostType"
-              placeholder="Post Type"
-              ng-model="publishData.content.postType"
-              required >
-          </div>
+          <div class='Form-categoryPanelInner'
+            collapse="isCollapsedContent">
 
-          <div class='PublishForm-content-media'>
-            <h3 class="Form--categoryHeading">Images</h3>
-            [drag and drop media]
+            <div class="Form-item PublishForm-contentMessage">
+              <label class="Form-label" for="publishData-contentMessage">Message</label>
+              <input type="text"
+                class="Form-input" id="publishData-contentMessage"
+                placeholder="Message"
+                ng-model="publishData.content.message"
+                required >
+            </div>
+            <div class="Form-item PublishForm-contentNetwork">
+              <label class="Form-label" for="publishData-contentNetwork">Network</label>
+              <input type="text"
+                class="Form-input" id="publishData-contentNetwork"
+                placeholder="Network"
+                ng-model="publishData.content.network"
+                required >
+            </div>
+            <div class="Form-item PublishForm-contentPostType">
+              <label class="Form-label" for="publishData-contentPostType">Post Type</label>
+              <input type="text"
+                class="Form-input" id="publishData-contentPostType"
+                placeholder="Post Type"
+                ng-model="publishData.content.postType"
+                required >
+            </div>
+
+            <div class='PublishForm-content-media'>
+              <h3 class="Form--categoryHeading">Images</h3>
+              [drag and drop media]
+            </div>
+
           </div>
 
         </div>
 
-        <div class="PublishForm-tags">
-          <h3 class="Form--categoryHeading">Tags</h3>
-        </div>
+        <div class="PublishForm-tags Form-categoryPanel">
+          <div class='Form-categoryPanelInner flag'>
 
-        <div class="PublishForm-status">
+            <div class="flag__body">
+                <h3 class="Form--categoryHeading">Tags</h3>
+            </div>
+            <div class="flag__image">
+              <a ng-click="isCollapsedTags = !isCollapsedTags">
+                  <i class="icon ion-ios7-arrow-up"></i>
+              </a>
+            </div>
+
+          </div>
+          <div collapse="isCollapsedTags">
+            <hr>
+            <div class='Form-categoryPanelInner'>
+              <div class="Form-item PublishForm-tags">
+                <label class="Form-label" for="publishData-tags">Tags</label>
+                <input type="text"
+                  class="Form-input" id="publishData-tags"
+                  placeholder="Tags"
+                  ng-model="publishData.tags" >
+              </div>
+            </div>
+          </div>
+        </div><!-- tags panel -->
+
+        <div class="PublishForm-status Form-categoryPanel">
           <h3 class="Form--categoryHeading">Status</h3>
         </div>
 
-        <div class="PublishForm-channels">
+        <div class="PublishForm-channels Form-categoryPanel">
           <h3 class="Form--categoryHeading">Channels</h3>
         </div>
 
-        <div class="PublishForm-scheduled">
+        <div class="PublishForm-scheduled Form-categoryPanel">
           <h3 class="Form--categoryHeading">Scheduled</h3>
         </div>
 
-        <div class="PublishForm-geo Geo">
+        <div class="PublishForm-geo Form-categoryPanel">
           <h3 class="Form--categoryHeading">Geolocation</h3>
 
           <div class='Geo-countries'>
@@ -99,7 +135,9 @@
         </div>
 
         <div class="CrudActions">
-          <button ng-click='publish()'>Publish</button>
+          <button ng-click='delete()'>Delete</button>
+          <button ng-click='sendForApproval()'>Send for approval</button>
+          <button ng-click='schedule()'>Schedule</button>
         </div>
 
       </form>

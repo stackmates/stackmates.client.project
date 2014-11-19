@@ -16,6 +16,10 @@
   /* Contrast for dark background */
   --text-color--light:            var(--white);
 
+  /* Text shadows */
+  --textShadow:                   none;  /* 0 1px 0 #fff;  */
+
+
   /* Messaging colors */
   --error:                       #f00;
   --success:                     #089e00;
@@ -29,7 +33,7 @@
 
 
   --color-brand:                  var(--deepOrange700);
-
+  --colorRemember:                var(--red500);
 
   /* THEME */
   --color-philosopher:            var(--blue500);
@@ -79,184 +83,15 @@
 
   --TopBar-color-logo:            var(--midnightblue);
 
-  /* COMPONENTS *****************************************/
-
-  /* ALERT*/
-  --Alert-border:                            none;
-  --Alert-color--info:                       var(--information);
-  --Alert-color--success:                    var(--success);
-  --Alert-color--warning:                    var(--warning);
-  --Alert-color--error:                      var(--error);
-
-  /* MODAL*/
-  --Modal-content-background:                var(--grey100);
-  --Modal-backdrop-background:               var(--grey800);
-  --Modal-backdrop-opacity:                  0.9;
-  --Modal-content-fallback-border-color:     var(--grey300);
-  --Modal-content-border-color:              var(--grey300);
-  --Modal-header-border-color:               var(--grey300);
-  --Modal-footer-border-color:               var(--grey300);
-
-  --Modal-border-radius:                     5px;
-
-
-  /*UI-SELECT*/
-
-   --uiselect-highlightBgColor:              var(--yellow700);
-
 }
 
-/* COLOR MODIFIER CLASSES */
-
-.u-paletteBody {
-  background: var(--body-bg-color);
-  color: var(--text-color);
-}
-.u-colorBrand {
-  color: var(--color-brand);
-}
-.paletteBrand, .home, .brand {
-  background-color: var(--deepOrange700);
-  color: var(--text-color--light);
-}
-
-/* Greys */
-.paletteGrey200 {
-  background-color: var(--grey200);
-  color: var(--text-color);
-}
-.paletteGrey300 {
-  background-color: var(--grey300);
-  color: var(--text-color);
-}
-.paletteGrey400 {
-  background-color: var(--grey400);
-  color: var(--text-color);
-}
-.paletteGrey600 {
-  background-color: var(--grey400);
-  color: var(--text-color--light);
-}
-
-/* States of mind */
-.u-colorTextPhilosopher {
-  color: var(--color-philosopher);
-}
-.philosopher {
-  background-color: var(--color-philosopher);
-  color: var(--text-color--light);
-}
-.philosopherQuestions {
-  background-color: var(--color-philosopher--QUESTION);
-  color: var(--text-color--light);
-}
-.philosopherProblems {
-  background-color: var(--color-philosopher--PROBLEM);
-  color: var(--text-color--light);
-}
-
-
-.u-colorTextDreamer {
-  color: var(--color-dreamer);
-}
-.dreamer {
-  background-color: var(--color-dreamer);
-  color: var(--text-color--light);
-}
-.dreamerVision {
-  background-color: var(--color-dreamer--VISION);
-  color: var(--text-color--light);
-}
-.dreamerCulture {
-  background-color: var(--color-dreamer--CULTURE);
-  color: var(--text-color--light);
-}
-
-
-
-.u-colorTextEngineer {
-  color: var(--color-engineer);
-}
-.engineer {
-  background-color: var(--color-engineer);
-  color: var(--text-color--light);
-  background-size: cover;
-}
-.engineerSubstance {
-  background-color: var(--color-engineer--SUBSTANCE);
-  color: var(--text-color--light);
-}
-.engineerStructure {
-  background-color: var(--color-engineer--STRUCTURE);
-  color: var(--text-color--light);
-}
-.engineerConnection {
-  background-color: var(--color-engineer--CONNECTION);
-  color: var(--text-color--light);
-}
-
-
-.u-colorTextRealist {
-  color: var(--color-realist);
-}
-.realist {
-  background-color: var(--color-realist);
-  color: var(--text-color--light);
-  background-size: cover;
-}
-.realistValue {
-  background-color: var(--green400);
-  color: var(--text-color--light);
-}
-.realistFacts {
-  background-color: var(--green500);
-  color: var(--text-color--light);
-}
-
-
-.bg-primary {
-  color: #fff;
-  background-color: #428bca;
-}
-a.bg-primary:hover {
-  background-color: #3071a9;
-}
-.bg-success {
-  background-color: #dff0d8;
-}
-a.bg-success:hover {
-  background-color: #c1e2b3;
-}
-.bg-info {
-  background-color: #d9edf7;
-}
-a.bg-info:hover {
-  background-color: #afd9ee;
-}
-.bg-warning {
-  background-color: #fcf8e3;
-}
-a.bg-warning:hover {
-  background-color: #f7ecb5;
-}
-.bg-danger {
-  background-color: #f2dede;
-}
-a.bg-danger:hover {
-  background-color: #e4b9b9;
-}
-
-
-
-/* Useful Concise Resources
+/* Resources
  *
  * https://www.codeschool.com/courses/fundamentals-of-design
  * http://www.google.com/design/spec/style/color.html#color-ui-color-palette
  * http://designcode.io/
  *
- */
-
-/*
+ *
  * COLOR GUIDE WITH HSL
  * use http://css-tricks.com/examples/HSLaExplorer/
  *

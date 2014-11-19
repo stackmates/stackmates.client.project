@@ -13,6 +13,7 @@
 @import "./connection";
 @import "./connection/fonts";
 @import "./connection/icons";
+@import "./components";
 
 /* Helpers */
 @import "../../../../../common/ux_patterns/_helpers/css/bootstrap";
@@ -20,14 +21,12 @@
 @import "../../../../../common/ux_patterns/_helpers/css/collapse";
 @import "../../../../../common/ux_patterns/_helpers/css/animation/fade_in";
 
-
 /* Base */
 @import "../../../../../common/ux_patterns/_base/normalize";
 @import "../../../../../common/ux_patterns/_base/suit-base";
 @import "../../../../../common/ux_patterns/_base/elements";
 @import "../../../../../common/ux_patterns/_base/typography";
 @import "../ux_patterns/typography";
-
 
 /* Utilities */
 @import "../../../../../common/utils/css/dimension";
@@ -44,23 +43,4 @@
 @import "../../../../../common/utils/css/text";
 @import "../../../../../common/utils/css/zindex";
 
-/*Atoms*/
-@import "../ux_patterns/brand";
-@import "../../../../../common/ux_patterns/atoms/buttons";
-@import "../../../../../common/ux_patterns/atoms/close";
-@import "../../../../../common/ux_patterns/atoms/icons";
-@import "../../../../../common/ux_patterns/atoms/forms";
-@import "../../../../../common/ux_patterns/atoms/media";
-
-
-/*Molecules*/
-@import "../../../../../common/ux_patterns/molecules/navigation/toggle";
-@import "../../../../../common/ux_patterns/molecules/navigation/nav_list";
-@import "../ux_patterns/banner";
-@import "../ux_patterns/markdown";
-
-/*Organisms*/
-@import "../../../../../common/ux_patterns/molecules/cards/haiku";
-
-/* Views */
-@import "../../../../../common/ux_patterns/views/basic_container";
+@import "../utility";

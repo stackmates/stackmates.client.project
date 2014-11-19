@@ -37,8 +37,8 @@ module.exports = {
                             ],
   meta                    :  './src/domain/stackmates/_shared/assets/meta',
   watchStyles             : [
-                              './src/common/style/rework/**/*.css',
-                              './src/common/ux_patterns/style/**/*.css',
+                              './src/common/utils/css/**/*.css',
+                              './src/common/ux_patterns/**/*.css',
                               './src/domain/stackmates/_shared/style/**/*.css',
                               './src/domain/stackmates/app_angular/**/*.css'
                             ],

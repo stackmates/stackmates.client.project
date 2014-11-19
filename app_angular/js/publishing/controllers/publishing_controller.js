@@ -1,23 +1,38 @@
+/* jshint validthis: true */
 'use strict';
 
+module.exports = angular.module('app.publishing.controller', [
+])
 
-module.exports = /*@ngInject*/
+.controller( 'PublishingController',
+  /*@ngInject*/
   function PublishingController ($scope, $state, $socket, PublishingResource ) {
 
+    var vm = this;
 
-    // WARNING this prevent being able to navigate from list to details
+    // WARNING this prevents being able to navigate from list to details
     // $state.transitionTo('app.publishing.new');
 
-    $scope.publishData = {};
-    $scope.publishedList = PublishingResource.listContent;
+    vm.publishData = {};
+    vm.publishedList = PublishingResource.listContent;
 
-    $scope.publish = function () {
+    // initial state
 
-      PublishingResource.publishNew($scope.publishData)
+    vm.isCollapsedContent = false;
+    vm.isCollapsedApproval = true;
+    vm.isCollapsedChannels = true;
+    vm.isCollapsedFeedTargeting = true;
+    vm.isCollapsedGeoTargeting = true;
+    vm.isCollapsedSchedule = true;
+    vm.isCollapsedTags = true;
+
+    vm.publish = function () {
+
+      PublishingResource.publishNew(vm.publishData)
         .then(
           function(result) {
             console.log(result);
-            $scope.publishData = {};
+            vm.publishData = {};
           },
           function(res) {
             if (res.data.error && res.data.error.message) {
@@ -30,12 +45,9 @@ module.exports = /*@ngInject*/
         );
      }
 
-    $socket.on('publish-data', function (data) {
-      // console.log('socket data', data);
-      PublishingResource.addRealtimeData(data);
-    });
 
 
-  };
+  }
+)
 
 

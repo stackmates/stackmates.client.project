@@ -5,6 +5,7 @@ module.exports = /*@ngInject*/
     // $state.transitionTo('app.pattern.accordion');
 
     $scope.patterns = [
+      { "link": "app.pattern.styleguide", "text": "Styleguide" },
       { "link": "app.pattern.accordion", "text": "Accordion" },
       { "link": "app.pattern.alert", "text": "Alert" },
       { "link": "app.pattern.buttons", "text": "Buttons" },

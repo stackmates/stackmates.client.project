@@ -1,0 +1,52 @@
+
+:root {
+
+  /* ALERT*/
+  --Alert-border:                            none;
+  --Alert-color--info:                       var(--information);
+  --Alert-color--success:                    var(--success);
+  --Alert-color--warning:                    var(--warning);
+  --Alert-color--error:                      var(--error);
+
+  /* BUTTONS */
+  --Button-borderWidth:                      1px;
+  --Button-borderColor:                      none;
+  --Button-color:                            inherit;
+  --Button-font:                             inherit;
+  --Button-padding:                          0.4em 0.75em;
+  --Button-opacityDisabled:                  0.6;
+
+  /* CODE */
+
+  /* CLOSE */
+   --Close-fontSize:                         21px;
+   --Close-color:                            var(--grey500);
+   --Close-color--hover:                     var(--grey300);
+
+  /* FORMS */
+
+  --Form-subContent-bgColor:                 var(--grey500);
+
+
+  /* HIGHLIGHT */
+
+
+
+  /* MODAL*/
+  --Modal-content-background:                var(--grey100);
+  --Modal-backdrop-background:               var(--grey800);
+  --Modal-backdrop-opacity:                  0.9;
+  --Modal-content-fallback-border-color:     var(--grey300);
+  --Modal-content-border-color:              var(--grey300);
+  --Modal-header-border-color:               var(--grey300);
+  --Modal-footer-border-color:               var(--grey300);
+  --Modal-border-radius:                     5px;
+
+
+  /*UI-SELECT*/
+
+   --uiselect-highlightBgColor:              var(--yellow700);
+
+}
+
+

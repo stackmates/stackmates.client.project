@@ -1,37 +1,37 @@
 
-
-
-
 @import "../_common";
 
-
-
 /*Atoms*/
+@import "../ux_patterns/brand";
+@import "../../../../../common/ux_patterns/atoms/breadcrumb";
+@import "../../../../../common/ux_patterns/atoms/buttons";
+@import "../../../../../common/ux_patterns/atoms/close";
+@import "../../../../../common/ux_patterns/atoms/forms";
+@import "../../../../../common/ux_patterns/atoms/icons";
+@import "../../../../../common/ux_patterns/atoms/media";
 @import "../../../../../common/ux_patterns/atoms/tooltip";
+
 
 /*Molecules*/
 @import "../../../../../common/ux_patterns/molecules/accordion";
 @import "../../../../../common/ux_patterns/molecules/alert";
+@import "../ux_patterns/banner";
+@import "../../../../../common/ux_patterns/molecules/button_group";
+@import "../../../../../common/ux_patterns/molecules/cards/haiku";
 @import "../../../../../common/ux_patterns/molecules/carousel";
 @import "../../../../../common/ux_patterns/molecules/datepicker";
 @import "../../../../../common/ux_patterns/molecules/dropdown";
-
-@import "../../../../../common/ux_patterns/molecules/button_group";
-
+@import "../../../../../common/ux_patterns/molecules/flag";                     /*  abstract pattern */
 @import "../../../../../common/ux_patterns/molecules/list_group";
+@import "../ux_patterns/markdown";
 @import "../../../../../common/ux_patterns/molecules/modal";
-
+@import "../ux_patterns/navigation";
 @import "../../../../../common/ux_patterns/molecules/navigation/nav";
 @import "../../../../../common/ux_patterns/molecules/navigation/nav_list";
 @import "../../../../../common/ux_patterns/molecules/navigation/pagination";
 @import "../../../../../common/ux_patterns/molecules/navigation/tabs";
 @import "../../../../../common/ux_patterns/molecules/navigation/slide_nav";
 @import "../../../../../common/ux_patterns/molecules/navigation/toggle";
-
-
-/*@import "../ux_patterns/form_for";*/
-@import "../ux_patterns/navigation";
-
 @import "../../../../../common/ux_patterns/molecules/popup";
 @import "../../../../../common/ux_patterns/molecules/progressbar";
 @import "../../../../../common/ux_patterns/molecules/timeline";
@@ -39,10 +39,11 @@
 @import "../../../../../common/ux_patterns/molecules/ui-select/style/select2_bootstrap";
 
 
-@import "../ux_patterns/bootstrap";
-
-
+/* Views */
+@import "../../../../../common/ux_patterns/views/basic_container";
 @import "../../../../../common/ux_patterns/views/slide_menu_layout";
+
+@import "../ux_patterns/bootstrap";
 
 
 .strike {
